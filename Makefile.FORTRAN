@@ -1,0 +1,47 @@
+# erzeugt Samstag, 04. Juli 2015 14:04 (C) 2015 von Leander Jedamus
+# modifiziert Samstag, 09. September 2023 09:31 von Leander Jedamus
+# modifiziert Mittwoch, 02. September 2015 14:31 von Leander Jedamus
+# modifiziert Dienstag, 01. September 2015 18:11 von Leander Jedamus
+# modifiziert Samstag, 15. August 2015 12:35 von Leander Jedamus
+# modifiziert Mittwoch, 29. Juli 2015 13:28 von Leander Jedamus
+# modifiziert Freitag, 17. Juli 2015 20:37 von Leander Jedamus
+# modifiziert Dienstag, 14. Juli 2015 17:19 von Leander Jedamus
+# modifiziert Mittwoch, 08. Juli 2015 15:20 von Leander Jedamus
+# modifiziert Samstag, 04. Juli 2015 14:11 von Leander Jedamus
+
+ifeq ($(machtype),MacOS)
+FORTRANC        = mpifort
+else
+FORTRANC	= gfortran
+endif
+
+COMPILE.f	= $(FORTRANC)
+
+define compile.f
+$(RM) $@
+$(COMPILE.f) -c $< -o $@
+endef
+
+%.o:		%.f
+		$(compile.f)
+
+%.o:		%.for
+		$(compile.f)
+
+%.o:		%.f77
+		$(compile.f)
+
+%.o:		%.f90
+		$(compile.f)
+
+%.o:		%.f95
+		$(compile.f) -std=f95
+
+%.o:		%.f03
+		$(compile.f) -std=f2003
+
+%.o:		%.f08
+		$(compile.f) -std=f2008
+
+# vim:ai sw=2 noexpandtab
+

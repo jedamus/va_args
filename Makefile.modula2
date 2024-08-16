@@ -1,0 +1,36 @@
+# erzeugt Donnerstag, 10. August 2023 18:27 (C) 2023 von Leander Jedamus
+# modifiziert Freitag, 11. August 2023 05:25 von Leander Jedamus
+# modifiziert Donnerstag, 10. August 2023 20:42 von Leander Jedamus
+
+M2C		    := m2c
+
+DEPEND.mod	    := $(M2C) -CM
+
+define compile.mod
+$(RM) $@
+$(strip $(COMPILE.mod) $(M2CFLAGS) -c $<)
+endef
+
+define link.mod
+$(RM) $@
+$(strip $(COMPILE.mod) $(M2CFLAGS) -make -o $@ $<)
+endef
+
+define depend.mod.o
+  $(RM) $@ && \
+  $(DEPEND.mod) $< | sed -e 's/\.o:/.o $@: Makefile Makefile.modula2/' > $@
+endef
+
+%.mod %.def:
+
+%.o:		    %.mod
+		    $(compile.mod)
+
+%.d:		    %.mod
+		    $(depend.mod.o)
+
+%:		    %.mod
+		    $(link.mod)
+
+# vim:ai sw=2 noexpandtab
+

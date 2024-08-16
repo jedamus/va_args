@@ -1,0 +1,1276 @@
+# GNU Make 4.1
+# Gebaut für x86_64-pc-linux-gnu
+# Copyright (C) 1988-2014 Free Software Foundation, Inc.
+# Lizenz GPLv3+: GNU GPL Version 3 oder später <http://gnu.org/licenses/gpl.html>
+# Dies ist freie Software: Sie können sie nach Belieben ändern und weiter verteilen.
+# Soweit es die Gesetze erlauben gibt es KEINE GARANTIE.
+
+# „Make“-Datenbank; erstellt am: Mon Aug  7 12:11:39 2023
+
+# Variablen
+
+# automatisch
+<D = $(patsubst %/,%,$(dir $<))
+# Standard
+COMPILE.m = $(OBJC) $(OBJCFLAGS) $(CPPFLAGS) $(TARGET_ARCH) -c
+# automatisch
+?F = $(notdir $?)
+# Standard
+.SHELLFLAGS := -c
+# Umgebung
+IPYTHONDIR = /home/leander/.ipython
+# automatisch
+?D = $(patsubst %/,%,$(dir $?))
+# Umgebung
+machtype = Linux
+# automatisch
+@D = $(patsubst %/,%,$(dir $@))
+# automatisch
+@F = $(notdir $@)
+# Standard
+MAKE_VERSION := 4.1
+# Makefile
+CURDIR := /home/leander/Projekte/c/va_args
+# Makefile
+SHELL = /bin/sh
+# Standard
+RM = rm -f
+# Standard
+CO = co
+# Standard
+COMPILE.mod = $(M2C) $(M2FLAGS) $(MODFLAGS) $(TARGET_ARCH)
+# automatisch
+*F = $(notdir $*)
+# Standard
+CWEAVE = cweave
+# Umgebung
+_ = /usr/bin/make
+# Standard
+PREPROCESS.F = $(FC) $(FFLAGS) $(CPPFLAGS) $(TARGET_ARCH) -F
+# Standard
+LINK.m = $(OBJC) $(OBJCFLAGS) $(CPPFLAGS) $(LDFLAGS) $(TARGET_ARCH)
+# Standard
+LINK.o = $(CC) $(LDFLAGS) $(TARGET_ARCH)
+# Standard
+OUTPUT_OPTION = -o $@
+# Umgebung
+SAVEHIST = 20000
+# Umgebung
+HUSHLOGIN = FALSE
+# Standard
+COMPILE.cpp = $(COMPILE.cc)
+# Makefile (aus „/dev/null“, Zeile 1)
+MAKEFILE_LIST :=  /dev/null
+# Umgebung
+DEBUG = true
+# „override“-Anweisung
+GNUMAKEFLAGS := 
+# Standard
+LINK.p = $(PC) $(PFLAGS) $(CPPFLAGS) $(LDFLAGS) $(TARGET_ARCH)
+# Umgebung
+KPATHSEA_DEBUG = 0
+# Standard
+CC = cc
+# Standard
+CHECKOUT,v = +$(if $(wildcard $@),,$(CO) $(COFLAGS) $< $@)
+# Standard
+CPP = $(CC) -E
+# Standard
+LINK.cc = $(CXX) $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(TARGET_ARCH)
+# Standard
+MAKE_HOST := x86_64-pc-linux-gnu
+# Umgebung
+PATH = /home/leander/anaconda3/bin:/home/leander/anaconda3/condabin:/home/leander/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:.
+# Umgebung
+OLDRPROMPT = %{[32m%}%4~%{[39m%}%{[31m%}%(?.. :( %?)%{[39m%}
+# Standard
+LD = ld
+# Umgebung
+LESS_TERMCAP_mb = [01;31m
+# Standard
+TEXI2DVI = texi2dvi
+# Standard
+YACC = yacc
+# Umgebung
+LESS_TERMCAP_se = [0m
+# Umgebung
+XDG_RUNTIME_DIR = /run/user/1000
+# Umgebung
+MYSQL_PS1 = mysql (\u@\h) [\d]> 
+# Standard
+ARFLAGS = rv
+# Standard
+LINK.r = $(FC) $(FFLAGS) $(RFLAGS) $(LDFLAGS) $(TARGET_ARCH)
+# Standard
+LINT = lint
+# Standard
+COMPILE.f = $(FC) $(FFLAGS) $(TARGET_ARCH) -c
+# Standard
+LINT.c = $(LINT) $(LINTFLAGS) $(CPPFLAGS) $(TARGET_ARCH)
+# Standard
+YACC.m = $(YACC) $(YFLAGS)
+# Standard
+YACC.y = $(YACC) $(YFLAGS)
+# Umgebung
+CONDA_PREFIX = /home/leander/anaconda3
+# Standard
+AR = ar
+# Standard
+.FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell archives jobserver output-sync check-symlink load
+# Standard
+TANGLE = tangle
+# Umgebung
+LS_COLORS = no=00:fi=00:di=01;34:ln=target:pi=40;33:so=00;35:bd=40;33;01:cd=40;33;01:or=01;05;37;41:mi=01;05;37;41:ex=00;32:*.cmd=00;32:*.exe=00;32:*.sh=00;32:*.ksh=00;32:*.mksh=00;32:*.csh=00;32:*.tcsh=00;32:*.bash=00;32:*.dash=00;32:*.zsh=00;32:*.php=00;32:*.cgi=00;32:*.odb=33:*.odp=33:*.ods=33:*.odt=33:*.ott=33:*.doc=33:*.ppt=33:*.xls=33:*.docx=33:*.pptx=33:*.xlsx=33:*.tar=01;31:*.tgz=01;31:*.arj=01;31:*.taz=01;31:*.lzh=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.gz=01;31:*.bz2=01;31:*.xz=01;31:*.bz=01;31:*.tz=01;31:*.rpm=01;30:*.cpio=01;30:*.deb=01;30:*.jar=00;36:*.sar=00;36:*.war=00;36:*.rar=00;36:*.jpg=00;35:*.JPG=00;35:*.jpeg=00;35:*.gif=00;35:*.bmp=00;35:*.pbm=00;35:*.pgm=00;35:*.ppm=00;35:*.xbm=00;35:*.xpm=00;35:*.png=00;35:*.tif=00;35:*.tiff=00;35:*.tga=00;35:*.xcf=00;35:*.eps=00;35:*#=04:*%=04:*~=04:*.bkp=04:*EADME=31;04:*eadme=31;04:*.c=31:*.C=31:*.cc=31:*.CC=31:*.cp=31:*.CP=31:*.c++=31:*.C++=31:*.cpp=31:*.CPP=31:*.cxx=31:*.CXX=31:*.java=31:*.jsp=31:*.scm=31:*.pl=31:*.pm=31:*.py=31:*.ipy=31:*.ipynb=31:*.pyw=31:*.rb=31:*.m=31:*.F=31:*.cob=31:*.fpp=31:*.FPP=31:*.r=31:*.S=31:*.adb=31:*.l=31:*.y=31:*.sql=31:*.js=31:*.lisp=31:*.pas=31:*.i=31:*.ii=31:*.mi=31:*.f=31:*.for=31:*.FOR=31:*.s=31:*.o=34:*.pyc=34:*.class=34:*.a=34:*.so=34:*.h=33:*.hh=33:*.H=33:*.hpp=33:*.h++=33:*.hxx=33:*.ads=33:*akefile=31;43:*akefile.in=31;43:*onfigure=31;43:*onfigure.in=31;43:*.html=00;32:*.css=00;32:*.htm=00;32:*.HTM=00;32:*.xml=00;32:*.properties=00;32:*.shtml=00;32:*.xhtml=00;32:*.nw=00;32:*.txt=00;32:*.TXT=00;32:*.lyx=00;32:*.mgp=00;32:*.tex=00;32:*.sty=00;32:*.fd=00;32:*.cls=00;32:*.def=00;32:*.cfg=00;32:*.ltx=00;32:*.ps=33;02:*.pdf=33;02:*.ogg=33;04:*.flac=33;04:*.mp3=33;04:*.wav=33;04:*.mpg=35;04:*.MPG=35;04:*.mpeg=35;04:*.MPEG=35;04:*.mov=35;04:*.MOV=35;04:*.avi=35;04:*.AVI=35;04:*.rm=35;04:*.RM=35;04:*.ram=35;04:*.RAM=35;04:*.wmv=35;04:*.WMV=35;04:*.mkv=35;04:*.MKV=35;04:*.ogm=35;04:*.OGM=35;04:*.rej=00;35:*.orig=00;35:*.diff=00;35
+# Standard
+GET = get
+# automatisch
+%F = $(notdir $%)
+# Umgebung
+CONDA_EXE = /home/leander/anaconda3/bin/conda
+# Umgebung
+LESS_TERMCAP_me = [0m
+# Standard
+COMPILE.F = $(FC) $(FFLAGS) $(CPPFLAGS) $(TARGET_ARCH) -c
+# Standard
+CTANGLE = ctangle
+# Standard
+.LIBPATTERNS = lib%.so lib%.a
+# Standard
+LINK.C = $(LINK.cc)
+# Umgebung
+PWD = /home/leander/Projekte/c/va_args
+# Standard
+LINK.S = $(CC) $(ASFLAGS) $(CPPFLAGS) $(LDFLAGS) $(TARGET_MACH)
+# Umgebung
+XDG_SEAT = seat0
+# Standard
+PREPROCESS.r = $(FC) $(FFLAGS) $(RFLAGS) $(TARGET_ARCH) -F
+# Standard
+LINK.c = $(CC) $(CFLAGS) $(CPPFLAGS) $(LDFLAGS) $(TARGET_ARCH)
+# Umgebung
+LESS_TERMCAP_ue = [0m
+# Umgebung
+MANPATH = /home/leander/anaconda3/share/man:/usr/local/man:/usr/local/share/man:/usr/man:/usr/share/man:.
+# Standard
+LINK.s = $(CC) $(ASFLAGS) $(LDFLAGS) $(TARGET_MACH)
+# Umgebung
+HOME = /home/leander
+# Umgebung
+LOGNAME = leander
+# Umgebung
+CONDA_PROMPT_MODIFIER = (base) 
+# automatisch
++F = $(notdir $+)
+# Umgebung
+FOREST_CONFIG = /home/leander/.forest_config
+# automatisch
+^D = $(patsubst %/,%,$(dir $^))
+# Umgebung
+LESS_TERMCAP_md = [01;31m
+# Umgebung
+XDG_VTNR = 5
+# Umgebung
+MAKELEVEL := 0
+# Umgebung
+CONDA_DEFAULT_ENV = base
+# Umgebung
+HISTFILE = /home/leander/.zsh_history
+# Standard
+MAKE = $(MAKE_COMMAND)
+# Umgebung
+SHLVL = 1
+# Umgebung
+HAS_ENV = true
+# Umgebung
+LESS_TERMCAP_so = [01;44;33m
+# Standard
+AS = as
+# Standard
+PREPROCESS.S = $(CC) -E $(CPPFLAGS)
+# Standard
+COMPILE.p = $(PC) $(PFLAGS) $(CPPFLAGS) $(TARGET_ARCH) -c
+# Umgebung
+XDG_SESSION_ID = 27
+# Umgebung
+USER = leander
+# Standard
+FC = f77
+# Makefile
+.DEFAULT_GOAL := 
+# automatisch
+%D = $(patsubst %/,%,$(dir $%))
+# Umgebung
+CONDA_SHLVL = 1
+# Standard
+WEAVE = weave
+# Standard
+MAKE_COMMAND := make
+# Standard
+LINK.cpp = $(LINK.cc)
+# Standard
+F77 = $(FC)
+# Umgebung
+OLDPWD = /home/leander
+# Standard
+.VARIABLES := 
+# Standard
+PC = pc
+# Umgebung
+PY_ENV_DIR = env
+# Standard
+COMPILE.def = $(M2C) $(M2FLAGS) $(DEFFLAGS) $(TARGET_ARCH)
+# Standard
+LEX = lex
+# Makefile
+MAKEFLAGS = p -j -l2 --jobserver-fds=3,4
+# Umgebung
+PROMPT = %{[33m%}%{[44m%}z%{[34m%}%{[43m%}%n@%m%{[39m%}%{[49m%} %T (%!) %(!.#.$) 
+# Umgebung
+MFLAGS = -p -j -l2 --jobserver-fds=3,4
+# automatisch
+*D = $(patsubst %/,%,$(dir $*))
+# Umgebung
+MAIL = /var/mail/leander
+# Standard
+LEX.l = $(LEX) $(LFLAGS) -t
+# Standard
+LEX.m = $(LEX) $(LFLAGS) -t
+# Umgebung
+LESS_TERMCAP_us = [01;32m
+# automatisch
++D = $(patsubst %/,%,$(dir $+))
+# Standard
+COMPILE.r = $(FC) $(FFLAGS) $(RFLAGS) $(TARGET_ARCH) -c
+# Umgebung
+BROWSER = lynx
+# Standard
+M2C = m2c
+# Umgebung
+RPROMPT = %{[32m%}%4~%{[39m%}%{[31m%}%(?.. :( %?)%{[39m%}
+# Standard
+MAKEFILES := 
+# Standard
+COMPILE.cc = $(CXX) $(CXXFLAGS) $(CPPFLAGS) $(TARGET_ARCH) -c
+# automatisch
+<F = $(notdir $<)
+# Umgebung
+PS1 = (base) %{[33m%}%{[44m%}z%{[34m%}%{[43m%}%n@%m%{[39m%}%{[49m%} %T (%!) %(!.#.$) 
+# Standard
+CXX = g++
+# Standard
+COFLAGS = 
+# Umgebung
+EDITOR = vi
+# Umgebung
+CONDA_PYTHON_EXE = /home/leander/anaconda3/bin/python
+# Standard
+COMPILE.C = $(COMPILE.cc)
+# automatisch
+^F = $(notdir $^)
+# Standard
+COMPILE.S = $(CC) $(ASFLAGS) $(CPPFLAGS) $(TARGET_MACH) -c
+# Standard
+LINK.F = $(FC) $(FFLAGS) $(CPPFLAGS) $(LDFLAGS) $(TARGET_ARCH)
+# Standard
+SUFFIXES := .out .a .ln .o .c .cc .C .cpp .p .f .F .m .r .y .l .ym .yl .s .S .mod .sym .def .h .info .dvi .tex .texinfo .texi .txinfo .w .ch .web .sh .elc .el
+# Umgebung
+HISTSIZE = 20000
+# Standard
+COMPILE.c = $(CC) $(CFLAGS) $(CPPFLAGS) $(TARGET_ARCH) -c
+# Umgebung
+_CE_M = 
+# Standard
+COMPILE.s = $(AS) $(ASFLAGS) $(TARGET_MACH)
+# Standard
+.INCLUDE_DIRS = /usr/include /usr/local/include /usr/include
+# Standard
+.RECIPEPREFIX := 
+# Standard
+MAKEINFO = makeinfo
+# Standard
+MAKE_TERMERR := /dev/tty5
+# Standard
+OBJC = cc
+# Umgebung
+GPG_TTY = /dev/tty5
+# Standard
+TEX = tex
+# Umgebung
+LANG = de_DE.UTF-8
+# Umgebung
+TERM = xterm-color
+# Standard
+F77FLAGS = $(FFLAGS)
+# Umgebung
+OLDPROMPT = %{[33m%}%{[44m%}z%{[34m%}%{[43m%}%n@%m%{[39m%}%{[49m%} %T (%!) %(!.#.$) 
+# Standard
+LINK.f = $(FC) $(FFLAGS) $(LDFLAGS) $(TARGET_ARCH)
+# Umgebung
+_CE_CONDA = 
+# Hashtabellen-Statistik für Variablen:
+# Auslastung=149/1024=15%, Rehash=0, Kollisionen=20/17511%
+
+# Musterspezifische Variablenwerte
+
+# Keine musterspezifischen Variablenwerte.
+
+# Verzeichnisse
+
+# SCCS: Status konnte nicht festgestellt werden.
+# /dev (Gerät 6, Inode 2): 222 Dateien, 19 Unmöglichkeiten.
+# /dev/SCCS: Status konnte nicht festgestellt werden.
+# /dev/RCS: Status konnte nicht festgestellt werden.
+# RCS: Status konnte nicht festgestellt werden.
+
+# 222 Dateien, 19 Unmöglichkeiten in 5 Verzeichnissen.
+
+# Implizite Regeln
+
+%.out:
+
+%.a:
+
+%.ln:
+
+%.o:
+
+%: %.o
+#  Auszuführende Regel (eingebaut):
+	$(LINK.o) $^ $(LOADLIBES) $(LDLIBS) -o $@
+
+%.c:
+
+%: %.c
+#  Auszuführende Regel (eingebaut):
+	$(LINK.c) $^ $(LOADLIBES) $(LDLIBS) -o $@
+
+%.ln: %.c
+#  Auszuführende Regel (eingebaut):
+	$(LINT.c) -C$* $<
+
+%.o: %.c
+#  Auszuführende Regel (eingebaut):
+	$(COMPILE.c) $(OUTPUT_OPTION) $<
+
+%.cc:
+
+%: %.cc
+#  Auszuführende Regel (eingebaut):
+	$(LINK.cc) $^ $(LOADLIBES) $(LDLIBS) -o $@
+
+%.o: %.cc
+#  Auszuführende Regel (eingebaut):
+	$(COMPILE.cc) $(OUTPUT_OPTION) $<
+
+%.C:
+
+%: %.C
+#  Auszuführende Regel (eingebaut):
+	$(LINK.C) $^ $(LOADLIBES) $(LDLIBS) -o $@
+
+%.o: %.C
+#  Auszuführende Regel (eingebaut):
+	$(COMPILE.C) $(OUTPUT_OPTION) $<
+
+%.cpp:
+
+%: %.cpp
+#  Auszuführende Regel (eingebaut):
+	$(LINK.cpp) $^ $(LOADLIBES) $(LDLIBS) -o $@
+
+%.o: %.cpp
+#  Auszuführende Regel (eingebaut):
+	$(COMPILE.cpp) $(OUTPUT_OPTION) $<
+
+%.p:
+
+%: %.p
+#  Auszuführende Regel (eingebaut):
+	$(LINK.p) $^ $(LOADLIBES) $(LDLIBS) -o $@
+
+%.o: %.p
+#  Auszuführende Regel (eingebaut):
+	$(COMPILE.p) $(OUTPUT_OPTION) $<
+
+%.f:
+
+%: %.f
+#  Auszuführende Regel (eingebaut):
+	$(LINK.f) $^ $(LOADLIBES) $(LDLIBS) -o $@
+
+%.o: %.f
+#  Auszuführende Regel (eingebaut):
+	$(COMPILE.f) $(OUTPUT_OPTION) $<
+
+%.F:
+
+%: %.F
+#  Auszuführende Regel (eingebaut):
+	$(LINK.F) $^ $(LOADLIBES) $(LDLIBS) -o $@
+
+%.o: %.F
+#  Auszuführende Regel (eingebaut):
+	$(COMPILE.F) $(OUTPUT_OPTION) $<
+
+%.f: %.F
+#  Auszuführende Regel (eingebaut):
+	$(PREPROCESS.F) $(OUTPUT_OPTION) $<
+
+%.m:
+
+%: %.m
+#  Auszuführende Regel (eingebaut):
+	$(LINK.m) $^ $(LOADLIBES) $(LDLIBS) -o $@
+
+%.o: %.m
+#  Auszuführende Regel (eingebaut):
+	$(COMPILE.m) $(OUTPUT_OPTION) $<
+
+%.r:
+
+%: %.r
+#  Auszuführende Regel (eingebaut):
+	$(LINK.r) $^ $(LOADLIBES) $(LDLIBS) -o $@
+
+%.o: %.r
+#  Auszuführende Regel (eingebaut):
+	$(COMPILE.r) $(OUTPUT_OPTION) $<
+
+%.f: %.r
+#  Auszuführende Regel (eingebaut):
+	$(PREPROCESS.r) $(OUTPUT_OPTION) $<
+
+%.y:
+
+%.ln: %.y
+#  Auszuführende Regel (eingebaut):
+	$(YACC.y) $< 
+	 $(LINT.c) -C$* y.tab.c 
+	 $(RM) y.tab.c
+
+%.c: %.y
+#  Auszuführende Regel (eingebaut):
+	$(YACC.y) $< 
+	 mv -f y.tab.c $@
+
+%.l:
+
+%.ln: %.l
+#  Auszuführende Regel (eingebaut):
+	@$(RM) $*.c
+	 $(LEX.l) $< > $*.c
+	$(LINT.c) -i $*.c -o $@
+	 $(RM) $*.c
+
+%.c: %.l
+#  Auszuführende Regel (eingebaut):
+	@$(RM) $@ 
+	 $(LEX.l) $< > $@
+
+%.r: %.l
+#  Auszuführende Regel (eingebaut):
+	$(LEX.l) $< > $@ 
+	 mv -f lex.yy.r $@
+
+%.ym:
+
+%.m: %.ym
+#  Auszuführende Regel (eingebaut):
+	$(YACC.m) $< 
+	 mv -f y.tab.c $@
+
+%.yl:
+
+%.s:
+
+%: %.s
+#  Auszuführende Regel (eingebaut):
+	$(LINK.s) $^ $(LOADLIBES) $(LDLIBS) -o $@
+
+%.o: %.s
+#  Auszuführende Regel (eingebaut):
+	$(COMPILE.s) -o $@ $<
+
+%.S:
+
+%: %.S
+#  Auszuführende Regel (eingebaut):
+	$(LINK.S) $^ $(LOADLIBES) $(LDLIBS) -o $@
+
+%.o: %.S
+#  Auszuführende Regel (eingebaut):
+	$(COMPILE.S) -o $@ $<
+
+%.s: %.S
+#  Auszuführende Regel (eingebaut):
+	$(PREPROCESS.S) $< > $@
+
+%.mod:
+
+%: %.mod
+#  Auszuführende Regel (eingebaut):
+	$(COMPILE.mod) -o $@ -e $@ $^
+
+%.o: %.mod
+#  Auszuführende Regel (eingebaut):
+	$(COMPILE.mod) -o $@ $<
+
+%.sym:
+
+%.def:
+
+%.sym: %.def
+#  Auszuführende Regel (eingebaut):
+	$(COMPILE.def) -o $@ $<
+
+%.h:
+
+%.info:
+
+%.dvi:
+
+%.tex:
+
+%.dvi: %.tex
+#  Auszuführende Regel (eingebaut):
+	$(TEX) $<
+
+%.texinfo:
+
+%.info: %.texinfo
+#  Auszuführende Regel (eingebaut):
+	$(MAKEINFO) $(MAKEINFO_FLAGS) $< -o $@
+
+%.dvi: %.texinfo
+#  Auszuführende Regel (eingebaut):
+	$(TEXI2DVI) $(TEXI2DVI_FLAGS) $<
+
+%.texi:
+
+%.info: %.texi
+#  Auszuführende Regel (eingebaut):
+	$(MAKEINFO) $(MAKEINFO_FLAGS) $< -o $@
+
+%.dvi: %.texi
+#  Auszuführende Regel (eingebaut):
+	$(TEXI2DVI) $(TEXI2DVI_FLAGS) $<
+
+%.txinfo:
+
+%.info: %.txinfo
+#  Auszuführende Regel (eingebaut):
+	$(MAKEINFO) $(MAKEINFO_FLAGS) $< -o $@
+
+%.dvi: %.txinfo
+#  Auszuführende Regel (eingebaut):
+	$(TEXI2DVI) $(TEXI2DVI_FLAGS) $<
+
+%.w:
+
+%.c: %.w
+#  Auszuführende Regel (eingebaut):
+	$(CTANGLE) $< - $@
+
+%.tex: %.w
+#  Auszuführende Regel (eingebaut):
+	$(CWEAVE) $< - $@
+
+%.ch:
+
+%.web:
+
+%.p: %.web
+#  Auszuführende Regel (eingebaut):
+	$(TANGLE) $<
+
+%.tex: %.web
+#  Auszuführende Regel (eingebaut):
+	$(WEAVE) $<
+
+%.sh:
+
+%: %.sh
+#  Auszuführende Regel (eingebaut):
+	cat $< >$@ 
+	 chmod a+x $@
+
+%.elc:
+
+%.el:
+
+(%): %
+#  Auszuführende Regel (eingebaut):
+	$(AR) $(ARFLAGS) $@ $<
+
+%.out: %
+#  Auszuführende Regel (eingebaut):
+	@rm -f $@ 
+	 cp $< $@
+
+%.c: %.w %.ch
+#  Auszuführende Regel (eingebaut):
+	$(CTANGLE) $^ $@
+
+%.tex: %.w %.ch
+#  Auszuführende Regel (eingebaut):
+	$(CWEAVE) $^ $@
+
+%:: %,v
+#  Auszuführende Regel (eingebaut):
+	$(CHECKOUT,v)
+
+%:: RCS/%,v
+#  Auszuführende Regel (eingebaut):
+	$(CHECKOUT,v)
+
+%:: RCS/%
+#  Auszuführende Regel (eingebaut):
+	$(CHECKOUT,v)
+
+%:: s.%
+#  Auszuführende Regel (eingebaut):
+	$(GET) $(GFLAGS) $(SCCS_OUTPUT_OPTION) $<
+
+%:: SCCS/s.%
+#  Auszuführende Regel (eingebaut):
+	$(GET) $(GFLAGS) $(SCCS_OUTPUT_OPTION) $<
+
+# 92 implizite Regeln, 5 (5,4%) Terminal.
+
+# Dateien
+
+# Dies ist kein Ziel:
+.web.p:
+# Eingebaute Regel
+#  Die Suche nach impliziten Regeln wurde nicht durchgeführt.
+#  Zeit der letzten Änderung wurde nicht überprüft.
+#  Datei wurde nicht aktualisiert.
+#  Auszuführende Regel (eingebaut):
+	$(TANGLE) $<
+
+# Dies ist kein Ziel:
+.l.r:
+# Eingebaute Regel
+#  Die Suche nach impliziten Regeln wurde nicht durchgeführt.
+#  Zeit der letzten Änderung wurde nicht überprüft.
+#  Datei wurde nicht aktualisiert.
+#  Auszuführende Regel (eingebaut):
+	$(LEX.l) $< > $@ 
+	 mv -f lex.yy.r $@
+
+# Dies ist kein Ziel:
+.dvi:
+# Eingebaute Regel
+#  Die Suche nach impliziten Regeln wurde nicht durchgeführt.
+#  Zeit der letzten Änderung wurde nicht überprüft.
+#  Datei wurde nicht aktualisiert.
+
+# Dies ist kein Ziel:
+.ym:
+# Eingebaute Regel
+#  Die Suche nach impliziten Regeln wurde nicht durchgeführt.
+#  Zeit der letzten Änderung wurde nicht überprüft.
+#  Datei wurde nicht aktualisiert.
+
+# Dies ist kein Ziel:
+.f.o:
+# Eingebaute Regel
+#  Die Suche nach impliziten Regeln wurde nicht durchgeführt.
+#  Zeit der letzten Änderung wurde nicht überprüft.
+#  Datei wurde nicht aktualisiert.
+#  Auszuführende Regel (eingebaut):
+	$(COMPILE.f) $(OUTPUT_OPTION) $<
+
+# Dies ist kein Ziel:
+.l:
+# Eingebaute Regel
+#  Die Suche nach impliziten Regeln wurde nicht durchgeführt.
+#  Zeit der letzten Änderung wurde nicht überprüft.
+#  Datei wurde nicht aktualisiert.
+
+# Dies ist kein Ziel:
+.m:
+# Eingebaute Regel
+#  Die Suche nach impliziten Regeln wurde nicht durchgeführt.
+#  Zeit der letzten Änderung wurde nicht überprüft.
+#  Datei wurde nicht aktualisiert.
+#  Auszuführende Regel (eingebaut):
+	$(LINK.m) $^ $(LOADLIBES) $(LDLIBS) -o $@
+
+# Dies ist kein Ziel:
+.ln:
+# Eingebaute Regel
+#  Die Suche nach impliziten Regeln wurde nicht durchgeführt.
+#  Zeit der letzten Änderung wurde nicht überprüft.
+#  Datei wurde nicht aktualisiert.
+
+# Dies ist kein Ziel:
+.o:
+# Eingebaute Regel
+#  Die Suche nach impliziten Regeln wurde nicht durchgeführt.
+#  Zeit der letzten Änderung wurde nicht überprüft.
+#  Datei wurde nicht aktualisiert.
+#  Auszuführende Regel (eingebaut):
+	$(LINK.o) $^ $(LOADLIBES) $(LDLIBS) -o $@
+
+# Dies ist kein Ziel:
+.y:
+# Eingebaute Regel
+#  Die Suche nach impliziten Regeln wurde nicht durchgeführt.
+#  Zeit der letzten Änderung wurde nicht überprüft.
+#  Datei wurde nicht aktualisiert.
+
+# Dies ist kein Ziel:
+.def.sym:
+# Eingebaute Regel
+#  Die Suche nach impliziten Regeln wurde nicht durchgeführt.
+#  Zeit der letzten Änderung wurde nicht überprüft.
+#  Datei wurde nicht aktualisiert.
+#  Auszuführende Regel (eingebaut):
+	$(COMPILE.def) -o $@ $<
+
+# Dies ist kein Ziel:
+.p.o:
+# Eingebaute Regel
+#  Die Suche nach impliziten Regeln wurde nicht durchgeführt.
+#  Zeit der letzten Änderung wurde nicht überprüft.
+#  Datei wurde nicht aktualisiert.
+#  Auszuführende Regel (eingebaut):
+	$(COMPILE.p) $(OUTPUT_OPTION) $<
+
+# Dies ist kein Ziel:
+.p:
+# Eingebaute Regel
+#  Die Suche nach impliziten Regeln wurde nicht durchgeführt.
+#  Zeit der letzten Änderung wurde nicht überprüft.
+#  Datei wurde nicht aktualisiert.
+#  Auszuführende Regel (eingebaut):
+	$(LINK.p) $^ $(LOADLIBES) $(LDLIBS) -o $@
+
+# Dies ist kein Ziel:
+.txinfo.dvi:
+# Eingebaute Regel
+#  Die Suche nach impliziten Regeln wurde nicht durchgeführt.
+#  Zeit der letzten Änderung wurde nicht überprüft.
+#  Datei wurde nicht aktualisiert.
+#  Auszuführende Regel (eingebaut):
+	$(TEXI2DVI) $(TEXI2DVI_FLAGS) $<
+
+# Dies ist kein Ziel:
+.a:
+# Eingebaute Regel
+#  Die Suche nach impliziten Regeln wurde nicht durchgeführt.
+#  Zeit der letzten Änderung wurde nicht überprüft.
+#  Datei wurde nicht aktualisiert.
+
+# Dies ist kein Ziel:
+.yl:
+# Eingebaute Regel
+#  Die Suche nach impliziten Regeln wurde nicht durchgeführt.
+#  Zeit der letzten Änderung wurde nicht überprüft.
+#  Datei wurde nicht aktualisiert.
+
+# Dies ist kein Ziel:
+.l.ln:
+# Eingebaute Regel
+#  Die Suche nach impliziten Regeln wurde nicht durchgeführt.
+#  Zeit der letzten Änderung wurde nicht überprüft.
+#  Datei wurde nicht aktualisiert.
+#  Auszuführende Regel (eingebaut):
+	@$(RM) $*.c
+	 $(LEX.l) $< > $*.c
+	$(LINT.c) -i $*.c -o $@
+	 $(RM) $*.c
+
+# Dies ist kein Ziel:
+.F.o:
+# Eingebaute Regel
+#  Die Suche nach impliziten Regeln wurde nicht durchgeführt.
+#  Zeit der letzten Änderung wurde nicht überprüft.
+#  Datei wurde nicht aktualisiert.
+#  Auszuführende Regel (eingebaut):
+	$(COMPILE.F) $(OUTPUT_OPTION) $<
+
+# Dies ist kein Ziel:
+.texi.info:
+# Eingebaute Regel
+#  Die Suche nach impliziten Regeln wurde nicht durchgeführt.
+#  Zeit der letzten Änderung wurde nicht überprüft.
+#  Datei wurde nicht aktualisiert.
+#  Auszuführende Regel (eingebaut):
+	$(MAKEINFO) $(MAKEINFO_FLAGS) $< -o $@
+
+# Dies ist kein Ziel:
+.w.c:
+# Eingebaute Regel
+#  Die Suche nach impliziten Regeln wurde nicht durchgeführt.
+#  Zeit der letzten Änderung wurde nicht überprüft.
+#  Datei wurde nicht aktualisiert.
+#  Auszuführende Regel (eingebaut):
+	$(CTANGLE) $< - $@
+
+# Dies ist kein Ziel:
+.texi.dvi:
+# Eingebaute Regel
+#  Die Suche nach impliziten Regeln wurde nicht durchgeführt.
+#  Zeit der letzten Änderung wurde nicht überprüft.
+#  Datei wurde nicht aktualisiert.
+#  Auszuführende Regel (eingebaut):
+	$(TEXI2DVI) $(TEXI2DVI_FLAGS) $<
+
+# Dies ist kein Ziel:
+.ch:
+# Eingebaute Regel
+#  Die Suche nach impliziten Regeln wurde nicht durchgeführt.
+#  Zeit der letzten Änderung wurde nicht überprüft.
+#  Datei wurde nicht aktualisiert.
+
+# Dies ist kein Ziel:
+.m.o:
+# Eingebaute Regel
+#  Die Suche nach impliziten Regeln wurde nicht durchgeführt.
+#  Zeit der letzten Änderung wurde nicht überprüft.
+#  Datei wurde nicht aktualisiert.
+#  Auszuführende Regel (eingebaut):
+	$(COMPILE.m) $(OUTPUT_OPTION) $<
+
+# Dies ist kein Ziel:
+.cc:
+# Eingebaute Regel
+#  Die Suche nach impliziten Regeln wurde nicht durchgeführt.
+#  Zeit der letzten Änderung wurde nicht überprüft.
+#  Datei wurde nicht aktualisiert.
+#  Auszuführende Regel (eingebaut):
+	$(LINK.cc) $^ $(LOADLIBES) $(LDLIBS) -o $@
+
+# Dies ist kein Ziel:
+.cc.o:
+# Eingebaute Regel
+#  Die Suche nach impliziten Regeln wurde nicht durchgeführt.
+#  Zeit der letzten Änderung wurde nicht überprüft.
+#  Datei wurde nicht aktualisiert.
+#  Auszuführende Regel (eingebaut):
+	$(COMPILE.cc) $(OUTPUT_OPTION) $<
+
+# Dies ist kein Ziel:
+.def:
+# Eingebaute Regel
+#  Die Suche nach impliziten Regeln wurde nicht durchgeführt.
+#  Zeit der letzten Änderung wurde nicht überprüft.
+#  Datei wurde nicht aktualisiert.
+
+# Dies ist kein Ziel:
+.SUFFIXES: .out .a .ln .o .c .cc .C .cpp .p .f .F .m .r .y .l .ym .yl .s .S .mod .sym .def .h .info .dvi .tex .texinfo .texi .txinfo .w .ch .web .sh .elc .el
+# Eingebaute Regel
+#  Die Suche nach impliziten Regeln wurde nicht durchgeführt.
+#  Zeit der letzten Änderung wurde nicht überprüft.
+#  Datei wurde nicht aktualisiert.
+
+# Dies ist kein Ziel:
+.c.o:
+# Eingebaute Regel
+#  Die Suche nach impliziten Regeln wurde nicht durchgeführt.
+#  Zeit der letzten Änderung wurde nicht überprüft.
+#  Datei wurde nicht aktualisiert.
+#  Auszuführende Regel (eingebaut):
+	$(COMPILE.c) $(OUTPUT_OPTION) $<
+
+# Dies ist kein Ziel:
+.r.o:
+# Eingebaute Regel
+#  Die Suche nach impliziten Regeln wurde nicht durchgeführt.
+#  Zeit der letzten Änderung wurde nicht überprüft.
+#  Datei wurde nicht aktualisiert.
+#  Auszuführende Regel (eingebaut):
+	$(COMPILE.r) $(OUTPUT_OPTION) $<
+
+# Dies ist kein Ziel:
+.r:
+# Eingebaute Regel
+#  Die Suche nach impliziten Regeln wurde nicht durchgeführt.
+#  Zeit der letzten Änderung wurde nicht überprüft.
+#  Datei wurde nicht aktualisiert.
+#  Auszuführende Regel (eingebaut):
+	$(LINK.r) $^ $(LOADLIBES) $(LDLIBS) -o $@
+
+# Dies ist kein Ziel:
+.ym.m:
+# Eingebaute Regel
+#  Die Suche nach impliziten Regeln wurde nicht durchgeführt.
+#  Zeit der letzten Änderung wurde nicht überprüft.
+#  Datei wurde nicht aktualisiert.
+#  Auszuführende Regel (eingebaut):
+	$(YACC.m) $< 
+	 mv -f y.tab.c $@
+
+# Dies ist kein Ziel:
+.y.ln:
+# Eingebaute Regel
+#  Die Suche nach impliziten Regeln wurde nicht durchgeführt.
+#  Zeit der letzten Änderung wurde nicht überprüft.
+#  Datei wurde nicht aktualisiert.
+#  Auszuführende Regel (eingebaut):
+	$(YACC.y) $< 
+	 $(LINT.c) -C$* y.tab.c 
+	 $(RM) y.tab.c
+
+# Dies ist kein Ziel:
+.elc:
+# Eingebaute Regel
+#  Die Suche nach impliziten Regeln wurde nicht durchgeführt.
+#  Zeit der letzten Änderung wurde nicht überprüft.
+#  Datei wurde nicht aktualisiert.
+
+# Dies ist kein Ziel:
+.l.c:
+# Eingebaute Regel
+#  Die Suche nach impliziten Regeln wurde nicht durchgeführt.
+#  Zeit der letzten Änderung wurde nicht überprüft.
+#  Datei wurde nicht aktualisiert.
+#  Auszuführende Regel (eingebaut):
+	@$(RM) $@ 
+	 $(LEX.l) $< > $@
+
+# Dies ist kein Ziel:
+.out:
+# Eingebaute Regel
+#  Die Suche nach impliziten Regeln wurde nicht durchgeführt.
+#  Zeit der letzten Änderung wurde nicht überprüft.
+#  Datei wurde nicht aktualisiert.
+
+# Dies ist kein Ziel:
+.C:
+# Eingebaute Regel
+#  Die Suche nach impliziten Regeln wurde nicht durchgeführt.
+#  Zeit der letzten Änderung wurde nicht überprüft.
+#  Datei wurde nicht aktualisiert.
+#  Auszuführende Regel (eingebaut):
+	$(LINK.C) $^ $(LOADLIBES) $(LDLIBS) -o $@
+
+# Dies ist kein Ziel:
+.r.f:
+# Eingebaute Regel
+#  Die Suche nach impliziten Regeln wurde nicht durchgeführt.
+#  Zeit der letzten Änderung wurde nicht überprüft.
+#  Datei wurde nicht aktualisiert.
+#  Auszuführende Regel (eingebaut):
+	$(PREPROCESS.r) $(OUTPUT_OPTION) $<
+
+# Dies ist kein Ziel:
+.S:
+# Eingebaute Regel
+#  Die Suche nach impliziten Regeln wurde nicht durchgeführt.
+#  Zeit der letzten Änderung wurde nicht überprüft.
+#  Datei wurde nicht aktualisiert.
+#  Auszuführende Regel (eingebaut):
+	$(LINK.S) $^ $(LOADLIBES) $(LDLIBS) -o $@
+
+# Dies ist kein Ziel:
+.texinfo.info:
+# Eingebaute Regel
+#  Die Suche nach impliziten Regeln wurde nicht durchgeführt.
+#  Zeit der letzten Änderung wurde nicht überprüft.
+#  Datei wurde nicht aktualisiert.
+#  Auszuführende Regel (eingebaut):
+	$(MAKEINFO) $(MAKEINFO_FLAGS) $< -o $@
+
+# Dies ist kein Ziel:
+.c:
+# Eingebaute Regel
+#  Die Suche nach impliziten Regeln wurde nicht durchgeführt.
+#  Zeit der letzten Änderung wurde nicht überprüft.
+#  Datei wurde nicht aktualisiert.
+#  Auszuführende Regel (eingebaut):
+	$(LINK.c) $^ $(LOADLIBES) $(LDLIBS) -o $@
+
+# Dies ist kein Ziel:
+.w.tex:
+# Eingebaute Regel
+#  Die Suche nach impliziten Regeln wurde nicht durchgeführt.
+#  Zeit der letzten Änderung wurde nicht überprüft.
+#  Datei wurde nicht aktualisiert.
+#  Auszuführende Regel (eingebaut):
+	$(CWEAVE) $< - $@
+
+# Dies ist kein Ziel:
+.c.ln:
+# Eingebaute Regel
+#  Die Suche nach impliziten Regeln wurde nicht durchgeführt.
+#  Zeit der letzten Änderung wurde nicht überprüft.
+#  Datei wurde nicht aktualisiert.
+#  Auszuführende Regel (eingebaut):
+	$(LINT.c) -C$* $<
+
+# Dies ist kein Ziel:
+.s.o:
+# Eingebaute Regel
+#  Die Suche nach impliziten Regeln wurde nicht durchgeführt.
+#  Zeit der letzten Änderung wurde nicht überprüft.
+#  Datei wurde nicht aktualisiert.
+#  Auszuführende Regel (eingebaut):
+	$(COMPILE.s) -o $@ $<
+
+# Dies ist kein Ziel:
+.s:
+# Eingebaute Regel
+#  Die Suche nach impliziten Regeln wurde nicht durchgeführt.
+#  Zeit der letzten Änderung wurde nicht überprüft.
+#  Datei wurde nicht aktualisiert.
+#  Auszuführende Regel (eingebaut):
+	$(LINK.s) $^ $(LOADLIBES) $(LDLIBS) -o $@
+
+# Dies ist kein Ziel:
+.texinfo.dvi:
+# Eingebaute Regel
+#  Die Suche nach impliziten Regeln wurde nicht durchgeführt.
+#  Zeit der letzten Änderung wurde nicht überprüft.
+#  Datei wurde nicht aktualisiert.
+#  Auszuführende Regel (eingebaut):
+	$(TEXI2DVI) $(TEXI2DVI_FLAGS) $<
+
+# Dies ist kein Ziel:
+.el:
+# Eingebaute Regel
+#  Die Suche nach impliziten Regeln wurde nicht durchgeführt.
+#  Zeit der letzten Änderung wurde nicht überprüft.
+#  Datei wurde nicht aktualisiert.
+
+# Dies ist kein Ziel:
+.lm.m:
+# Eingebaute Regel
+#  Die Suche nach impliziten Regeln wurde nicht durchgeführt.
+#  Zeit der letzten Änderung wurde nicht überprüft.
+#  Datei wurde nicht aktualisiert.
+#  Auszuführende Regel (eingebaut):
+	@$(RM) $@ 
+	 $(LEX.m) $< > $@
+
+# Dies ist kein Ziel:
+.y.c:
+# Eingebaute Regel
+#  Die Suche nach impliziten Regeln wurde nicht durchgeführt.
+#  Zeit der letzten Änderung wurde nicht überprüft.
+#  Datei wurde nicht aktualisiert.
+#  Auszuführende Regel (eingebaut):
+	$(YACC.y) $< 
+	 mv -f y.tab.c $@
+
+# Dies ist kein Ziel:
+.web.tex:
+# Eingebaute Regel
+#  Die Suche nach impliziten Regeln wurde nicht durchgeführt.
+#  Zeit der letzten Änderung wurde nicht überprüft.
+#  Datei wurde nicht aktualisiert.
+#  Auszuführende Regel (eingebaut):
+	$(WEAVE) $<
+
+# Dies ist kein Ziel:
+.texinfo:
+# Eingebaute Regel
+#  Die Suche nach impliziten Regeln wurde nicht durchgeführt.
+#  Zeit der letzten Änderung wurde nicht überprüft.
+#  Datei wurde nicht aktualisiert.
+
+# Dies ist kein Ziel:
+.DEFAULT:
+#  Die Suche nach impliziten Regeln wurde nicht durchgeführt.
+#  Zeit der letzten Änderung wurde nicht überprüft.
+#  Datei wurde nicht aktualisiert.
+
+# Dies ist kein Ziel:
+.h:
+# Eingebaute Regel
+#  Die Suche nach impliziten Regeln wurde nicht durchgeführt.
+#  Zeit der letzten Änderung wurde nicht überprüft.
+#  Datei wurde nicht aktualisiert.
+
+# Dies ist kein Ziel:
+.tex.dvi:
+# Eingebaute Regel
+#  Die Suche nach impliziten Regeln wurde nicht durchgeführt.
+#  Zeit der letzten Änderung wurde nicht überprüft.
+#  Datei wurde nicht aktualisiert.
+#  Auszuführende Regel (eingebaut):
+	$(TEX) $<
+
+# Dies ist kein Ziel:
+.cpp.o:
+# Eingebaute Regel
+#  Die Suche nach impliziten Regeln wurde nicht durchgeführt.
+#  Zeit der letzten Änderung wurde nicht überprüft.
+#  Datei wurde nicht aktualisiert.
+#  Auszuführende Regel (eingebaut):
+	$(COMPILE.cpp) $(OUTPUT_OPTION) $<
+
+# Dies ist kein Ziel:
+.cpp:
+# Eingebaute Regel
+#  Die Suche nach impliziten Regeln wurde nicht durchgeführt.
+#  Zeit der letzten Änderung wurde nicht überprüft.
+#  Datei wurde nicht aktualisiert.
+#  Auszuführende Regel (eingebaut):
+	$(LINK.cpp) $^ $(LOADLIBES) $(LDLIBS) -o $@
+
+# Dies ist kein Ziel:
+.C.o:
+# Eingebaute Regel
+#  Die Suche nach impliziten Regeln wurde nicht durchgeführt.
+#  Zeit der letzten Änderung wurde nicht überprüft.
+#  Datei wurde nicht aktualisiert.
+#  Auszuführende Regel (eingebaut):
+	$(COMPILE.C) $(OUTPUT_OPTION) $<
+
+# Dies ist kein Ziel:
+.texi:
+# Eingebaute Regel
+#  Die Suche nach impliziten Regeln wurde nicht durchgeführt.
+#  Zeit der letzten Änderung wurde nicht überprüft.
+#  Datei wurde nicht aktualisiert.
+
+# Dies ist kein Ziel:
+.txinfo:
+# Eingebaute Regel
+#  Die Suche nach impliziten Regeln wurde nicht durchgeführt.
+#  Zeit der letzten Änderung wurde nicht überprüft.
+#  Datei wurde nicht aktualisiert.
+
+# Dies ist kein Ziel:
+.tex:
+# Eingebaute Regel
+#  Die Suche nach impliziten Regeln wurde nicht durchgeführt.
+#  Zeit der letzten Änderung wurde nicht überprüft.
+#  Datei wurde nicht aktualisiert.
+
+# Dies ist kein Ziel:
+/dev/null:
+#  Die Suche nach impliziten Regeln wurde durchgeführt.
+#  Zuletzt geändert 2023-08-05 18:09:29.347403211
+#  Datei wurde aktualisiert.
+#  Erfolgreich aktualisiert.
+
+# Dies ist kein Ziel:
+.txinfo.info:
+# Eingebaute Regel
+#  Die Suche nach impliziten Regeln wurde nicht durchgeführt.
+#  Zeit der letzten Änderung wurde nicht überprüft.
+#  Datei wurde nicht aktualisiert.
+#  Auszuführende Regel (eingebaut):
+	$(MAKEINFO) $(MAKEINFO_FLAGS) $< -o $@
+
+# Dies ist kein Ziel:
+.sh:
+# Eingebaute Regel
+#  Die Suche nach impliziten Regeln wurde nicht durchgeführt.
+#  Zeit der letzten Änderung wurde nicht überprüft.
+#  Datei wurde nicht aktualisiert.
+#  Auszuführende Regel (eingebaut):
+	cat $< >$@ 
+	 chmod a+x $@
+
+# Dies ist kein Ziel:
+.S.s:
+# Eingebaute Regel
+#  Die Suche nach impliziten Regeln wurde nicht durchgeführt.
+#  Zeit der letzten Änderung wurde nicht überprüft.
+#  Datei wurde nicht aktualisiert.
+#  Auszuführende Regel (eingebaut):
+	$(PREPROCESS.S) $< > $@
+
+# Dies ist kein Ziel:
+.mod:
+# Eingebaute Regel
+#  Die Suche nach impliziten Regeln wurde nicht durchgeführt.
+#  Zeit der letzten Änderung wurde nicht überprüft.
+#  Datei wurde nicht aktualisiert.
+#  Auszuführende Regel (eingebaut):
+	$(COMPILE.mod) -o $@ -e $@ $^
+
+# Dies ist kein Ziel:
+.mod.o:
+# Eingebaute Regel
+#  Die Suche nach impliziten Regeln wurde nicht durchgeführt.
+#  Zeit der letzten Änderung wurde nicht überprüft.
+#  Datei wurde nicht aktualisiert.
+#  Auszuführende Regel (eingebaut):
+	$(COMPILE.mod) -o $@ $<
+
+# Dies ist kein Ziel:
+.F.f:
+# Eingebaute Regel
+#  Die Suche nach impliziten Regeln wurde nicht durchgeführt.
+#  Zeit der letzten Änderung wurde nicht überprüft.
+#  Datei wurde nicht aktualisiert.
+#  Auszuführende Regel (eingebaut):
+	$(PREPROCESS.F) $(OUTPUT_OPTION) $<
+
+# Dies ist kein Ziel:
+.w:
+# Eingebaute Regel
+#  Die Suche nach impliziten Regeln wurde nicht durchgeführt.
+#  Zeit der letzten Änderung wurde nicht überprüft.
+#  Datei wurde nicht aktualisiert.
+
+# Dies ist kein Ziel:
+.S.o:
+# Eingebaute Regel
+#  Die Suche nach impliziten Regeln wurde nicht durchgeführt.
+#  Zeit der letzten Änderung wurde nicht überprüft.
+#  Datei wurde nicht aktualisiert.
+#  Auszuführende Regel (eingebaut):
+	$(COMPILE.S) -o $@ $<
+
+# Dies ist kein Ziel:
+.F:
+# Eingebaute Regel
+#  Die Suche nach impliziten Regeln wurde nicht durchgeführt.
+#  Zeit der letzten Änderung wurde nicht überprüft.
+#  Datei wurde nicht aktualisiert.
+#  Auszuführende Regel (eingebaut):
+	$(LINK.F) $^ $(LOADLIBES) $(LDLIBS) -o $@
+
+# Dies ist kein Ziel:
+.web:
+# Eingebaute Regel
+#  Die Suche nach impliziten Regeln wurde nicht durchgeführt.
+#  Zeit der letzten Änderung wurde nicht überprüft.
+#  Datei wurde nicht aktualisiert.
+
+# Dies ist kein Ziel:
+.sym:
+# Eingebaute Regel
+#  Die Suche nach impliziten Regeln wurde nicht durchgeführt.
+#  Zeit der letzten Änderung wurde nicht überprüft.
+#  Datei wurde nicht aktualisiert.
+
+# Dies ist kein Ziel:
+.f:
+# Eingebaute Regel
+#  Die Suche nach impliziten Regeln wurde nicht durchgeführt.
+#  Zeit der letzten Änderung wurde nicht überprüft.
+#  Datei wurde nicht aktualisiert.
+#  Auszuführende Regel (eingebaut):
+	$(LINK.f) $^ $(LOADLIBES) $(LDLIBS) -o $@
+
+# Dies ist kein Ziel:
+.info:
+# Eingebaute Regel
+#  Die Suche nach impliziten Regeln wurde nicht durchgeführt.
+#  Zeit der letzten Änderung wurde nicht überprüft.
+#  Datei wurde nicht aktualisiert.
+
+# Statistik der Hash-Tabelle für Dateien:
+# Auslastung=73/1024=7%, Rehash=0, Kollisionen=396/147627%
+# VPATH-Suchpfade
+
+# Keine „vpath“-Suchpfade.
+
+# Kein allgemeiner Suchpfad (Variable „VPATH“).
+
+# Puffer für strcache: 1 (0) / Zeichenketten = 481 / Speicher = 4109 B / ø = 8 B
+# aktueller Puffer: Größe = 8162 B / benutzt = 4109 B / Anzahl = 481 / ø = 8 B
+
+# Leistung von strcache: Suchen = 650 / Trefferrate = 26%
+# Statistik für Hashtabelle:
+# Auslastung=481/8192=6%, Rehash=0, Kollisionen=170/65026%
+# „Make“-Datenbank beendet am: Mon Aug  7 12:11:39 2023
+

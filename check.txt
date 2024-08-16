@@ -1,0 +1,29 @@
+\input texinfo
+
+GNU Sample
+1 First Chapter
+Index
+GNU Sample
+**********
+
+This manual is for GNU Sample (version 1.0, 09.08.2023).
+
+1 First Chapter
+***************
+
+This is the first chapter.
+
+   Here is a numbered list.
+
+  1. This is the first item.
+
+  2. This is the second item.
+
+Index
+*****
+
+* Menu:
+
+* chapter, first:                        First Chapter.        (line 13)
+* index entry, another:                  First Chapter.        (line 13)
+

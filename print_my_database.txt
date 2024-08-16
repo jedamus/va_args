@@ -1,0 +1,2484 @@
+make: Für das Ziel „dummy“ ist nichts zu tun.
+# GNU Make 4.1
+# Gebaut für x86_64-pc-linux-gnu
+# Copyright (C) 1988-2014 Free Software Foundation, Inc.
+# Lizenz GPLv3+: GNU GPL Version 3 oder später <http://gnu.org/licenses/gpl.html>
+# Dies ist freie Software: Sie können sie nach Belieben ändern und weiter verteilen.
+# Soweit es die Gesetze erlauben gibt es KEINE GARANTIE.
+
+# „Make“-Datenbank; erstellt am: Thu Aug 10 07:18:01 2023
+
+# Variablen
+
+# automatisch
+<D = $(patsubst %/,%,$(dir $<))
+# Standard
+COMPILE.m = $(OBJC) $(OBJCFLAGS) $(CPPFLAGS) $(TARGET_ARCH) -c
+# automatisch
+?F = $(notdir $?)
+# Makefile (aus „Makefile.latex“, Zeile 11)
+LATEX = pdflatex
+# Makefile (aus „Makefile“, Zeile 50)
+BACKUPDIR := va_args
+# Makefile (aus „Makefile“, Zeile 43)
+link_switch := static
+# Standard
+.SHELLFLAGS := -c
+# Makefile (aus „Makefile.documentation“, Zeile 28)
+RST := rst
+# Makefile (aus „Makefile“, Zeile 213)
+LIBRARIES :=  libsubs.a
+# Makefile (aus „Makefile.latex“, Zeile 14)
+DVIPS = dvips
+# Makefile (aus „Makefile.latex“, Zeile 27)
+DOPLOT = doplot
+# Umgebung
+IPYTHONDIR = /home/leander/.ipython
+# automatisch
+?D = $(patsubst %/,%,$(dir $?))
+# Makefile (aus „Makefile“, Zeile 109)
+CPPFLAGS :=  -g -Wall -pg  -Og  -ansi  
+# Makefile (aus „Makefile.documentation“, Zeile 40)
+define rst2man.txt
+$(RM) $@
+$(RST2MAN) $< > $@
+endef
+# Umgebung
+machtype = Linux
+# Makefile (aus „Makefile.c_and_c++“, Zeile 23)
+COPTS = $(DFLAGS) $(CPPFLAGS) $(IFLAGS) $(TARGET_ARCH) 
+# automatisch
+@D = $(patsubst %/,%,$(dir $@))
+# Makefile (aus „Makefile“, Zeile 55)
+PROFFILE := gprof.out.txt
+# automatisch
+@F = $(notdir $@)
+# Standard
+MAKE_VERSION := 4.1
+# Makefile (aus „Makefile.cobol“, Zeile 15)
+COBCFREE = 
+# Makefile
+CURDIR := /home/leander/Projekte/c/va_args
+# Makefile (aus „Makefile.documentation“, Zeile 13)
+PYDOC := pydoc
+# Makefile
+SHELL = /bin/sh
+# Makefile (aus „Makefile“, Zeile 70)
+RM := rm -f
+# Standard
+CO = co
+# Standard
+COMPILE.mod = $(M2C) $(M2FLAGS) $(MODFLAGS) $(TARGET_ARCH)
+# automatisch
+*F = $(notdir $*)
+# Makefile (aus „Makefile.cweb_and_noweb“, Zeile 10)
+CWEAVE = cweave
+# Umgebung
+_ = /usr/bin/make
+# Makefile (aus „Makefile“, Zeile 145)
+CCDEPENDS := 
+# Standard
+PREPROCESS.F = $(FC) $(FFLAGS) $(CPPFLAGS) $(TARGET_ARCH) -F
+# Makefile (aus „Makefile.c_and_c++“, Zeile 25)
+C.c = $(CC) $(strip $(CFLAGS) $(COPTS))
+# Makefile (aus „Makefile“, Zeile 76)
+NM := nm
+# Standard
+LINK.m = $(OBJC) $(OBJCFLAGS) $(CPPFLAGS) $(LDFLAGS) $(TARGET_ARCH)
+# Standard
+LINK.o = $(CC) $(LDFLAGS) $(TARGET_ARCH)
+# Standard
+OUTPUT_OPTION = -o $@
+# Umgebung
+SAVEHIST = 20000
+# Umgebung
+HUSHLOGIN = FALSE
+# Standard
+COMPILE.cpp = $(COMPILE.cc)
+# Makefile (aus „Makefile“, Zeile 47)
+TEXINFOFILE := check.texinfo
+# Makefile (aus „main.d“, Zeile 1)
+MAKEFILE_LIST :=  Makefile Makefile.c_and_c++ Makefile.cobol Makefile.cweb_and_noweb Makefile.documentation Makefile.flex_and_bison Makefile.FORTRAN Makefile.latex Makefile.pascal check.d minmax.d main.d
+# Makefile (aus „Makefile“, Zeile 212)
+LOADLIBES := -lsubs
+# Makefile (aus „Makefile.latex“, Zeile 24)
+PAPER = a4
+# Makefile (aus „Makefile.cweb_and_noweb“, Zeile 27)
+define cweave
+$(RM) $@
+$(CWEAVE) $<
+endef
+# Makefile (aus „Makefile.c_and_c++“, Zeile 32)
+DEPEND.cc = $(C.cc) -MM
+# Makefile (aus „Makefile.documentation“, Zeile 55)
+define rst2odt.txt
+$(RM) $@
+$(RST2ODT) $< > $@
+endef
+# Umgebung
+DEBUG = true
+# „override“-Anweisung
+GNUMAKEFLAGS := 
+# Standard
+LINK.p = $(PC) $(PFLAGS) $(CPPFLAGS) $(LDFLAGS) $(TARGET_ARCH)
+# Makefile (aus „Makefile“, Zeile 101)
+DFLAGS :=  -DDEBUG=true
+# Makefile (aus „Makefile.documentation“, Zeile 71)
+define makeinfo.html
+$(RM) -r $@
+$(strip $(MAKEINFO) --html $(MAKEINFO_FLAGS) $< -o $@)
+endef
+# Umgebung
+KPATHSEA_DEBUG = 0
+# Makefile (aus „Makefile.c_and_c++“, Zeile 13)
+CC := gcc
+# Makefile (aus „Makefile“, Zeile 211)
+LIBRARY1 := libsubs.a
+# Makefile (aus „Makefile.cweb_and_noweb“, Zeile 32)
+define notangle
+$(RM) $@
+$(NOTANGLE) -R$@ $< > $@
+endef
+# Makefile (aus „Makefile“, Zeile 221)
+OBJS :=  minmax.oo main.o
+# Makefile (aus „Makefile.cweb_and_noweb“, Zeile 19)
+NOWEAVE.latex = $(NOWEAVE) -latex
+# Standard
+CHECKOUT,v = +$(if $(wildcard $@),,$(CO) $(COFLAGS) $< $@)
+# Makefile (aus „Makefile“, Zeile 147)
+CCSOURCES := 
+# Standard
+CPP = $(CC) -E
+# Makefile (aus „Makefile“, Zeile 42)
+debug_switch := true
+# Makefile (aus „Makefile“, Zeile 46)
+PRINTFILE := .print
+# Makefile (aus „Makefile“, Zeile 56)
+NMFILE := nm.out.txt
+# Makefile (aus „Makefile“, Zeile 85)
+NMFLAGS := --extern-only --defined-only -v --print-file-name
+# Makefile (aus „Makefile.c_and_c++“, Zeile 30)
+LINK.cc = $(CXX) $(strip $(CXXFLAGS) $(LOPTS))
+# Makefile (aus „Makefile.c_and_c++“, Zeile 44)
+define link.c
+$(RM) $@
+$(strip $(LINK.c) $(filter %.o,$^) $(LOADLIBES) -o $@ $(LDLIBS))
+endef
+# Standard
+MAKE_HOST := x86_64-pc-linux-gnu
+# Umgebung
+PATH = /home/leander/anaconda3/bin:/home/leander/anaconda3/condabin:/home/leander/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:.
+# Makefile (aus „Makefile.latex“, Zeile 59)
+define gftopk
+$(RM) $@
+$(GFTOPK) $<
+endef
+# Umgebung
+OLDRPROMPT = %{[32m%}%4~%{[39m%}%{[31m%}%(?.. :( %?)%{[39m%}
+# Makefile (aus „Makefile.c_and_c++“, Zeile 19)
+LD := ld
+# Makefile (aus „Makefile“, Zeile 48)
+INFOFILE := check.info
+# Umgebung
+LESS_TERMCAP_mb = [01;31m
+# Standard
+TEXI2DVI = texi2dvi
+# Makefile (aus „Makefile.latex“, Zeile 64)
+makeindex = $(MAKEINDEX) $(MAKEINDEXFLAGS) $<
+# Makefile (aus „Makefile.cweb_and_noweb“, Zeile 42)
+define sed
+$(SED) -f $(SEDCMD) $@ > $(SEDTMP)
+mv $(SEDTMP) $@
+endef
+# Makefile (aus „Makefile.flex_and_bison“, Zeile 12)
+YACC = bison
+# Makefile (aus „Makefile.latex“, Zeile 13)
+BIBTEX = bibtex
+# Umgebung
+LESS_TERMCAP_se = [0m
+# Umgebung
+XDG_RUNTIME_DIR = /run/user/1000
+# Umgebung
+MYSQL_PS1 = mysql (\u@\h) [\d]> 
+# Makefile (aus „Makefile.pascal“, Zeile 7)
+define compile.p
+$(RM) $@
+$(PC) $(PFLAGS) $<
+endef
+# Makefile (aus „Makefile“, Zeile 84)
+ARFLAGS := rv
+# Standard
+LINK.r = $(FC) $(FFLAGS) $(RFLAGS) $(LDFLAGS) $(TARGET_ARCH)
+# Makefile (aus „Makefile“, Zeile 74)
+LINT := cppcheck
+# Makefile (aus „Makefile.FORTRAN“, Zeile 17)
+COMPILE.f = $(FORTRANC)
+# Makefile (aus „Makefile“, Zeile 120)
+debug = $(DEBUGGER) $<
+# Standard
+LINT.c = $(LINT) $(LINTFLAGS) $(CPPFLAGS) $(TARGET_ARCH)
+# Standard
+YACC.m = $(YACC) $(YFLAGS)
+# Makefile (aus „Makefile“, Zeile 49)
+HTMLFILE := check.html
+# Makefile (aus „Makefile“, Zeile 75)
+PROF := gprof
+# Makefile (aus „Makefile.c_and_c++“, Zeile 110)
+depend.c.o =   $(RM) $@ && $(DEPEND.c) $< | sed -e 's/\.o:/.o $@: Makefile Makefile.c_and_c++/' > $@
+# Standard
+YACC.y = $(YACC) $(YFLAGS)
+# Makefile (aus „Makefile“, Zeile 128)
+print = $(PRINT) $<
+# Makefile (aus „Makefile“, Zeile 37)
+VPATH := 
+# Umgebung
+CONDA_PREFIX = /home/leander/anaconda3
+# Makefile (aus „Makefile.c_and_c++“, Zeile 17)
+AR := ar
+# Makefile (aus „Makefile“, Zeile 124)
+generate = $(GENERATE) $<
+# Makefile (aus „Makefile.cobol“, Zeile 17)
+COMPILE.cob = $(COBOLC) -I /usr/local/include -L /usr/local/lib
+# Makefile (aus „Makefile.latex“, Zeile 39)
+define dvips
+$(RM) $@
+$(DVIPS) -t $(PAPER) $< -o $@
+endef
+# Makefile (aus „Makefile.latex“, Zeile 20)
+MAKEINDEX.idx = $(MAKEINDEX) $(MAKEINDEXFLAGS)
+# Makefile (aus „Makefile“, Zeile 111)
+LDFLAGS :=  -L .
+# Makefile (aus „Makefile“, Zeile 118)
+LDLIBS :=  -lm    -ll  -ly 
+# Standard
+.FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell archives jobserver output-sync check-symlink load
+# Standard
+TANGLE = tangle
+# Umgebung
+LS_COLORS = no=00:fi=00:di=01;34:ln=target:pi=40;33:so=00;35:bd=40;33;01:cd=40;33;01:or=01;05;37;41:mi=01;05;37;41:ex=00;32:*.cmd=00;32:*.exe=00;32:*.sh=00;32:*.ksh=00;32:*.mksh=00;32:*.csh=00;32:*.tcsh=00;32:*.bash=00;32:*.dash=00;32:*.zsh=00;32:*.php=00;32:*.cgi=00;32:*.odb=33:*.odp=33:*.ods=33:*.odt=33:*.ott=33:*.doc=33:*.ppt=33:*.xls=33:*.docx=33:*.pptx=33:*.xlsx=33:*.tar=01;31:*.tgz=01;31:*.arj=01;31:*.taz=01;31:*.lzh=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.gz=01;31:*.bz2=01;31:*.xz=01;31:*.bz=01;31:*.tz=01;31:*.rpm=01;30:*.cpio=01;30:*.deb=01;30:*.jar=00;36:*.sar=00;36:*.war=00;36:*.rar=00;36:*.jpg=00;35:*.JPG=00;35:*.jpeg=00;35:*.gif=00;35:*.bmp=00;35:*.pbm=00;35:*.pgm=00;35:*.ppm=00;35:*.xbm=00;35:*.xpm=00;35:*.png=00;35:*.tif=00;35:*.tiff=00;35:*.tga=00;35:*.xcf=00;35:*.eps=00;35:*#=04:*%=04:*~=04:*.bkp=04:*EADME=31;04:*eadme=31;04:*.c=31:*.C=31:*.cc=31:*.CC=31:*.cp=31:*.CP=31:*.c++=31:*.C++=31:*.cpp=31:*.CPP=31:*.cxx=31:*.CXX=31:*.java=31:*.jsp=31:*.scm=31:*.pl=31:*.pm=31:*.py=31:*.ipy=31:*.ipynb=31:*.pyw=31:*.rb=31:*.m=31:*.F=31:*.cob=31:*.fpp=31:*.FPP=31:*.r=31:*.S=31:*.adb=31:*.l=31:*.y=31:*.sql=31:*.js=31:*.lisp=31:*.pas=31:*.p=31:*.texinfo=31:*.i=31:*.ii=31:*.mi=31:*.f=31:*.for=31:*.FOR=31:*.s=31:*.o=34:*.pyc=34:*.class=34:*.a=34:*.so=34:*.h=33:*.hh=33:*.H=33:*.hpp=33:*.h++=33:*.hxx=33:*.ads=33:*akefile=31;43:*akefile.c_and_c++=31;43:*akefile.cobol=31;43:*akefile.cweb_and_noweb=31;43:*akefile.documentation=31;43:*akefile.flex_and_bison=31;43:*akefile.FORTRAN=31;43:*akefile.latex=31;43:*akefile.pascal=31;43:*akefile.in=31;43:*onfigure=31;43:*onfigure.in=31;43:*.html=00;32:*.css=00;32:*.htm=00;32:*.HTM=00;32:*.xml=00;32:*.properties=00;32:*.shtml=00;32:*.xhtml=00;32:*.nw=00;32:*.txt=00;32:*.TXT=00;32:*.info=00;32:*.lyx=00;32:*.mgp=00;32:*.tex=00;32:*.sty=00;32:*.fd=00;32:*.cls=00;32:*.def=00;32:*.cfg=00;32:*.ltx=00;32:*.ps=33;02:*.pdf=33;02:*.ogg=33;04:*.flac=33;04:*.mp3=33;04:*.wav=33;04:*.mpg=35;04:*.MPG=35;04:*.mpeg=35;04:*.MPEG=35;04:*.mov=35;04:*.MOV=35;04:*.avi=35;04:*.AVI=35;04:*.rm=35;04:*.RM=35;04:*.ram=35;04:*.RAM=35;04:*.wmv=35;04:*.WMV=35;04:*.mkv=35;04:*.MKV=35;04:*.ogm=35;04:*.OGM=35;04:*.rej=00;35:*.orig=00;35:*.diff=00;35
+# Makefile (aus „Makefile.c_and_c++“, Zeile 31)
+DEPEND.c = $(C.c) -MM
+# Makefile (aus „Makefile.c_and_c++“, Zeile 54)
+define archive
+$(RM) $@
+$(AR) $(ARFLAGS) $@ $?
+$(RANLIB) $@
+endef
+# Makefile (aus „Makefile.cobol“, Zeile 19)
+define compile.cob
+$(RM) $@
+$(COMPILE.cob) $(COBCFREE) $(COBCWARN) -c $< -o $@
+endef
+# Makefile (aus „Makefile“, Zeile 86)
+LINTFLAGS := 
+# Standard
+GET = get
+# automatisch
+%F = $(notdir $%)
+# Makefile (aus „Makefile“, Zeile 208)
+LIB1OBJS := minmax.oo
+# Umgebung
+CONDA_EXE = /home/leander/anaconda3/bin/conda
+# Makefile (aus „Makefile.documentation“, Zeile 18)
+RST2LATEX := rst2latex
+# Umgebung
+LESS_TERMCAP_me = [0m
+# Standard
+COMPILE.F = $(FC) $(FFLAGS) $(CPPFLAGS) $(TARGET_ARCH) -c
+# Makefile (aus „Makefile.FORTRAN“, Zeile 19)
+define compile.f
+$(RM) $@
+$(COMPILE.f) -c $< -o $@
+endef
+# Makefile (aus „Makefile.cweb_and_noweb“, Zeile 17)
+SEDTMP = sed.tmp
+# Makefile (aus „Makefile.cweb_and_noweb“, Zeile 11)
+CTANGLE = ctangle
+# Makefile (aus „Makefile“, Zeile 201)
+CLIB1FILES := minmax.c
+# Makefile (aus „Makefile“, Zeile 40)
+.LIBPATTERNS := lib%.so lib%.a
+# Makefile (aus „Makefile“, Zeile 214)
+IS_IN_LIB :=  minmax.d
+# Standard
+LINK.C = $(LINK.cc)
+# Umgebung
+PWD = /home/leander/Projekte/c/va_args
+# Makefile (aus „Makefile.c_and_c++“, Zeile 39)
+define compile.cc
+$(RM) $@
+$(strip $(COMPILE.cc) $< $(OUTPUT_OPTION))
+endef
+# Standard
+LINK.S = $(CC) $(ASFLAGS) $(CPPFLAGS) $(LDFLAGS) $(TARGET_MACH)
+# Umgebung
+XDG_SEAT = seat0
+# Standard
+PREPROCESS.r = $(FC) $(FFLAGS) $(RFLAGS) $(TARGET_ARCH) -F
+# Makefile (aus „Makefile“, Zeile 54)
+GMONFILE := gmon.out
+# Makefile (aus „Makefile.documentation“, Zeile 50)
+define rst2latex.txt
+$(RM) $@
+$(RST2LATEX) $< > $@
+endef
+# Makefile (aus „Makefile.c_and_c++“, Zeile 18)
+RANLIB := ranlib
+# Makefile (aus „Makefile.c_and_c++“, Zeile 29)
+LINK.c = $(CC) $(strip $(CFLAGS) $(LOPTS))
+# Umgebung
+LESS_TERMCAP_ue = [0m
+# Umgebung
+MANPATH = /home/leander/anaconda3/share/man:/usr/local/man:/usr/local/share/man:/usr/man:/usr/share/man:.
+# Standard
+LINK.s = $(CC) $(ASFLAGS) $(LDFLAGS) $(TARGET_MACH)
+# Makefile (aus „Makefile.cweb_and_noweb“, Zeile 16)
+SEDCMD = noweb2latex.sed
+# Umgebung
+HOME = /home/leander
+# Makefile (aus „Makefile.latex“, Zeile 26)
+RES2 = 600
+# Makefile (aus „Makefile.cweb_and_noweb“, Zeile 14)
+SED = sed
+# Makefile (aus „Makefile.latex“, Zeile 44)
+define gnuplot
+$(RM) $@
+@echo set terminal mf > gnuplot.do
+@echo set output '"'$@'"' >> gnuplot.do
+@cat $< >> gnuplot.do
+@echo cp $< gnuplot.do
+$(GNUPLOT) < gnuplot.do
+$(RM) gnuplot.do
+endef
+# Makefile (aus „Makefile.documentation“, Zeile 30)
+define pod2man.pl
+$(RM) $@
+$(POD2MAN) $< > $@
+endef
+# Makefile (aus „Makefile“, Zeile 73)
+TOUCH := touch
+# Makefile (aus „Makefile.documentation“, Zeile 17)
+RST2MAN := rst2man
+# Makefile (aus „Makefile“, Zeile 207)
+HLIB1FILES := types.h minmax.h
+# Makefile (aus „Makefile“, Zeile 216)
+CMAINFILE := main.c
+# Umgebung
+LOGNAME = leander
+# Makefile (aus „Makefile“, Zeile 51)
+BACKUPFILE := va_args.tar.gz
+# Makefile (aus „Makefile.documentation“, Zeile 66)
+define makeinfo.texinfo
+$(RM) $@
+$(strip $(MAKEINFO) $(MAKEINFO_FLAGS) $< -o $@)
+endef
+# Umgebung
+CONDA_PROMPT_MODIFIER = (base) 
+# automatisch
++F = $(notdir $+)
+# Umgebung
+FOREST_CONFIG = /home/leander/.forest_config
+# Makefile (aus „Makefile.latex“, Zeile 21)
+MAKEINDEXGST = makeindex.gst
+# Makefile (aus „Makefile“, Zeile 69)
+DEBUGGER := gdb
+# Makefile (aus „Makefile.flex_and_bison“, Zeile 16)
+define lex.l
+$(RM) $@
+$(LEX) $<
+mv $(LEXFILE) $@
+endef
+# automatisch
+^D = $(patsubst %/,%,$(dir $^))
+# Makefile (aus „Makefile.latex“, Zeile 22)
+MAKEINDEXIST = makeindex.ist
+# Umgebung
+LESS_TERMCAP_md = [01;31m
+# Makefile (aus „Makefile.documentation“, Zeile 19)
+RST2ODT := rst2odt
+# Umgebung
+XDG_VTNR = 5
+# Makefile (aus „Makefile.cweb_and_noweb“, Zeile 12)
+NOWEAVE = noweave
+# Umgebung
+MAKELEVEL := 0
+# Umgebung
+CONDA_DEFAULT_ENV = base
+# Umgebung
+HISTFILE = /home/leander/.zsh_history
+# Standard
+MAKE = $(MAKE_COMMAND)
+# Standard
+MAKECMDGOALS := dummy
+# Makefile (aus „Makefile.flex_and_bison“, Zeile 14)
+LEXFILE = lex.yy.c
+# Makefile (aus „Makefile“, Zeile 218)
+CDEPENDS :=  minmax.d main.d
+# Umgebung
+SHLVL = 1
+# Umgebung
+HAS_ENV = true
+# Makefile (aus „Makefile.c_and_c++“, Zeile 84)
+define dynamic_link.o++
+    $(RM) $@
+    $(CXX) -shared -o $@ $^
+endef
+# Makefile (aus „Makefile“, Zeile 223)
+CLEAN = $(strip $(filter %.o,$(OBJS)) $(filter %.o++,$(OBJS)) $(filter %.oo,$(OBJS)) $(LIBRARIES) $(PROGRAMS) $(INFOFILE) -r $(HTMLFILE) )
+# Umgebung
+LESS_TERMCAP_so = [01;44;33m
+# Makefile (aus „Makefile.c_and_c++“, Zeile 20)
+AS := as
+# Makefile (aus „Makefile.cweb_and_noweb“, Zeile 13)
+NOTANGLE = notangle
+# Standard
+PREPROCESS.S = $(CC) -E $(CPPFLAGS)
+# Makefile (aus „Makefile“, Zeile 45)
+DEPENDFILE := .depend
+# Standard
+COMPILE.p = $(PC) $(PFLAGS) $(CPPFLAGS) $(TARGET_ARCH) -c
+# Umgebung
+XDG_SESSION_ID = 265
+# Umgebung
+USER = leander
+# Makefile (aus „Makefile.latex“, Zeile 23)
+MAKEINDEXFLAGS = -s makeindex.ist -g -l
+# Standard
+FC = f77
+# Makefile (aus „Makefile“, Zeile 72)
+PRINT := a2ps
+# Makefile (aus „Makefile“, Zeile 25)
+.DEFAULT_GOAL := all
+# Makefile (aus „Makefile.c_and_c++“, Zeile 105)
+depend.cc.o++ =   $(RM) $@ && $(DEPEND.c) $< | sed -e 's/\.o:/.o++ $@: Makefile Makefile.c_and_c++/' > $@
+# Makefile (aus „Makefile“, Zeile 220)
+MAINOBJS := main.o
+# Makefile (aus „Makefile.latex“, Zeile 25)
+RES1 = 300
+# Makefile (aus „Makefile.c_and_c++“, Zeile 24)
+LOPTS = $(CPPFLAGS) $(LDFLAGS) $(TARGET_ARCH)
+# Makefile (aus „Makefile.latex“, Zeile 15)
+GS = gs
+# Makefile (aus „Makefile.cweb_and_noweb“, Zeile 37)
+define noweave
+$(RM) $@
+$(NOWEAVE.latex) $< > $@
+endef
+# Makefile (aus „Makefile.c_and_c++“, Zeile 80)
+define dynamic_link.o
+    $(RM) $@
+    $(CC) -shared -o $@ $^
+endef
+# automatisch
+%D = $(patsubst %/,%,$(dir $%))
+# Makefile (aus „Makefile.c_and_c++“, Zeile 26)
+C.cc = $(CXX) $(strip $(CXXFLAGS) $(COPTS))
+# Makefile (aus „Makefile.documentation“, Zeile 12)
+GROFF := groff
+# Umgebung
+CONDA_SHLVL = 1
+# Standard
+WEAVE = weave
+# Standard
+MAKE_COMMAND := make
+# Makefile (aus „Makefile.latex“, Zeile 12)
+MAKEINDEX = makeindex
+# Standard
+LINK.cpp = $(LINK.cc)
+# Standard
+F77 = $(FC)
+# Umgebung
+OLDPWD = /home/leander/Projekte/make
+# Makefile (aus „Makefile.latex“, Zeile 18)
+GFTOPK = gftopk
+# Makefile (aus „Makefile.c_and_c++“, Zeile 95)
+depend.cc.oo =   $(RM) $@ && $(DEPEND.c) $< | sed -e 's/\.o:/.oo $@: Makefile Makefile.c_and_c++/' > $@
+# Standard
+.VARIABLES := 
+# Makefile (aus „Makefile.pascal“, Zeile 5)
+PC := fpc 
+# Umgebung
+PY_ENV_DIR = env
+# Makefile (aus „Makefile.cobol“, Zeile 13)
+COBCWARN = 
+# Makefile (aus „Makefile.documentation“, Zeile 35)
+define man2ps.1
+$(RM) $@
+$(GROFF) -T ps -man $< > $@
+endef
+# Standard
+COMPILE.def = $(M2C) $(M2FLAGS) $(DEFFLAGS) $(TARGET_ARCH)
+# Makefile (aus „Makefile.flex_and_bison“, Zeile 11)
+LEX = flex
+# Makefile
+MAKEFLAGS = p -j -l2 --jobserver-fds=3,4
+# Makefile (aus „Makefile.latex“, Zeile 34)
+define latex
+$(RM) $@
+$(LATEX) $<
+endef
+# Umgebung
+PROMPT = %{[33m%}%{[44m%}z%{[34m%}%{[43m%}%n@%m%{[39m%}%{[49m%} %T (%!) %(!.#.$) 
+# Umgebung
+MFLAGS = -p -j -l2 --jobserver-fds=3,4
+# automatisch
+*D = $(patsubst %/,%,$(dir $*))
+# Umgebung
+MAIL = /var/mail/leander
+# Makefile (aus „Makefile.documentation“, Zeile 11)
+POD2MAN := pod2man
+# Standard
+LEX.l = $(LEX) $(LFLAGS) -t
+# Standard
+LEX.m = $(LEX) $(LFLAGS) -t
+# Umgebung
+LESS_TERMCAP_us = [01;32m
+# automatisch
++D = $(patsubst %/,%,$(dir $+))
+# Standard
+COMPILE.r = $(FC) $(FFLAGS) $(RFLAGS) $(TARGET_ARCH) -c
+# Makefile (aus „Makefile.FORTRAN“, Zeile 12)
+FORTRANC = gfortran
+# Umgebung
+BROWSER = lynx
+# Standard
+M2C = m2c
+# Makefile (aus „Makefile.c_and_c++“, Zeile 65)
+define dynamic_link.cc
+$(RM) $@
+$(strip $(COMPILE.cc) -fPIC $< $(OUTPUT_OPTION))
+endef
+# Makefile (aus „Makefile“, Zeile 58)
+STRIP := strip
+# Makefile (aus „Makefile.c_and_c++“, Zeile 49)
+define link.cc
+$(RM) $@
+$(strip $(LINK.cc) $(filter %.o,$^) $(LOADLIBES) -o $@ $(LDLIBS))
+endef
+# Makefile (aus „Makefile“, Zeile 217)
+CSOURCES :=  minmax.c main.c
+# Makefile (aus „Makefile“, Zeile 71)
+GENERATE := ./generate2
+# Makefile (aus „Makefile.cobol“, Zeile 11)
+COBOLC = cobc
+# Umgebung
+RPROMPT = %{[32m%}%4~%{[39m%}%{[31m%}%(?.. :( %?)%{[39m%}
+# Standard
+MAKEFILES := 
+# Makefile (aus „Makefile.c_and_c++“, Zeile 28)
+COMPILE.cc = $(C.cc) -c
+# Makefile (aus „Makefile“, Zeile 110)
+CXXFLAGS := $(subst ,, )
+# automatisch
+<F = $(notdir $<)
+# Makefile (aus „Makefile“, Zeile 230)
+PROGRAM1 := args
+# Umgebung
+PS1 = (base) %{[33m%}%{[44m%}z%{[34m%}%{[43m%}%n@%m%{[39m%}%{[49m%} %T (%!) %(!.#.$) 
+# Makefile (aus „Makefile.c_and_c++“, Zeile 14)
+CXX := g++
+# Makefile (aus „Makefile.latex“, Zeile 16)
+GNUPLOT = gnuplot
+# Makefile (aus „Makefile.c_and_c++“, Zeile 100)
+depend.c.o++ =   $(RM) $@ && $(DEPEND.c) $< | sed -e 's/\.o:/.o++ $@: Makefile Makefile.c_and_c++/' > $@
+# Standard
+COFLAGS = 
+# Umgebung
+EDITOR = vi
+# Makefile (aus „Makefile“, Zeile 78)
+CFLAGS := 
+# Makefile (aus „Makefile.c_and_c++“, Zeile 114)
+depend.cc.o =   $(RM) $@ && $(DEPEND.cc) $< | sed -e 's/\.o:/.o $@: Makefile Makefile.c_and_c++/' > $@
+# Umgebung
+CONDA_PYTHON_EXE = /home/leander/anaconda3/bin/python
+# Standard
+COMPILE.C = $(COMPILE.cc)
+# Makefile (aus „Makefile.latex“, Zeile 17)
+MF = mf
+# Makefile (aus „Makefile.flex_and_bison“, Zeile 22)
+define yacc.y
+$(RM) $@
+$(YACC) -d $<
+endef
+# automatisch
+^F = $(notdir $^)
+# Standard
+COMPILE.S = $(CC) $(ASFLAGS) $(CPPFLAGS) $(TARGET_MACH) -c
+# Standard
+LINK.F = $(FC) $(FFLAGS) $(CPPFLAGS) $(LDFLAGS) $(TARGET_ARCH)
+# Makefile (aus „Makefile“, Zeile 233)
+PROGRAMS := args
+# Makefile (aus „Makefile“, Zeile 18)
+SUFFIXES := .out .a .ln .o .c .cc .cpp .c++ .cxx .C .p .pas .f .F .for .f77 .f90 .f95 .f03 .f08 .m .r .y .l .ym .yl .s .S .mod .sym .def .h .info .dvi .tex .texinfo .texi .txinfo .w .ch .web .sh .elc .el .latex .ps .nw .cweb .noweb .mf .ind .sgml .cob .1 .odt .html .pdf .ps .tfm
+# Umgebung
+HISTSIZE = 20000
+# Makefile (aus „Makefile.c_and_c++“, Zeile 27)
+COMPILE.c = $(C.c) -c
+# Makefile (aus „Makefile.c_and_c++“, Zeile 90)
+depend.c.oo =   $(RM) $@ && $(DEPEND.c) $< | sed -e 's/\.o:/.oo $@: Makefile Makefile.c_and_c++/' > $@
+# Umgebung
+_CE_M = 
+# Makefile (aus „Makefile.latex“, Zeile 54)
+define mf
+$(RM) $@
+$(MF) '\mode=localfont; \mag=1; input $<'
+endef
+# Makefile (aus „Makefile“, Zeile 210)
+LIBRARY1NAME := subs
+# Makefile (aus „Makefile.documentation“, Zeile 60)
+define pydoc.py
+$(RM) $@
+$(PYDOC) -w $(<:%.py=%)
+@$(RM) $(<:%.py=%.pyc)
+endef
+# Standard
+COMPILE.s = $(AS) $(ASFLAGS) $(TARGET_MACH)
+# Makefile (aus „Makefile.cweb_and_noweb“, Zeile 20)
+NOWEB = nw
+# Standard
+.INCLUDE_DIRS = /usr/include /usr/local/include /usr/include
+# Makefile (aus „Makefile.c_and_c++“, Zeile 34)
+define compile.c
+$(RM) $@
+$(strip $(COMPILE.c) $< $(OUTPUT_OPTION))
+endef
+# Standard
+.RECIPEPREFIX := 
+# Makefile (aus „Makefile.documentation“, Zeile 14)
+MAKEINFO := makeinfo
+# Standard
+MAKE_TERMERR := /dev/tty5
+# Standard
+OBJC = cc
+# Umgebung
+GPG_TTY = /dev/tty5
+# Makefile (aus „Makefile.latex“, Zeile 10)
+TEX = tex
+# Makefile (aus „Makefile.documentation“, Zeile 20)
+RST2HTML := rst2html
+# Umgebung
+LANG = de_DE.UTF-8
+# Umgebung
+TERM = xterm-color
+# Standard
+F77FLAGS = $(FFLAGS)
+# Makefile (aus „Makefile.documentation“, Zeile 45)
+define rst2html.txt
+$(RM) $@
+$(RST2HTML) $< > $@
+endef
+# Umgebung
+OLDPROMPT = %{[33m%}%{[44m%}z%{[34m%}%{[43m%}%n@%m%{[39m%}%{[49m%} %T (%!) %(!.#.$) 
+# Standard
+LINK.f = $(FC) $(FFLAGS) $(LDFLAGS) $(TARGET_ARCH)
+# Makefile (aus „Makefile.c_and_c++“, Zeile 60)
+define dynamic_link.c
+$(RM) $@
+$(strip $(COMPILE.c) -fPIC $< $(OUTPUT_OPTION))
+endef
+# Makefile (aus „Makefile.latex“, Zeile 29)
+define tex
+$(RM) $@
+$(TEX) $<
+endef
+# Umgebung
+_CE_CONDA = 
+# Makefile (aus „Makefile“, Zeile 219)
+FILES :=  Makefile Makefile.c_and_c++ Makefile.cobol Makefile.cweb_and_noweb Makefile.documentation Makefile.flex_and_bison Makefile.FORTRAN Makefile.latex Makefile.pascal check.texinfo version.texinfo check.d run_me_once.sh depend.sh minmax.c types.h main.c
+# Makefile (aus „Makefile.cweb_and_noweb“, Zeile 22)
+define ctangle
+$(RM) $@
+$(CTANGLE) $<
+endef
+# Hashtabellen-Statistik für Variablen:
+# Auslastung=285/1024=28%, Rehash=0, Kollisionen=128/50525%
+
+# Musterspezifische Variablenwerte
+
+# Keine musterspezifischen Variablenwerte.
+
+# Verzeichnisse
+
+# SCCS: Status konnte nicht festgestellt werden.
+# . (Gerät 2049, Inode 11584906): 32 Dateien, 268 Unmöglichkeiten.
+# RCS: Status konnte nicht festgestellt werden.
+
+# 32 Dateien, 268 Unmöglichkeiten in 3 Verzeichnissen.
+
+# Implizite Regeln
+
+%.o: %.c
+#  Auszuführende Regel (aus „Makefile.c_and_c++“, Zeile 120):
+		$(compile.c)
+
+%.d: %.c
+#  Auszuführende Regel (aus „Makefile.c_and_c++“, Zeile 124):
+		@depend.sh $@ "$(IS_IN_LIB)" "$(depend.c.oo)" "$(depend.c.o)"
+
+%.o: %.c++
+#  Auszuführende Regel (aus „Makefile.c_and_c++“, Zeile 130):
+		$(compile.cc)
+
+%.o: %.cpp
+#  Auszuführende Regel (aus „Makefile.c_and_c++“, Zeile 133):
+		$(compile.cc)
+
+%.o: %.cxx
+#  Auszuführende Regel (aus „Makefile.c_and_c++“, Zeile 136):
+		$(compile.cc)
+
+%.o: %.cc
+#  Auszuführende Regel (aus „Makefile.c_and_c++“, Zeile 139):
+		$(compile.cc)
+
+%.o: %.C
+#  Auszuführende Regel (aus „Makefile.c_and_c++“, Zeile 142):
+		$(compile.cc)
+
+%.d: %.c++
+#  Auszuführende Regel (aus „Makefile.c_and_c++“, Zeile 146):
+		@depend.sh $@ "$(IS_IN_LIB)" "$(depend.cc.oo)" "$(depend.cc.o)"
+
+%.d: %.cpp
+#  Auszuführende Regel (aus „Makefile.c_and_c++“, Zeile 153):
+		@depend.sh $@ "$(IS_IN_LIB)" "$(depend.cc.oo)" "$(depend.cc.o)"
+
+%.d: %.cxx
+#  Auszuführende Regel (aus „Makefile.c_and_c++“, Zeile 160):
+		@depend.sh $@ "$(IS_IN_LIB)" "$(depend.cc.oo)" "$(depend.cc.o)"
+
+%.d: %.cc
+#  Auszuführende Regel (aus „Makefile.c_and_c++“, Zeile 167):
+		@depend.sh $@ "$(IS_IN_LIB)" "$(depend.cc.oo)" "$(depend.cc.o)"
+
+%.d: %.C
+#  Auszuführende Regel (aus „Makefile.c_and_c++“, Zeile 174):
+		@depend.sh $@ "$(IS_IN_LIB)" "$(depend.cc.oo)" "$(depend.cc.o)"
+
+%.o++: %.c
+#  Auszuführende Regel (aus „Makefile.c_and_c++“, Zeile 180):
+		$(dynamic_link.c)
+
+%.oo: %.c
+#  Auszuführende Regel (aus „Makefile.c_and_c++“, Zeile 183):
+		$(dynamic_link.c)
+
+%.so: %.oo
+#  Auszuführende Regel (aus „Makefile.c_and_c++“, Zeile 186):
+		$(dynamic_link.o)
+
+%.oo: %.cc
+#  Auszuführende Regel (aus „Makefile.c_and_c++“, Zeile 189):
+		$(dynamic_link.cc)
+
+%.o++: %.cc
+#  Auszuführende Regel (aus „Makefile.c_and_c++“, Zeile 192):
+		$(dynamic_link.cc)
+
+%.o++: %.c++
+#  Auszuführende Regel (aus „Makefile.c_and_c++“, Zeile 195):
+		$(dynamic_link.cc)
+
+%.o++: %.cpp
+#  Auszuführende Regel (aus „Makefile.c_and_c++“, Zeile 198):
+		$(dynamic_link.cc)
+
+%.o++: %.cxx
+#  Auszuführende Regel (aus „Makefile.c_and_c++“, Zeile 201):
+		$(dynamic_link.cc)
+
+%.o++: %.C
+#  Auszuführende Regel (aus „Makefile.c_and_c++“, Zeile 204):
+		$(dynamic_link.cc)
+
+%.so: %.o++
+#  Auszuführende Regel (aus „Makefile.c_and_c++“, Zeile 207):
+		$(dynamic_link.o++)
+
+%.o: %.cob
+#  Auszuführende Regel (aus „Makefile.cobol“, Zeile 25):
+		$(compile.cob)
+
+%.c: %.w
+#  Auszuführende Regel (aus „Makefile.cweb_and_noweb“, Zeile 48):
+		$(ctangle)
+
+%.tex: %.w
+#  Auszuführende Regel (aus „Makefile.cweb_and_noweb“, Zeile 51):
+		$(cweave)
+
+%.c: %.nw
+#  Auszuführende Regel (aus „Makefile.cweb_and_noweb“, Zeile 54):
+		$(notangle)
+
+%.h: %.nw
+#  Auszuführende Regel (aus „Makefile.cweb_and_noweb“, Zeile 57):
+		$(notangle)
+
+%.cc: %.nw
+#  Auszuführende Regel (aus „Makefile.cweb_and_noweb“, Zeile 60):
+		$(notangle)
+
+%.hh: %.nw
+#  Auszuführende Regel (aus „Makefile.cweb_and_noweb“, Zeile 63):
+		$(notangle)
+
+%.tex: %.nw
+#  Auszuführende Regel (aus „Makefile.cweb_and_noweb“, Zeile 66):
+		$(noweave)
+		$(sed)
+
+%.pl %.py %.rst %.txinfo %.texinfo %.texi:
+
+%.1: %.pl
+#  Auszuführende Regel (aus „Makefile.documentation“, Zeile 79):
+		$(pod2man.pl)
+
+%.ps: %.1
+#  Auszuführende Regel (aus „Makefile.documentation“, Zeile 82):
+		$(man2ps.1)
+
+%.1: %.rst
+#  Auszuführende Regel (aus „Makefile.documentation“, Zeile 85):
+		$(rst2man.txt)
+
+%.tex: %.rst
+#  Auszuführende Regel (aus „Makefile.documentation“, Zeile 88):
+		$(rst2latex.txt)
+
+%.html: %.rst
+#  Auszuführende Regel (aus „Makefile.documentation“, Zeile 91):
+		$(rst2html.txt)
+
+%.odt: %.rst
+#  Auszuführende Regel (aus „Makefile.documentation“, Zeile 94):
+		$(rst2odt.txt)
+
+%.html: %.py
+#  Auszuführende Regel (aus „Makefile.documentation“, Zeile 97):
+		$(pydoc.py)
+
+%.info: %.txinfo
+#  Auszuführende Regel (aus „Makefile.documentation“, Zeile 100):
+		$(makeinfo.texinfo)
+
+%.html: %.txinfo
+#  Auszuführende Regel (aus „Makefile.documentation“, Zeile 103):
+		$(makeinfo.html)
+
+%.info: %.texinfo
+#  Auszuführende Regel (aus „Makefile.documentation“, Zeile 106):
+		$(makeinfo.texinfo)
+
+%.html: %.texinfo
+#  Auszuführende Regel (aus „Makefile.documentation“, Zeile 109):
+		$(makeinfo.html)
+
+%.info: %.texi
+#  Auszuführende Regel (aus „Makefile.documentation“, Zeile 112):
+		$(makeinfo.texinfo)
+
+%.html: %.texi
+#  Auszuführende Regel (aus „Makefile.documentation“, Zeile 115):
+		$(makeinfo.html)
+
+%.c: %.l
+#  Auszuführende Regel (aus „Makefile.flex_and_bison“, Zeile 28):
+			$(lex.l)
+
+%.tab.c %.tab.h: %.y
+#  Auszuführende Regel (aus „Makefile.flex_and_bison“, Zeile 31):
+			$(yacc.y)
+
+%.o: %.f
+#  Auszuführende Regel (aus „Makefile.FORTRAN“, Zeile 25):
+		$(compile.f)
+
+%.o: %.for
+#  Auszuführende Regel (aus „Makefile.FORTRAN“, Zeile 28):
+		$(compile.f)
+
+%.o: %.f77
+#  Auszuführende Regel (aus „Makefile.FORTRAN“, Zeile 31):
+		$(compile.f)
+
+%.o: %.f90
+#  Auszuführende Regel (aus „Makefile.FORTRAN“, Zeile 34):
+		$(compile.f)
+
+%.o: %.f95
+#  Auszuführende Regel (aus „Makefile.FORTRAN“, Zeile 37):
+		$(compile.f) -std=f95
+
+%.o: %.f03
+#  Auszuführende Regel (aus „Makefile.FORTRAN“, Zeile 40):
+		$(compile.f) -std=f2003
+
+%.o: %.f08
+#  Auszuführende Regel (aus „Makefile.FORTRAN“, Zeile 43):
+		$(compile.f) -std=f2008
+
+%.pdf: %.tex
+#  Auszuführende Regel (aus „Makefile.latex“, Zeile 69):
+		$(latex)
+
+%.mf: %.doplot
+#  Auszuführende Regel (aus „Makefile.latex“, Zeile 72):
+		$(gnuplot)
+
+%.300gf: %.mf
+#  Auszuführende Regel (aus „Makefile.latex“, Zeile 75):
+		$(mf)
+		mv $(<:%.mf=%.$(RES2)gf) $@
+
+%.300pk: %.300gf
+#  Auszuführende Regel (aus „Makefile.latex“, Zeile 79):
+		$(gftopk)
+
+%.600gf: %.mf
+#  Auszuführende Regel (aus „Makefile.latex“, Zeile 82):
+		$(mf)
+
+%.600pk: %.600gf
+#  Auszuführende Regel (aus „Makefile.latex“, Zeile 85):
+		$(gftopk)
+
+%.idx: %.tex
+#  Auszuführende Regel (aus „Makefile.latex“, Zeile 88):
+		$(latex)
+
+%.ind: %.idx
+#  Auszuführende Regel (aus „Makefile.latex“, Zeile 91):
+		$(makeindex)
+
+%.p %.pas:
+
+%.o: %.pas
+#  Auszuführende Regel (aus „Makefile.pascal“, Zeile 15):
+		    $(compile.p)
+
+%.o: %.p
+#  Auszuführende Regel (aus „Makefile.pascal“, Zeile 18):
+		    $(compile.p)
+
+%.cc: %.txt
+#  Auszuführende Regel (aus „Makefile“, Zeile 133):
+			$(generate)
+
+%.hh: %.txt
+#  Auszuführende Regel (aus „Makefile“, Zeile 136):
+			$(generate)
+
+%.out:
+
+%.a:
+
+%.ln:
+
+%.o:
+
+%: %.o
+#  Auszuführende Regel (eingebaut):
+	$(LINK.o) $^ $(LOADLIBES) $(LDLIBS) -o $@
+
+%.c:
+
+%: %.c
+#  Auszuführende Regel (eingebaut):
+	$(LINK.c) $^ $(LOADLIBES) $(LDLIBS) -o $@
+
+%.ln: %.c
+#  Auszuführende Regel (eingebaut):
+	$(LINT.c) -C$* $<
+
+%.cc:
+
+%: %.cc
+#  Auszuführende Regel (eingebaut):
+	$(LINK.cc) $^ $(LOADLIBES) $(LDLIBS) -o $@
+
+%.C:
+
+%: %.C
+#  Auszuführende Regel (eingebaut):
+	$(LINK.C) $^ $(LOADLIBES) $(LDLIBS) -o $@
+
+%.cpp:
+
+%: %.cpp
+#  Auszuführende Regel (eingebaut):
+	$(LINK.cpp) $^ $(LOADLIBES) $(LDLIBS) -o $@
+
+%.p:
+
+%: %.p
+#  Auszuführende Regel (eingebaut):
+	$(LINK.p) $^ $(LOADLIBES) $(LDLIBS) -o $@
+
+%.f:
+
+%: %.f
+#  Auszuführende Regel (eingebaut):
+	$(LINK.f) $^ $(LOADLIBES) $(LDLIBS) -o $@
+
+%.F:
+
+%: %.F
+#  Auszuführende Regel (eingebaut):
+	$(LINK.F) $^ $(LOADLIBES) $(LDLIBS) -o $@
+
+%.o: %.F
+#  Auszuführende Regel (eingebaut):
+	$(COMPILE.F) $(OUTPUT_OPTION) $<
+
+%.f: %.F
+#  Auszuführende Regel (eingebaut):
+	$(PREPROCESS.F) $(OUTPUT_OPTION) $<
+
+%.m:
+
+%: %.m
+#  Auszuführende Regel (eingebaut):
+	$(LINK.m) $^ $(LOADLIBES) $(LDLIBS) -o $@
+
+%.o: %.m
+#  Auszuführende Regel (eingebaut):
+	$(COMPILE.m) $(OUTPUT_OPTION) $<
+
+%.r:
+
+%: %.r
+#  Auszuführende Regel (eingebaut):
+	$(LINK.r) $^ $(LOADLIBES) $(LDLIBS) -o $@
+
+%.o: %.r
+#  Auszuführende Regel (eingebaut):
+	$(COMPILE.r) $(OUTPUT_OPTION) $<
+
+%.f: %.r
+#  Auszuführende Regel (eingebaut):
+	$(PREPROCESS.r) $(OUTPUT_OPTION) $<
+
+%.y:
+
+%.ln: %.y
+#  Auszuführende Regel (eingebaut):
+	$(YACC.y) $< 
+	 $(LINT.c) -C$* y.tab.c 
+	 $(RM) y.tab.c
+
+%.c: %.y
+#  Auszuführende Regel (eingebaut):
+	$(YACC.y) $< 
+	 mv -f y.tab.c $@
+
+%.l:
+
+%.ln: %.l
+#  Auszuführende Regel (eingebaut):
+	@$(RM) $*.c
+	 $(LEX.l) $< > $*.c
+	$(LINT.c) -i $*.c -o $@
+	 $(RM) $*.c
+
+%.r: %.l
+#  Auszuführende Regel (eingebaut):
+	$(LEX.l) $< > $@ 
+	 mv -f lex.yy.r $@
+
+%.ym:
+
+%.m: %.ym
+#  Auszuführende Regel (eingebaut):
+	$(YACC.m) $< 
+	 mv -f y.tab.c $@
+
+%.yl:
+
+%.s:
+
+%: %.s
+#  Auszuführende Regel (eingebaut):
+	$(LINK.s) $^ $(LOADLIBES) $(LDLIBS) -o $@
+
+%.o: %.s
+#  Auszuführende Regel (eingebaut):
+	$(COMPILE.s) -o $@ $<
+
+%.S:
+
+%: %.S
+#  Auszuführende Regel (eingebaut):
+	$(LINK.S) $^ $(LOADLIBES) $(LDLIBS) -o $@
+
+%.o: %.S
+#  Auszuführende Regel (eingebaut):
+	$(COMPILE.S) -o $@ $<
+
+%.s: %.S
+#  Auszuführende Regel (eingebaut):
+	$(PREPROCESS.S) $< > $@
+
+%.mod:
+
+%: %.mod
+#  Auszuführende Regel (eingebaut):
+	$(COMPILE.mod) -o $@ -e $@ $^
+
+%.o: %.mod
+#  Auszuführende Regel (eingebaut):
+	$(COMPILE.mod) -o $@ $<
+
+%.sym:
+
+%.def:
+
+%.sym: %.def
+#  Auszuführende Regel (eingebaut):
+	$(COMPILE.def) -o $@ $<
+
+%.h:
+
+%.info:
+
+%.dvi:
+
+%.tex:
+
+%.dvi: %.tex
+#  Auszuführende Regel (eingebaut):
+	$(TEX) $<
+
+%.texinfo:
+
+%.dvi: %.texinfo
+#  Auszuführende Regel (eingebaut):
+	$(TEXI2DVI) $(TEXI2DVI_FLAGS) $<
+
+%.texi:
+
+%.dvi: %.texi
+#  Auszuführende Regel (eingebaut):
+	$(TEXI2DVI) $(TEXI2DVI_FLAGS) $<
+
+%.txinfo:
+
+%.dvi: %.txinfo
+#  Auszuführende Regel (eingebaut):
+	$(TEXI2DVI) $(TEXI2DVI_FLAGS) $<
+
+%.w:
+
+%.ch:
+
+%.web:
+
+%.p: %.web
+#  Auszuführende Regel (eingebaut):
+	$(TANGLE) $<
+
+%.tex: %.web
+#  Auszuführende Regel (eingebaut):
+	$(WEAVE) $<
+
+%.sh:
+
+%: %.sh
+#  Auszuführende Regel (eingebaut):
+	cat $< >$@ 
+	 chmod a+x $@
+
+%.elc:
+
+%.el:
+
+%.c++:
+
+%.cxx:
+
+%.pas:
+
+%.for:
+
+%.f77:
+
+%.f90:
+
+%.f95:
+
+%.f03:
+
+%.f08:
+
+%.latex:
+
+%.ps:
+
+%.nw:
+
+%.cweb:
+
+%.noweb:
+
+%.mf:
+
+%.ind:
+
+%.sgml:
+
+%.cob:
+
+%.1:
+
+%.odt:
+
+%.html:
+
+%.pdf:
+
+%.tfm:
+
+(%): %
+#  Auszuführende Regel (eingebaut):
+	$(AR) $(ARFLAGS) $@ $<
+
+%.out: %
+#  Auszuführende Regel (eingebaut):
+	@rm -f $@ 
+	 cp $< $@
+
+%.c: %.w %.ch
+#  Auszuführende Regel (eingebaut):
+	$(CTANGLE) $^ $@
+
+%.tex: %.w %.ch
+#  Auszuführende Regel (eingebaut):
+	$(CWEAVE) $^ $@
+
+%:: %,v
+#  Auszuführende Regel (eingebaut):
+	$(CHECKOUT,v)
+
+%:: RCS/%,v
+#  Auszuführende Regel (eingebaut):
+	$(CHECKOUT,v)
+
+%:: RCS/%
+#  Auszuführende Regel (eingebaut):
+	$(CHECKOUT,v)
+
+%:: s.%
+#  Auszuführende Regel (eingebaut):
+	$(GET) $(GFLAGS) $(SCCS_OUTPUT_OPTION) $<
+
+%:: SCCS/s.%
+#  Auszuführende Regel (eingebaut):
+	$(GET) $(GFLAGS) $(SCCS_OUTPUT_OPTION) $<
+
+# 169 implizite Regeln, 5 (3,0%) Terminal.
+
+# Dateien
+
+# Dies ist kein Ziel:
+types.h:
+#  Die Suche nach impliziten Regeln wurde durchgeführt.
+#  Zuletzt geändert 2023-07-30 12:31:20
+#  Datei wurde aktualisiert.
+#  Erfolgreich aktualisiert.
+
+# Dies ist kein Ziel:
+.web.p:
+# Eingebaute Regel
+#  Die Suche nach impliziten Regeln wurde nicht durchgeführt.
+#  Datei ist ein Zwischenschritt in den Abhängigkeiten.
+#  Zeit der letzten Änderung wurde nicht überprüft.
+#  Datei wurde nicht aktualisiert.
+#  Auszuführende Regel (eingebaut):
+	$(TANGLE) $<
+
+# Dies ist kein Ziel:
+check.html:
+#  Die Suche nach impliziten Regeln wurde nicht durchgeführt.
+#  Datei ist ein Zwischenschritt in den Abhängigkeiten.
+#  Zeit der letzten Änderung wurde nicht überprüft.
+#  Datei wurde nicht aktualisiert.
+
+# Dies ist kein Ziel:
+.f08:
+#  Die Suche nach impliziten Regeln wurde nicht durchgeführt.
+#  Datei ist ein Zwischenschritt in den Abhängigkeiten.
+#  Zeit der letzten Änderung wurde nicht überprüft.
+#  Datei wurde nicht aktualisiert.
+
+# Dies ist kein Ziel:
+.ps:
+#  Die Suche nach impliziten Regeln wurde nicht durchgeführt.
+#  Datei ist ein Zwischenschritt in den Abhängigkeiten.
+#  Zeit der letzten Änderung wurde nicht überprüft.
+#  Datei wurde nicht aktualisiert.
+
+# Dies ist kein Ziel:
+version.texinfo:
+#  Die Suche nach impliziten Regeln wurde durchgeführt.
+#  Zuletzt geändert 2023-08-09 09:38:10.249689418
+#  Datei wurde aktualisiert.
+#  Erfolgreich aktualisiert.
+
+# Dies ist kein Ziel:
+.l.r:
+# Eingebaute Regel
+#  Die Suche nach impliziten Regeln wurde nicht durchgeführt.
+#  Datei ist ein Zwischenschritt in den Abhängigkeiten.
+#  Zeit der letzten Änderung wurde nicht überprüft.
+#  Datei wurde nicht aktualisiert.
+#  Auszuführende Regel (eingebaut):
+	$(LEX.l) $< > $@ 
+	 mv -f lex.yy.r $@
+
+# Dies ist kein Ziel:
+.dvi:
+# Eingebaute Regel
+#  Die Suche nach impliziten Regeln wurde nicht durchgeführt.
+#  Datei ist ein Zwischenschritt in den Abhängigkeiten.
+#  Zeit der letzten Änderung wurde nicht überprüft.
+#  Datei wurde nicht aktualisiert.
+
+# Dies ist kein Ziel:
+.tfm:
+#  Die Suche nach impliziten Regeln wurde nicht durchgeführt.
+#  Datei ist ein Zwischenschritt in den Abhängigkeiten.
+#  Zeit der letzten Änderung wurde nicht überprüft.
+#  Datei wurde nicht aktualisiert.
+
+# Dies ist kein Ziel:
+Makefile.cobol:
+#  Die Suche nach impliziten Regeln wurde durchgeführt.
+#  Zuletzt geändert 2020-12-29 21:20:52.85287414
+#  Datei wurde aktualisiert.
+#  Erfolgreich aktualisiert.
+
+# Dies ist kein Ziel:
+.ym:
+# Eingebaute Regel
+#  Die Suche nach impliziten Regeln wurde nicht durchgeführt.
+#  Datei ist ein Zwischenschritt in den Abhängigkeiten.
+#  Zeit der letzten Änderung wurde nicht überprüft.
+#  Datei wurde nicht aktualisiert.
+
+# Dies ist kein Ziel:
+.f.o:
+# Eingebaute Regel
+#  Die Suche nach impliziten Regeln wurde nicht durchgeführt.
+#  Datei ist ein Zwischenschritt in den Abhängigkeiten.
+#  Zeit der letzten Änderung wurde nicht überprüft.
+#  Datei wurde nicht aktualisiert.
+#  Auszuführende Regel (eingebaut):
+	$(COMPILE.f) $(OUTPUT_OPTION) $<
+
+# Dies ist kein Ziel:
+.l:
+# Eingebaute Regel
+#  Die Suche nach impliziten Regeln wurde nicht durchgeführt.
+#  Datei ist ein Zwischenschritt in den Abhängigkeiten.
+#  Zeit der letzten Änderung wurde nicht überprüft.
+#  Datei wurde nicht aktualisiert.
+
+# Dies ist kein Ziel:
+.m:
+# Eingebaute Regel
+#  Die Suche nach impliziten Regeln wurde nicht durchgeführt.
+#  Datei ist ein Zwischenschritt in den Abhängigkeiten.
+#  Zeit der letzten Änderung wurde nicht überprüft.
+#  Datei wurde nicht aktualisiert.
+#  Auszuführende Regel (eingebaut):
+	$(LINK.m) $^ $(LOADLIBES) $(LDLIBS) -o $@
+
+# Dies ist kein Ziel:
+.ln:
+# Eingebaute Regel
+#  Die Suche nach impliziten Regeln wurde nicht durchgeführt.
+#  Datei ist ein Zwischenschritt in den Abhängigkeiten.
+#  Zeit der letzten Änderung wurde nicht überprüft.
+#  Datei wurde nicht aktualisiert.
+
+# Dies ist kein Ziel:
+.o:
+# Eingebaute Regel
+#  Die Suche nach impliziten Regeln wurde nicht durchgeführt.
+#  Datei ist ein Zwischenschritt in den Abhängigkeiten.
+#  Zeit der letzten Änderung wurde nicht überprüft.
+#  Datei wurde nicht aktualisiert.
+#  Auszuführende Regel (eingebaut):
+	$(LINK.o) $^ $(LOADLIBES) $(LDLIBS) -o $@
+
+# Dies ist kein Ziel:
+.y:
+# Eingebaute Regel
+#  Die Suche nach impliziten Regeln wurde nicht durchgeführt.
+#  Datei ist ein Zwischenschritt in den Abhängigkeiten.
+#  Zeit der letzten Änderung wurde nicht überprüft.
+#  Datei wurde nicht aktualisiert.
+
+# Dies ist kein Ziel:
+.def.sym:
+# Eingebaute Regel
+#  Die Suche nach impliziten Regeln wurde nicht durchgeführt.
+#  Datei ist ein Zwischenschritt in den Abhängigkeiten.
+#  Zeit der letzten Änderung wurde nicht überprüft.
+#  Datei wurde nicht aktualisiert.
+#  Auszuführende Regel (eingebaut):
+	$(COMPILE.def) -o $@ $<
+
+.PHONY: all strip debug debugger lint prof doc clean distclean print dummy backup
+#  Die Suche nach impliziten Regeln wurde nicht durchgeführt.
+#  Datei ist ein Zwischenschritt in den Abhängigkeiten.
+#  Zeit der letzten Änderung wurde nicht überprüft.
+#  Datei wurde nicht aktualisiert.
+
+# Dies ist kein Ziel:
+run_me_once.sh:
+#  Die Suche nach impliziten Regeln wurde nicht durchgeführt.
+#  Datei ist ein Zwischenschritt in den Abhängigkeiten.
+#  Zeit der letzten Änderung wurde nicht überprüft.
+#  Datei wurde nicht aktualisiert.
+
+# Dies ist kein Ziel:
+.pas:
+#  Die Suche nach impliziten Regeln wurde nicht durchgeführt.
+#  Datei ist ein Zwischenschritt in den Abhängigkeiten.
+#  Zeit der letzten Änderung wurde nicht überprüft.
+#  Datei wurde nicht aktualisiert.
+
+# Dies ist kein Ziel:
+.1:
+#  Die Suche nach impliziten Regeln wurde nicht durchgeführt.
+#  Datei ist ein Zwischenschritt in den Abhängigkeiten.
+#  Zeit der letzten Änderung wurde nicht überprüft.
+#  Datei wurde nicht aktualisiert.
+
+# Dies ist kein Ziel:
+.pdf:
+#  Die Suche nach impliziten Regeln wurde nicht durchgeführt.
+#  Datei ist ein Zwischenschritt in den Abhängigkeiten.
+#  Zeit der letzten Änderung wurde nicht überprüft.
+#  Datei wurde nicht aktualisiert.
+
+# Dies ist kein Ziel:
+Makefile.FORTRAN:
+#  Die Suche nach impliziten Regeln wurde durchgeführt.
+#  Zuletzt geändert 2022-08-19 14:41:43.404916617
+#  Datei wurde aktualisiert.
+#  Erfolgreich aktualisiert.
+
+# Dies ist kein Ziel:
+.p.o:
+# Eingebaute Regel
+#  Die Suche nach impliziten Regeln wurde nicht durchgeführt.
+#  Datei ist ein Zwischenschritt in den Abhängigkeiten.
+#  Zeit der letzten Änderung wurde nicht überprüft.
+#  Datei wurde nicht aktualisiert.
+#  Auszuführende Regel (eingebaut):
+	$(COMPILE.p) $(OUTPUT_OPTION) $<
+
+# Dies ist kein Ziel:
+.p:
+# Eingebaute Regel
+#  Die Suche nach impliziten Regeln wurde nicht durchgeführt.
+#  Datei ist ein Zwischenschritt in den Abhängigkeiten.
+#  Zeit der letzten Änderung wurde nicht überprüft.
+#  Datei wurde nicht aktualisiert.
+#  Auszuführende Regel (eingebaut):
+	$(LINK.p) $^ $(LOADLIBES) $(LDLIBS) -o $@
+
+# Dies ist kein Ziel:
+.txinfo.dvi:
+# Eingebaute Regel
+#  Die Suche nach impliziten Regeln wurde nicht durchgeführt.
+#  Datei ist ein Zwischenschritt in den Abhängigkeiten.
+#  Zeit der letzten Änderung wurde nicht überprüft.
+#  Datei wurde nicht aktualisiert.
+#  Auszuführende Regel (eingebaut):
+	$(TEXI2DVI) $(TEXI2DVI_FLAGS) $<
+
+# Dies ist kein Ziel:
+main.c:
+#  Die Suche nach impliziten Regeln wurde durchgeführt.
+#  Zuletzt geändert 2023-07-26 08:22:10
+#  Datei wurde aktualisiert.
+#  Erfolgreich aktualisiert.
+
+.PRECIOUS:
+#  Die Suche nach impliziten Regeln wurde nicht durchgeführt.
+#  Datei ist ein Zwischenschritt in den Abhängigkeiten.
+#  Zeit der letzten Änderung wurde nicht überprüft.
+#  Datei wurde nicht aktualisiert.
+
+libsubs.a: minmax.oo
+#  Die Suche nach impliziten Regeln wurde nicht durchgeführt.
+#  Datei ist ein Zwischenschritt in den Abhängigkeiten.
+#  Zeit der letzten Änderung wurde nicht überprüft.
+#  Datei wurde nicht aktualisiert.
+#  Auszuführende Regel (aus „Makefile“, Zeile 279):
+			$(archive)
+
+# Dies ist kein Ziel:
+.a:
+# Eingebaute Regel
+#  Die Suche nach impliziten Regeln wurde nicht durchgeführt.
+#  Datei ist ein Zwischenschritt in den Abhängigkeiten.
+#  Zeit der letzten Änderung wurde nicht überprüft.
+#  Datei wurde nicht aktualisiert.
+
+# Dies ist kein Ziel:
+.yl:
+# Eingebaute Regel
+#  Die Suche nach impliziten Regeln wurde nicht durchgeführt.
+#  Datei ist ein Zwischenschritt in den Abhängigkeiten.
+#  Zeit der letzten Änderung wurde nicht überprüft.
+#  Datei wurde nicht aktualisiert.
+
+# Dies ist kein Ziel:
+.l.ln:
+# Eingebaute Regel
+#  Die Suche nach impliziten Regeln wurde nicht durchgeführt.
+#  Datei ist ein Zwischenschritt in den Abhängigkeiten.
+#  Zeit der letzten Änderung wurde nicht überprüft.
+#  Datei wurde nicht aktualisiert.
+#  Auszuführende Regel (eingebaut):
+	@$(RM) $*.c
+	 $(LEX.l) $< > $*.c
+	$(LINT.c) -i $*.c -o $@
+	 $(RM) $*.c
+
+# Dies ist kein Ziel:
+.F.o:
+# Eingebaute Regel
+#  Die Suche nach impliziten Regeln wurde nicht durchgeführt.
+#  Datei ist ein Zwischenschritt in den Abhängigkeiten.
+#  Zeit der letzten Änderung wurde nicht überprüft.
+#  Datei wurde nicht aktualisiert.
+#  Auszuführende Regel (eingebaut):
+	$(COMPILE.F) $(OUTPUT_OPTION) $<
+
+# Dies ist kein Ziel:
+.texi.info:
+# Eingebaute Regel
+#  Die Suche nach impliziten Regeln wurde nicht durchgeführt.
+#  Datei ist ein Zwischenschritt in den Abhängigkeiten.
+#  Zeit der letzten Änderung wurde nicht überprüft.
+#  Datei wurde nicht aktualisiert.
+#  Auszuführende Regel (eingebaut):
+	$(MAKEINFO) $(MAKEINFO_FLAGS) $< -o $@
+
+# Dies ist kein Ziel:
+.w.c:
+# Eingebaute Regel
+#  Die Suche nach impliziten Regeln wurde nicht durchgeführt.
+#  Datei ist ein Zwischenschritt in den Abhängigkeiten.
+#  Zeit der letzten Änderung wurde nicht überprüft.
+#  Datei wurde nicht aktualisiert.
+#  Auszuführende Regel (eingebaut):
+	$(CTANGLE) $< - $@
+
+# Dies ist kein Ziel:
+.texi.dvi:
+# Eingebaute Regel
+#  Die Suche nach impliziten Regeln wurde nicht durchgeführt.
+#  Datei ist ein Zwischenschritt in den Abhängigkeiten.
+#  Zeit der letzten Änderung wurde nicht überprüft.
+#  Datei wurde nicht aktualisiert.
+#  Auszuführende Regel (eingebaut):
+	$(TEXI2DVI) $(TEXI2DVI_FLAGS) $<
+
+# Dies ist kein Ziel:
+.ch:
+# Eingebaute Regel
+#  Die Suche nach impliziten Regeln wurde nicht durchgeführt.
+#  Datei ist ein Zwischenschritt in den Abhängigkeiten.
+#  Zeit der letzten Änderung wurde nicht überprüft.
+#  Datei wurde nicht aktualisiert.
+
+distclean:
+#  Vorgetäuschtes Ziel (benötigt von .PHONY).
+#  Die Suche nach impliziten Regeln wurde nicht durchgeführt.
+#  Datei ist ein Zwischenschritt in den Abhängigkeiten.
+#  Die Datei existiert nicht.
+#  Datei wurde nicht aktualisiert.
+#  Auszuführende Regel (aus „Makefile“, Zeile 290):
+			$(strip $(RM) $(CDEPENDS) $(CCDEPENDS) $(PRINTFILE) $(GMONFILE) $(PROFFILE) $(NMFILE) $(CLEAN))
+
+# Dies ist kein Ziel:
+.m.o:
+# Eingebaute Regel
+#  Die Suche nach impliziten Regeln wurde nicht durchgeführt.
+#  Datei ist ein Zwischenschritt in den Abhängigkeiten.
+#  Zeit der letzten Änderung wurde nicht überprüft.
+#  Datei wurde nicht aktualisiert.
+#  Auszuführende Regel (eingebaut):
+	$(COMPILE.m) $(OUTPUT_OPTION) $<
+
+# Dies ist kein Ziel:
+.cxx:
+#  Die Suche nach impliziten Regeln wurde nicht durchgeführt.
+#  Datei ist ein Zwischenschritt in den Abhängigkeiten.
+#  Zeit der letzten Änderung wurde nicht überprüft.
+#  Datei wurde nicht aktualisiert.
+
+# Dies ist kein Ziel:
+.cc:
+# Eingebaute Regel
+#  Die Suche nach impliziten Regeln wurde nicht durchgeführt.
+#  Datei ist ein Zwischenschritt in den Abhängigkeiten.
+#  Zeit der letzten Änderung wurde nicht überprüft.
+#  Datei wurde nicht aktualisiert.
+#  Auszuführende Regel (eingebaut):
+	$(LINK.cc) $^ $(LOADLIBES) $(LDLIBS) -o $@
+
+# Dies ist kein Ziel:
+.html:
+#  Die Suche nach impliziten Regeln wurde nicht durchgeführt.
+#  Datei ist ein Zwischenschritt in den Abhängigkeiten.
+#  Zeit der letzten Änderung wurde nicht überprüft.
+#  Datei wurde nicht aktualisiert.
+
+# Dies ist kein Ziel:
+.cc.o:
+# Eingebaute Regel
+#  Die Suche nach impliziten Regeln wurde nicht durchgeführt.
+#  Datei ist ein Zwischenschritt in den Abhängigkeiten.
+#  Zeit der letzten Änderung wurde nicht überprüft.
+#  Datei wurde nicht aktualisiert.
+#  Auszuführende Regel (eingebaut):
+	$(COMPILE.cc) $(OUTPUT_OPTION) $<
+
+# Dies ist kein Ziel:
+.def:
+# Eingebaute Regel
+#  Die Suche nach impliziten Regeln wurde nicht durchgeführt.
+#  Datei ist ein Zwischenschritt in den Abhängigkeiten.
+#  Zeit der letzten Änderung wurde nicht überprüft.
+#  Datei wurde nicht aktualisiert.
+
+.SUFFIXES: .out .a .ln .o .c .cc .C .cpp .p .f .F .m .r .y .l .ym .yl .s .S .mod .sym .def .h .info .dvi .tex .texinfo .texi .txinfo .w .ch .web .sh .elc .el .out .a .ln .o .c .cc .cpp .c++ .cxx .C .p .pas .f .F .for .f77 .f90 .f95 .f03 .f08 .m .r .y .l .ym .yl .s .S .mod .sym .def .h .info .dvi .tex .texinfo .texi .txinfo .w .ch .web .sh .elc .el .latex .ps .nw .cweb .noweb .mf .ind .sgml .cob .1 .odt .html .pdf .ps .tfm
+#  Die Suche nach impliziten Regeln wurde nicht durchgeführt.
+#  Datei ist ein Zwischenschritt in den Abhängigkeiten.
+#  Zeit der letzten Änderung wurde nicht überprüft.
+#  Datei wurde nicht aktualisiert.
+
+print: .print
+#  Vorgetäuschtes Ziel (benötigt von .PHONY).
+#  Die Suche nach impliziten Regeln wurde nicht durchgeführt.
+#  Datei ist ein Zwischenschritt in den Abhängigkeiten.
+#  Die Datei existiert nicht.
+#  Datei wurde nicht aktualisiert.
+
+# Dies ist kein Ziel:
+.c.o:
+# Eingebaute Regel
+#  Die Suche nach impliziten Regeln wurde nicht durchgeführt.
+#  Datei ist ein Zwischenschritt in den Abhängigkeiten.
+#  Zeit der letzten Änderung wurde nicht überprüft.
+#  Datei wurde nicht aktualisiert.
+#  Auszuführende Regel (eingebaut):
+	$(COMPILE.c) $(OUTPUT_OPTION) $<
+
+# Dies ist kein Ziel:
+Makefile:
+#  Die Suche nach impliziten Regeln wurde durchgeführt.
+#  Zuletzt geändert 2023-08-10 07:17:42.628765229
+#  Datei wurde aktualisiert.
+#  Erfolgreich aktualisiert.
+
+# Dies ist kein Ziel:
+.r.o:
+# Eingebaute Regel
+#  Die Suche nach impliziten Regeln wurde nicht durchgeführt.
+#  Datei ist ein Zwischenschritt in den Abhängigkeiten.
+#  Zeit der letzten Änderung wurde nicht überprüft.
+#  Datei wurde nicht aktualisiert.
+#  Auszuführende Regel (eingebaut):
+	$(COMPILE.r) $(OUTPUT_OPTION) $<
+
+# Dies ist kein Ziel:
+.r:
+# Eingebaute Regel
+#  Die Suche nach impliziten Regeln wurde nicht durchgeführt.
+#  Datei ist ein Zwischenschritt in den Abhängigkeiten.
+#  Zeit der letzten Änderung wurde nicht überprüft.
+#  Datei wurde nicht aktualisiert.
+#  Auszuführende Regel (eingebaut):
+	$(LINK.r) $^ $(LOADLIBES) $(LDLIBS) -o $@
+
+debug:
+#  Vorgetäuschtes Ziel (benötigt von .PHONY).
+#  Die Suche nach impliziten Regeln wurde nicht durchgeführt.
+#  Datei ist ein Zwischenschritt in den Abhängigkeiten.
+#  Die Datei existiert nicht.
+#  Datei wurde nicht aktualisiert.
+#  Auszuführende Regel (aus „Makefile“, Zeile 245):
+			@echo "$$""(CLEAN)=$(strip $(CLEAN))"
+			@echo "$$""(OBJS)=$(strip $(OBJS))"
+			@echo "$$""(FILES)=$(strip $(FILES))"
+			@echo "$$""(CSOURCES)=$(strip $(CSOURCES))"
+			@echo "$$""(CCSOURCES)=$(strip $(CCSOURCES))"
+			@echo "$$""(CDEPENDS)=$(strip $(CDEPENDS))"
+			@echo "$$""(CCDEPENDS)=$(strip $(CCDEPENDS))"
+			@echo "$$""(PROGRAMS)=$(strip $(PROGRAMS))"
+			@echo "$$""(PC)=$(strip $(PC))"
+
+.print: Makefile Makefile.c_and_c++ Makefile.cobol Makefile.cweb_and_noweb Makefile.documentation Makefile.flex_and_bison Makefile.FORTRAN Makefile.latex Makefile.pascal check.texinfo version.texinfo check.d run_me_once.sh depend.sh minmax.c types.h main.c
+#  Die Suche nach impliziten Regeln wurde nicht durchgeführt.
+#  Datei ist ein Zwischenschritt in den Abhängigkeiten.
+#  Zeit der letzten Änderung wurde nicht überprüft.
+#  Datei wurde nicht aktualisiert.
+#  Auszuführende Regel (aus „Makefile“, Zeile 299):
+			$(PRINT) $?
+			$(TOUCH) $(PRINTFILE)
+
+# Dies ist kein Ziel:
+.ym.m:
+# Eingebaute Regel
+#  Die Suche nach impliziten Regeln wurde nicht durchgeführt.
+#  Datei ist ein Zwischenschritt in den Abhängigkeiten.
+#  Zeit der letzten Änderung wurde nicht überprüft.
+#  Datei wurde nicht aktualisiert.
+#  Auszuführende Regel (eingebaut):
+	$(YACC.m) $< 
+	 mv -f y.tab.c $@
+
+# Dies ist kein Ziel:
+.y.ln:
+# Eingebaute Regel
+#  Die Suche nach impliziten Regeln wurde nicht durchgeführt.
+#  Datei ist ein Zwischenschritt in den Abhängigkeiten.
+#  Zeit der letzten Änderung wurde nicht überprüft.
+#  Datei wurde nicht aktualisiert.
+#  Auszuführende Regel (eingebaut):
+	$(YACC.y) $< 
+	 $(LINT.c) -C$* y.tab.c 
+	 $(RM) y.tab.c
+
+# Dies ist kein Ziel:
+check.texinfo:
+#  Die Suche nach impliziten Regeln wurde durchgeführt.
+#  Zuletzt geändert 2023-08-09 10:07:39.046765973
+#  Datei wurde aktualisiert.
+#  Erfolgreich aktualisiert.
+
+# Dies ist kein Ziel:
+.elc:
+# Eingebaute Regel
+#  Die Suche nach impliziten Regeln wurde nicht durchgeführt.
+#  Datei ist ein Zwischenschritt in den Abhängigkeiten.
+#  Zeit der letzten Änderung wurde nicht überprüft.
+#  Datei wurde nicht aktualisiert.
+
+# Dies ist kein Ziel:
+.l.c:
+# Eingebaute Regel
+#  Die Suche nach impliziten Regeln wurde nicht durchgeführt.
+#  Datei ist ein Zwischenschritt in den Abhängigkeiten.
+#  Zeit der letzten Änderung wurde nicht überprüft.
+#  Datei wurde nicht aktualisiert.
+#  Auszuführende Regel (eingebaut):
+	@$(RM) $@ 
+	 $(LEX.l) $< > $@
+
+# Dies ist kein Ziel:
+.f03:
+#  Die Suche nach impliziten Regeln wurde nicht durchgeführt.
+#  Datei ist ein Zwischenschritt in den Abhängigkeiten.
+#  Zeit der letzten Änderung wurde nicht überprüft.
+#  Datei wurde nicht aktualisiert.
+
+# Dies ist kein Ziel:
+Makefile.pascal:
+#  Die Suche nach impliziten Regeln wurde durchgeführt.
+#  Zuletzt geändert 2023-08-09 11:52:49.794287586
+#  Datei wurde aktualisiert.
+#  Erfolgreich aktualisiert.
+
+# Dies ist kein Ziel:
+.c++:
+#  Die Suche nach impliziten Regeln wurde nicht durchgeführt.
+#  Datei ist ein Zwischenschritt in den Abhängigkeiten.
+#  Zeit der letzten Änderung wurde nicht überprüft.
+#  Datei wurde nicht aktualisiert.
+
+# Dies ist kein Ziel:
+.out:
+# Eingebaute Regel
+#  Die Suche nach impliziten Regeln wurde nicht durchgeführt.
+#  Datei ist ein Zwischenschritt in den Abhängigkeiten.
+#  Zeit der letzten Änderung wurde nicht überprüft.
+#  Datei wurde nicht aktualisiert.
+
+all:: args
+#  Vorgetäuschtes Ziel (benötigt von .PHONY).
+#  Die Suche nach impliziten Regeln wurde nicht durchgeführt.
+#  Datei ist ein Zwischenschritt in den Abhängigkeiten.
+#  Die Datei existiert nicht.
+#  Datei wurde nicht aktualisiert.
+#  Auszuführende Regel (aus „Makefile“, Zeile 237):
+			@echo done.
+
+# Dies ist kein Ziel:
+Makefile.c_and_c++:
+#  Die Suche nach impliziten Regeln wurde durchgeführt.
+#  Zuletzt geändert 2023-08-09 15:11:53.770138634
+#  Datei wurde aktualisiert.
+#  Erfolgreich aktualisiert.
+
+# Dies ist kein Ziel:
+minmax.c:
+#  Die Suche nach impliziten Regeln wurde durchgeführt.
+#  Zuletzt geändert 2023-07-26 08:20:10
+#  Datei wurde aktualisiert.
+#  Erfolgreich aktualisiert.
+
+# Dies ist kein Ziel:
+.for:
+#  Die Suche nach impliziten Regeln wurde nicht durchgeführt.
+#  Datei ist ein Zwischenschritt in den Abhängigkeiten.
+#  Zeit der letzten Änderung wurde nicht überprüft.
+#  Datei wurde nicht aktualisiert.
+
+# Dies ist kein Ziel:
+.C:
+# Eingebaute Regel
+#  Die Suche nach impliziten Regeln wurde nicht durchgeführt.
+#  Datei ist ein Zwischenschritt in den Abhängigkeiten.
+#  Zeit der letzten Änderung wurde nicht überprüft.
+#  Datei wurde nicht aktualisiert.
+#  Auszuführende Regel (eingebaut):
+	$(LINK.C) $^ $(LOADLIBES) $(LDLIBS) -o $@
+
+# Dies ist kein Ziel:
+.r.f:
+# Eingebaute Regel
+#  Die Suche nach impliziten Regeln wurde nicht durchgeführt.
+#  Datei ist ein Zwischenschritt in den Abhängigkeiten.
+#  Zeit der letzten Änderung wurde nicht überprüft.
+#  Datei wurde nicht aktualisiert.
+#  Auszuführende Regel (eingebaut):
+	$(PREPROCESS.r) $(OUTPUT_OPTION) $<
+
+lint:
+#  Vorgetäuschtes Ziel (benötigt von .PHONY).
+#  Die Suche nach impliziten Regeln wurde nicht durchgeführt.
+#  Datei ist ein Zwischenschritt in den Abhängigkeiten.
+#  Die Datei existiert nicht.
+#  Datei wurde nicht aktualisiert.
+#  Auszuführende Regel (aus „Makefile“, Zeile 261):
+			$(LINT) $(LINTFLAGS) .
+
+# Dies ist kein Ziel:
+.S:
+# Eingebaute Regel
+#  Die Suche nach impliziten Regeln wurde nicht durchgeführt.
+#  Datei ist ein Zwischenschritt in den Abhängigkeiten.
+#  Zeit der letzten Änderung wurde nicht überprüft.
+#  Datei wurde nicht aktualisiert.
+#  Auszuführende Regel (eingebaut):
+	$(LINK.S) $^ $(LOADLIBES) $(LDLIBS) -o $@
+
+# Dies ist kein Ziel:
+Makefile.cweb_and_noweb:
+#  Die Suche nach impliziten Regeln wurde durchgeführt.
+#  Zuletzt geändert 2020-12-29 21:20:52.85287414
+#  Datei wurde aktualisiert.
+#  Erfolgreich aktualisiert.
+
+.INTERMEDIATE:
+#  Die Suche nach impliziten Regeln wurde nicht durchgeführt.
+#  Datei ist ein Zwischenschritt in den Abhängigkeiten.
+#  Zeit der letzten Änderung wurde nicht überprüft.
+#  Datei wurde nicht aktualisiert.
+
+# Dies ist kein Ziel:
+.texinfo.info:
+# Eingebaute Regel
+#  Die Suche nach impliziten Regeln wurde nicht durchgeführt.
+#  Datei ist ein Zwischenschritt in den Abhängigkeiten.
+#  Zeit der letzten Änderung wurde nicht überprüft.
+#  Datei wurde nicht aktualisiert.
+#  Auszuführende Regel (eingebaut):
+	$(MAKEINFO) $(MAKEINFO_FLAGS) $< -o $@
+
+# Dies ist kein Ziel:
+.c:
+# Eingebaute Regel
+#  Die Suche nach impliziten Regeln wurde nicht durchgeführt.
+#  Datei ist ein Zwischenschritt in den Abhängigkeiten.
+#  Zeit der letzten Änderung wurde nicht überprüft.
+#  Datei wurde nicht aktualisiert.
+#  Auszuführende Regel (eingebaut):
+	$(LINK.c) $^ $(LOADLIBES) $(LDLIBS) -o $@
+
+# Dies ist kein Ziel:
+.w.tex:
+# Eingebaute Regel
+#  Die Suche nach impliziten Regeln wurde nicht durchgeführt.
+#  Datei ist ein Zwischenschritt in den Abhängigkeiten.
+#  Zeit der letzten Änderung wurde nicht überprüft.
+#  Datei wurde nicht aktualisiert.
+#  Auszuführende Regel (eingebaut):
+	$(CWEAVE) $< - $@
+
+strip: args
+#  Vorgetäuschtes Ziel (benötigt von .PHONY).
+#  Die Suche nach impliziten Regeln wurde nicht durchgeführt.
+#  Datei ist ein Zwischenschritt in den Abhängigkeiten.
+#  Die Datei existiert nicht.
+#  Datei wurde nicht aktualisiert.
+#  Auszuführende Regel (aus „Makefile“, Zeile 241):
+			$(STRIP) $(PROGRAMS)
+
+# Dies ist kein Ziel:
+.c.ln:
+# Eingebaute Regel
+#  Die Suche nach impliziten Regeln wurde nicht durchgeführt.
+#  Datei ist ein Zwischenschritt in den Abhängigkeiten.
+#  Zeit der letzten Änderung wurde nicht überprüft.
+#  Datei wurde nicht aktualisiert.
+#  Auszuführende Regel (eingebaut):
+	$(LINT.c) -C$* $<
+
+# Dies ist kein Ziel:
+.s.o:
+# Eingebaute Regel
+#  Die Suche nach impliziten Regeln wurde nicht durchgeführt.
+#  Datei ist ein Zwischenschritt in den Abhängigkeiten.
+#  Zeit der letzten Änderung wurde nicht überprüft.
+#  Datei wurde nicht aktualisiert.
+#  Auszuführende Regel (eingebaut):
+	$(COMPILE.s) -o $@ $<
+
+# Dies ist kein Ziel:
+.s:
+# Eingebaute Regel
+#  Die Suche nach impliziten Regeln wurde nicht durchgeführt.
+#  Datei ist ein Zwischenschritt in den Abhängigkeiten.
+#  Zeit der letzten Änderung wurde nicht überprüft.
+#  Datei wurde nicht aktualisiert.
+#  Auszuführende Regel (eingebaut):
+	$(LINK.s) $^ $(LOADLIBES) $(LDLIBS) -o $@
+
+prof: args
+#  Vorgetäuschtes Ziel (benötigt von .PHONY).
+#  Die Suche nach impliziten Regeln wurde nicht durchgeführt.
+#  Datei ist ein Zwischenschritt in den Abhängigkeiten.
+#  Die Datei existiert nicht.
+#  Datei wurde nicht aktualisiert.
+#  Auszuführende Regel (aus „Makefile“, Zeile 265):
+			$(PROGRAM1)
+			$(PROF) $(PROGRAM1) $(GMONFILE) > $(PROFFILE)
+			$(NM) $(NMFLAGS) $(PROGRAM1) > $(NMFILE)
+
+backup:
+#  Vorgetäuschtes Ziel (benötigt von .PHONY).
+#  Die Suche nach impliziten Regeln wurde nicht durchgeführt.
+#  Datei ist ein Zwischenschritt in den Abhängigkeiten.
+#  Die Datei existiert nicht.
+#  Datei wurde nicht aktualisiert.
+#  Auszuführende Regel (aus „Makefile“, Zeile 319):
+			rm -rf backup
+			-mkdir -p backup/$(BACKUPDIR)
+			cp -p $(strip $(FILES)) backup/$(BACKUPDIR)
+			(cd backup ; tar cf - $(BACKUPDIR)) | gzip -9c > \
+			 $(BACKUPFILE)
+			rm -rf backup
+
+main.d: main.c Makefile Makefile.c_and_c++ main.c types.h minmax.h
+#  Die Suche nach impliziten Regeln wurde durchgeführt.
+#  Wurzel impliziter/statischer Muster: „main“
+#  Zuletzt geändert 2023-08-10 07:17:45.292778899
+#  Datei wurde aktualisiert.
+#  Erfolgreich aktualisiert.
+#  Auszuführende Regel (aus „Makefile.c_and_c++“, Zeile 124):
+		@depend.sh $@ "$(IS_IN_LIB)" "$(depend.c.oo)" "$(depend.c.o)"
+
+# Dies ist kein Ziel:
+.texinfo.dvi:
+# Eingebaute Regel
+#  Die Suche nach impliziten Regeln wurde nicht durchgeführt.
+#  Datei ist ein Zwischenschritt in den Abhängigkeiten.
+#  Zeit der letzten Änderung wurde nicht überprüft.
+#  Datei wurde nicht aktualisiert.
+#  Auszuführende Regel (eingebaut):
+	$(TEXI2DVI) $(TEXI2DVI_FLAGS) $<
+
+# Dies ist kein Ziel:
+.el:
+# Eingebaute Regel
+#  Die Suche nach impliziten Regeln wurde nicht durchgeführt.
+#  Datei ist ein Zwischenschritt in den Abhängigkeiten.
+#  Zeit der letzten Änderung wurde nicht überprüft.
+#  Datei wurde nicht aktualisiert.
+
+args: libsubs.a minmax.d main.d main.o
+#  Die Suche nach impliziten Regeln wurde nicht durchgeführt.
+#  Datei ist ein Zwischenschritt in den Abhängigkeiten.
+#  Zeit der letzten Änderung wurde nicht überprüft.
+#  Datei wurde nicht aktualisiert.
+#  Auszuführende Regel (aus „Makefile“, Zeile 273):
+			$(link.c)
+
+# Dies ist kein Ziel:
+.f77:
+#  Die Suche nach impliziten Regeln wurde nicht durchgeführt.
+#  Datei ist ein Zwischenschritt in den Abhängigkeiten.
+#  Zeit der letzten Änderung wurde nicht überprüft.
+#  Datei wurde nicht aktualisiert.
+
+# Dies ist kein Ziel:
+.lm.m:
+# Eingebaute Regel
+#  Die Suche nach impliziten Regeln wurde nicht durchgeführt.
+#  Datei ist ein Zwischenschritt in den Abhängigkeiten.
+#  Zeit der letzten Änderung wurde nicht überprüft.
+#  Datei wurde nicht aktualisiert.
+#  Auszuführende Regel (eingebaut):
+	@$(RM) $@ 
+	 $(LEX.m) $< > $@
+
+# Dies ist kein Ziel:
+.y.c:
+# Eingebaute Regel
+#  Die Suche nach impliziten Regeln wurde nicht durchgeführt.
+#  Datei ist ein Zwischenschritt in den Abhängigkeiten.
+#  Zeit der letzten Änderung wurde nicht überprüft.
+#  Datei wurde nicht aktualisiert.
+#  Auszuführende Regel (eingebaut):
+	$(YACC.y) $< 
+	 mv -f y.tab.c $@
+
+# Dies ist kein Ziel:
+.odt:
+#  Die Suche nach impliziten Regeln wurde nicht durchgeführt.
+#  Datei ist ein Zwischenschritt in den Abhängigkeiten.
+#  Zeit der letzten Änderung wurde nicht überprüft.
+#  Datei wurde nicht aktualisiert.
+
+# Dies ist kein Ziel:
+.web.tex:
+# Eingebaute Regel
+#  Die Suche nach impliziten Regeln wurde nicht durchgeführt.
+#  Datei ist ein Zwischenschritt in den Abhängigkeiten.
+#  Zeit der letzten Änderung wurde nicht überprüft.
+#  Datei wurde nicht aktualisiert.
+#  Auszuführende Regel (eingebaut):
+	$(WEAVE) $<
+
+# Dies ist kein Ziel:
+.texinfo:
+# Eingebaute Regel
+#  Die Suche nach impliziten Regeln wurde nicht durchgeführt.
+#  Datei ist ein Zwischenschritt in den Abhängigkeiten.
+#  Zeit der letzten Änderung wurde nicht überprüft.
+#  Datei wurde nicht aktualisiert.
+
+# Dies ist kein Ziel:
+.DEFAULT:
+#  Die Suche nach impliziten Regeln wurde nicht durchgeführt.
+#  Datei ist ein Zwischenschritt in den Abhängigkeiten.
+#  Zeit der letzten Änderung wurde nicht überprüft.
+#  Datei wurde nicht aktualisiert.
+
+# Dies ist kein Ziel:
+.h:
+# Eingebaute Regel
+#  Die Suche nach impliziten Regeln wurde nicht durchgeführt.
+#  Datei ist ein Zwischenschritt in den Abhängigkeiten.
+#  Zeit der letzten Änderung wurde nicht überprüft.
+#  Datei wurde nicht aktualisiert.
+
+check.d: Makefile Makefile.documentation check.texinfo version.texinfo
+#  Die Suche nach impliziten Regeln wurde durchgeführt.
+#  Zuletzt geändert 2023-08-09 09:45:11.891853068
+#  Datei wurde aktualisiert.
+#  Erfolgreich aktualisiert.
+
+# Dies ist kein Ziel:
+.nw:
+#  Die Suche nach impliziten Regeln wurde nicht durchgeführt.
+#  Datei ist ein Zwischenschritt in den Abhängigkeiten.
+#  Zeit der letzten Änderung wurde nicht überprüft.
+#  Datei wurde nicht aktualisiert.
+
+# Dies ist kein Ziel:
+depend.sh:
+#  Die Suche nach impliziten Regeln wurde nicht durchgeführt.
+#  Datei ist ein Zwischenschritt in den Abhängigkeiten.
+#  Zeit der letzten Änderung wurde nicht überprüft.
+#  Datei wurde nicht aktualisiert.
+
+# Dies ist kein Ziel:
+.tex.dvi:
+# Eingebaute Regel
+#  Die Suche nach impliziten Regeln wurde nicht durchgeführt.
+#  Datei ist ein Zwischenschritt in den Abhängigkeiten.
+#  Zeit der letzten Änderung wurde nicht überprüft.
+#  Datei wurde nicht aktualisiert.
+#  Auszuführende Regel (eingebaut):
+	$(TEX) $<
+
+# Dies ist kein Ziel:
+.cpp.o:
+# Eingebaute Regel
+#  Die Suche nach impliziten Regeln wurde nicht durchgeführt.
+#  Datei ist ein Zwischenschritt in den Abhängigkeiten.
+#  Zeit der letzten Änderung wurde nicht überprüft.
+#  Datei wurde nicht aktualisiert.
+#  Auszuführende Regel (eingebaut):
+	$(COMPILE.cpp) $(OUTPUT_OPTION) $<
+
+# Dies ist kein Ziel:
+.cpp:
+# Eingebaute Regel
+#  Die Suche nach impliziten Regeln wurde nicht durchgeführt.
+#  Datei ist ein Zwischenschritt in den Abhängigkeiten.
+#  Zeit der letzten Änderung wurde nicht überprüft.
+#  Datei wurde nicht aktualisiert.
+#  Auszuführende Regel (eingebaut):
+	$(LINK.cpp) $^ $(LOADLIBES) $(LDLIBS) -o $@
+
+clean:
+#  Vorgetäuschtes Ziel (benötigt von .PHONY).
+#  Die Suche nach impliziten Regeln wurde nicht durchgeführt.
+#  Datei ist ein Zwischenschritt in den Abhängigkeiten.
+#  Die Datei existiert nicht.
+#  Datei wurde nicht aktualisiert.
+#  Auszuführende Regel (aus „Makefile“, Zeile 283):
+			$(RM) -r $(CLEAN)
+
+# Dies ist kein Ziel:
+.C.o:
+# Eingebaute Regel
+#  Die Suche nach impliziten Regeln wurde nicht durchgeführt.
+#  Datei ist ein Zwischenschritt in den Abhängigkeiten.
+#  Zeit der letzten Änderung wurde nicht überprüft.
+#  Datei wurde nicht aktualisiert.
+#  Auszuführende Regel (eingebaut):
+	$(COMPILE.C) $(OUTPUT_OPTION) $<
+
+# Dies ist kein Ziel:
+.texi:
+# Eingebaute Regel
+#  Die Suche nach impliziten Regeln wurde nicht durchgeführt.
+#  Datei ist ein Zwischenschritt in den Abhängigkeiten.
+#  Zeit der letzten Änderung wurde nicht überprüft.
+#  Datei wurde nicht aktualisiert.
+
+# Dies ist kein Ziel:
+.txinfo:
+# Eingebaute Regel
+#  Die Suche nach impliziten Regeln wurde nicht durchgeführt.
+#  Datei ist ein Zwischenschritt in den Abhängigkeiten.
+#  Zeit der letzten Änderung wurde nicht überprüft.
+#  Datei wurde nicht aktualisiert.
+
+# Dies ist kein Ziel:
+.f95:
+#  Die Suche nach impliziten Regeln wurde nicht durchgeführt.
+#  Datei ist ein Zwischenschritt in den Abhängigkeiten.
+#  Zeit der letzten Änderung wurde nicht überprüft.
+#  Datei wurde nicht aktualisiert.
+
+# Dies ist kein Ziel:
+.tex:
+# Eingebaute Regel
+#  Die Suche nach impliziten Regeln wurde nicht durchgeführt.
+#  Datei ist ein Zwischenschritt in den Abhängigkeiten.
+#  Zeit der letzten Änderung wurde nicht überprüft.
+#  Datei wurde nicht aktualisiert.
+
+# Dies ist kein Ziel:
+.latex:
+#  Die Suche nach impliziten Regeln wurde nicht durchgeführt.
+#  Datei ist ein Zwischenschritt in den Abhängigkeiten.
+#  Zeit der letzten Änderung wurde nicht überprüft.
+#  Datei wurde nicht aktualisiert.
+
+# Dies ist kein Ziel:
+.txinfo.info:
+# Eingebaute Regel
+#  Die Suche nach impliziten Regeln wurde nicht durchgeführt.
+#  Datei ist ein Zwischenschritt in den Abhängigkeiten.
+#  Zeit der letzten Änderung wurde nicht überprüft.
+#  Datei wurde nicht aktualisiert.
+#  Auszuführende Regel (eingebaut):
+	$(MAKEINFO) $(MAKEINFO_FLAGS) $< -o $@
+
+dummy:
+#  Vorgetäuschtes Ziel (benötigt von .PHONY).
+#  Befehlszeilenziel.
+#  Die Suche nach impliziten Regeln wurde nicht durchgeführt.
+#  Datei ist ein Zwischenschritt in den Abhängigkeiten.
+#  Die Datei existiert nicht.
+#  Datei wurde aktualisiert.
+#  Erfolgreich aktualisiert.
+
+check.info: Makefile Makefile.documentation check.texinfo version.texinfo
+#  Die Suche nach impliziten Regeln wurde nicht durchgeführt.
+#  Datei ist ein Zwischenschritt in den Abhängigkeiten.
+#  Zeit der letzten Änderung wurde nicht überprüft.
+#  Datei wurde nicht aktualisiert.
+
+minmax.d: minmax.c Makefile Makefile.c_and_c++ minmax.c types.h minmax.h
+#  Die Suche nach impliziten Regeln wurde durchgeführt.
+#  Wurzel impliziter/statischer Muster: „minmax“
+#  Zuletzt geändert 2023-08-10 07:17:45.292778899
+#  Datei wurde aktualisiert.
+#  Erfolgreich aktualisiert.
+#  Auszuführende Regel (aus „Makefile.c_and_c++“, Zeile 124):
+		@depend.sh $@ "$(IS_IN_LIB)" "$(depend.c.oo)" "$(depend.c.o)"
+
+# Dies ist kein Ziel:
+.sh:
+# Eingebaute Regel
+#  Die Suche nach impliziten Regeln wurde nicht durchgeführt.
+#  Datei ist ein Zwischenschritt in den Abhängigkeiten.
+#  Zeit der letzten Änderung wurde nicht überprüft.
+#  Datei wurde nicht aktualisiert.
+#  Auszuführende Regel (eingebaut):
+	cat $< >$@ 
+	 chmod a+x $@
+
+# Dies ist kein Ziel:
+.noweb:
+#  Die Suche nach impliziten Regeln wurde nicht durchgeführt.
+#  Datei ist ein Zwischenschritt in den Abhängigkeiten.
+#  Zeit der letzten Änderung wurde nicht überprüft.
+#  Datei wurde nicht aktualisiert.
+
+debugger: args
+#  Vorgetäuschtes Ziel (benötigt von .PHONY).
+#  Die Suche nach impliziten Regeln wurde nicht durchgeführt.
+#  Datei ist ein Zwischenschritt in den Abhängigkeiten.
+#  Die Datei existiert nicht.
+#  Datei wurde nicht aktualisiert.
+#  Auszuführende Regel (aus „Makefile“, Zeile 257):
+			$(debug)
+
+# Dies ist kein Ziel:
+.ind:
+#  Die Suche nach impliziten Regeln wurde nicht durchgeführt.
+#  Datei ist ein Zwischenschritt in den Abhängigkeiten.
+#  Zeit der letzten Änderung wurde nicht überprüft.
+#  Datei wurde nicht aktualisiert.
+
+main.o: Makefile Makefile.c_and_c++ main.c types.h minmax.h
+#  Die Suche nach impliziten Regeln wurde nicht durchgeführt.
+#  Datei ist ein Zwischenschritt in den Abhängigkeiten.
+#  Zeit der letzten Änderung wurde nicht überprüft.
+#  Datei wurde nicht aktualisiert.
+
+minmax.oo: Makefile Makefile.c_and_c++ minmax.c types.h minmax.h
+#  Die Suche nach impliziten Regeln wurde nicht durchgeführt.
+#  Datei ist ein Zwischenschritt in den Abhängigkeiten.
+#  Zeit der letzten Änderung wurde nicht überprüft.
+#  Datei wurde nicht aktualisiert.
+
+# Dies ist kein Ziel:
+.S.s:
+# Eingebaute Regel
+#  Die Suche nach impliziten Regeln wurde nicht durchgeführt.
+#  Datei ist ein Zwischenschritt in den Abhängigkeiten.
+#  Zeit der letzten Änderung wurde nicht überprüft.
+#  Datei wurde nicht aktualisiert.
+#  Auszuführende Regel (eingebaut):
+	$(PREPROCESS.S) $< > $@
+
+# Dies ist kein Ziel:
+.mod:
+# Eingebaute Regel
+#  Die Suche nach impliziten Regeln wurde nicht durchgeführt.
+#  Datei ist ein Zwischenschritt in den Abhängigkeiten.
+#  Zeit der letzten Änderung wurde nicht überprüft.
+#  Datei wurde nicht aktualisiert.
+#  Auszuführende Regel (eingebaut):
+	$(COMPILE.mod) -o $@ -e $@ $^
+
+# Dies ist kein Ziel:
+Makefile.documentation:
+#  Die Suche nach impliziten Regeln wurde durchgeführt.
+#  Zuletzt geändert 2023-08-09 11:51:25.017852558
+#  Datei wurde aktualisiert.
+#  Erfolgreich aktualisiert.
+
+# Dies ist kein Ziel:
+.sgml:
+#  Die Suche nach impliziten Regeln wurde nicht durchgeführt.
+#  Datei ist ein Zwischenschritt in den Abhängigkeiten.
+#  Zeit der letzten Änderung wurde nicht überprüft.
+#  Datei wurde nicht aktualisiert.
+
+.SECONDARY:
+#  Die Suche nach impliziten Regeln wurde nicht durchgeführt.
+#  Datei ist ein Zwischenschritt in den Abhängigkeiten.
+#  Zeit der letzten Änderung wurde nicht überprüft.
+#  Datei wurde nicht aktualisiert.
+
+# Dies ist kein Ziel:
+.mod.o:
+# Eingebaute Regel
+#  Die Suche nach impliziten Regeln wurde nicht durchgeführt.
+#  Datei ist ein Zwischenschritt in den Abhängigkeiten.
+#  Zeit der letzten Änderung wurde nicht überprüft.
+#  Datei wurde nicht aktualisiert.
+#  Auszuführende Regel (eingebaut):
+	$(COMPILE.mod) -o $@ $<
+
+# Dies ist kein Ziel:
+.F.f:
+# Eingebaute Regel
+#  Die Suche nach impliziten Regeln wurde nicht durchgeführt.
+#  Datei ist ein Zwischenschritt in den Abhängigkeiten.
+#  Zeit der letzten Änderung wurde nicht überprüft.
+#  Datei wurde nicht aktualisiert.
+#  Auszuführende Regel (eingebaut):
+	$(PREPROCESS.F) $(OUTPUT_OPTION) $<
+
+# Dies ist kein Ziel:
+.w:
+# Eingebaute Regel
+#  Die Suche nach impliziten Regeln wurde nicht durchgeführt.
+#  Datei ist ein Zwischenschritt in den Abhängigkeiten.
+#  Zeit der letzten Änderung wurde nicht überprüft.
+#  Datei wurde nicht aktualisiert.
+
+.DELETE_ON_ERROR:
+#  Die Suche nach impliziten Regeln wurde nicht durchgeführt.
+#  Datei ist ein Zwischenschritt in den Abhängigkeiten.
+#  Zeit der letzten Änderung wurde nicht überprüft.
+#  Datei wurde nicht aktualisiert.
+
+# Dies ist kein Ziel:
+.S.o:
+# Eingebaute Regel
+#  Die Suche nach impliziten Regeln wurde nicht durchgeführt.
+#  Datei ist ein Zwischenschritt in den Abhängigkeiten.
+#  Zeit der letzten Änderung wurde nicht überprüft.
+#  Datei wurde nicht aktualisiert.
+#  Auszuführende Regel (eingebaut):
+	$(COMPILE.S) -o $@ $<
+
+# Dies ist kein Ziel:
+Makefile.flex_and_bison:
+#  Die Suche nach impliziten Regeln wurde durchgeführt.
+#  Zuletzt geändert 2023-08-09 06:47:31.229148039
+#  Datei wurde aktualisiert.
+#  Erfolgreich aktualisiert.
+
+# Dies ist kein Ziel:
+.cweb:
+#  Die Suche nach impliziten Regeln wurde nicht durchgeführt.
+#  Datei ist ein Zwischenschritt in den Abhängigkeiten.
+#  Zeit der letzten Änderung wurde nicht überprüft.
+#  Datei wurde nicht aktualisiert.
+
+# Dies ist kein Ziel:
+.cob:
+#  Die Suche nach impliziten Regeln wurde nicht durchgeführt.
+#  Datei ist ein Zwischenschritt in den Abhängigkeiten.
+#  Zeit der letzten Änderung wurde nicht überprüft.
+#  Datei wurde nicht aktualisiert.
+
+# Dies ist kein Ziel:
+minmax.h:
+#  Die Suche nach impliziten Regeln wurde durchgeführt.
+#  Zuletzt geändert 2023-07-26 08:23:28
+#  Datei wurde aktualisiert.
+#  Erfolgreich aktualisiert.
+
+# Dies ist kein Ziel:
+Makefile.latex:
+#  Die Suche nach impliziten Regeln wurde durchgeführt.
+#  Zuletzt geändert 2018-03-06 19:12:29
+#  Datei wurde aktualisiert.
+#  Erfolgreich aktualisiert.
+
+# Dies ist kein Ziel:
+.mf:
+#  Die Suche nach impliziten Regeln wurde nicht durchgeführt.
+#  Datei ist ein Zwischenschritt in den Abhängigkeiten.
+#  Zeit der letzten Änderung wurde nicht überprüft.
+#  Datei wurde nicht aktualisiert.
+
+# Dies ist kein Ziel:
+.F:
+# Eingebaute Regel
+#  Die Suche nach impliziten Regeln wurde nicht durchgeführt.
+#  Datei ist ein Zwischenschritt in den Abhängigkeiten.
+#  Zeit der letzten Änderung wurde nicht überprüft.
+#  Datei wurde nicht aktualisiert.
+#  Auszuführende Regel (eingebaut):
+	$(LINK.F) $^ $(LOADLIBES) $(LDLIBS) -o $@
+
+# Dies ist kein Ziel:
+.web:
+# Eingebaute Regel
+#  Die Suche nach impliziten Regeln wurde nicht durchgeführt.
+#  Datei ist ein Zwischenschritt in den Abhängigkeiten.
+#  Zeit der letzten Änderung wurde nicht überprüft.
+#  Datei wurde nicht aktualisiert.
+
+doc: check.info check.html
+#  Vorgetäuschtes Ziel (benötigt von .PHONY).
+#  Die Suche nach impliziten Regeln wurde nicht durchgeführt.
+#  Datei ist ein Zwischenschritt in den Abhängigkeiten.
+#  Die Datei existiert nicht.
+#  Datei wurde nicht aktualisiert.
+
+# Dies ist kein Ziel:
+.sym:
+# Eingebaute Regel
+#  Die Suche nach impliziten Regeln wurde nicht durchgeführt.
+#  Datei ist ein Zwischenschritt in den Abhängigkeiten.
+#  Zeit der letzten Änderung wurde nicht überprüft.
+#  Datei wurde nicht aktualisiert.
+
+# Dies ist kein Ziel:
+.f:
+# Eingebaute Regel
+#  Die Suche nach impliziten Regeln wurde nicht durchgeführt.
+#  Datei ist ein Zwischenschritt in den Abhängigkeiten.
+#  Zeit der letzten Änderung wurde nicht überprüft.
+#  Datei wurde nicht aktualisiert.
+#  Auszuführende Regel (eingebaut):
+	$(LINK.f) $^ $(LOADLIBES) $(LDLIBS) -o $@
+
+# Dies ist kein Ziel:
+.f90:
+#  Die Suche nach impliziten Regeln wurde nicht durchgeführt.
+#  Datei ist ein Zwischenschritt in den Abhängigkeiten.
+#  Zeit der letzten Änderung wurde nicht überprüft.
+#  Datei wurde nicht aktualisiert.
+
+# Dies ist kein Ziel:
+.info:
+# Eingebaute Regel
+#  Die Suche nach impliziten Regeln wurde nicht durchgeführt.
+#  Datei ist ein Zwischenschritt in den Abhängigkeiten.
+#  Zeit der letzten Änderung wurde nicht überprüft.
+#  Datei wurde nicht aktualisiert.
+
+# Statistik der Hash-Tabelle für Dateien:
+# Auslastung=139/1024=14%, Rehash=0, Kollisionen=3242/1111829%
+# VPATH-Suchpfade
+
+# Keine „vpath“-Suchpfade.
+
+# Kein allgemeiner Suchpfad (Variable „VPATH“).
+
+# Puffer für strcache: 6 (5) / Zeichenketten = 1922 / Speicher = 41626 B / ø = 21 B
+# aktueller Puffer: Größe = 8162 B / benutzt = 854 B / Anzahl = 39 / ø = 21 B
+# andere verwendete: Summe = 33464 B / Anzahl = 1883 / /ø = 17 B
+# andere freie: Summe = 38 B / Max = 15 B / Min = 3 B / ø = 7 B
+
+# Leistung von strcache: Suchen = 3419 / Trefferrate = 43%
+# Statistik für Hashtabelle:
+# Auslastung=1922/8192=23%, Rehash=0, Kollisionen=1411/341941%
+# „Make“-Datenbank beendet am: Thu Aug 10 07:18:01 2023
+

@@ -1,0 +1,533 @@
+
+SUBDIRS = foo bar baz
+
+.PHONY: subdirs $(SUBDIRS)
+subdirs: $(SUBDIRS)
+
+$(SUBDIRS):
+    $(MAKE) -C $@
+
+foo: baz
+
+--------------------------------------------------
+info make 4.9
+.PHONY
+.SUFFIXES
+.DEFAULT
+.PRECIOUS
+.INTERMEDIATE
+.SECONDARY
+.SECONDEXPANSION
+.DELETE_ON_ERROR ! set this! make 5.5
+.IGNORE
+.LOW_RESOLUTION_TIME
+.SILENT
+.EXPORT_ALL_VARIABLES !
+.NOTPARALLEL
+.POSIX ! make 5.7.3
+--------------------------------------------------
+info make 4.12.1
+objects = foo.o bar.o
+
+all: $(objects)
+
+$(objects): %.o: %.c
+    $(CC) -c $(CFLAGS) $< -o $@
+--------------------------------------------------
+info make 5.8 (yacc)
+--------------------------------------------------
+BRIEF = CC HOSTCC
+SILENT = DEPCC DEPHOSTCC
+--------------------------------------------------
+info make 6.2:
+     ifeq ($(origin FOO), undefined)
+       FOO = bar
+     endif
+--------------------------------------------------
+CFLAGS += -pg # enable profiling
+--------------------------------------------------
+     libs_for_gcc = -lgnu
+     normal_libs =
+
+     foo: $(objects)
+     ifeq ($(CC),gcc)
+             $(CC) -o foo $(objects) $(libs_for_gcc)
+     else
+             $(CC) -o foo $(objects) $(normal_libs)
+     endif
+--------------------------------------------------
+nfo make 8.2 functions for string substitution and analysis
+--------------------------------------------------
+override CFLAGS += $(patsubst %,-I%,$(subst :, ,$(VPATH)))
+--------------------------------------------------
+make -k # keep going, even with errors
+--------------------------------------------------
+info make 8.8:
+
+     PROGRAMS    = server client
+
+     server_OBJS = server.o server_priv.o server_access.o
+     server_LIBS = priv protocol
+
+     client_OBJS = client.o client_api.o client_mem.o
+     client_LIBS = protocol
+
+     # Everything after this is generic
+
+     .PHONY: all
+     all: $(PROGRAMS)
+
+     define PROGRAM_template
+      $(1): $$($(1)_OBJS) $$($(1)_LIBS:%=-l%)
+      ALL_OBJS   += $$($(1)_OBJS)
+     endef
+
+     $(foreach prog,$(PROGRAMS),$(eval $(call PROGRAM_template,$(prog))))
+
+     $(PROGRAMS):
+             $(LINK.o) $^ $(LDLIBS) -o $@
+
+     clean:
+             rm -f $(ALL_OBJS) $(PROGRAMS)
+--------------------------------------------------
+info make 9.7:
+create internal database dump of make:
+make -p -f /dev/null
+--------------------------------------------------
+Flags (info make 10.2):
+for gcc $(CC):
+CPPFLAGS
+CFLAGS
+
+linker:
+LDFLAGS
+LOADLIBES
+LDLIBS
+
+for g++ $(CXX):
+CPPFLAGS
+CXXFLAGS
+
+for pc $(PC):
+PFLAGS
+
+for fc $(FC):
+FFLAGS
+CPPFLAGS
+RFLAGS (for .r ratfor)
+
+for m2c $(M2C):
+M2FLAGS
+MODFLAGS
+
+for as $(AS):
+ASFLAGS
+
+for yacc (bison) $(YACC):
+YFLAGS
+
+for lex (flex) $(LEX):
+LFLAGS
+
+for lint $(LINT):
+LINTFLAGS
+CPPFLAGS
+
+$(TEX)
+$(WEAVE)
+$(TANGLE)
+$(CWEAVE)
+$(CTANGLE)
+
+for tex2dvi $(TEXI2DVI):
+TEXI2DVI_FLAGS
+
+for makeinfo $(MAKEINFO)
+MAKEINFO_FLAGS
+--------------------------------------------------
+info make 10.5.3:
+`$%'
+     The target member name, when the target is an archive member.
+     *Note Archives::.  For example, if the target is `foo.a(bar.o)'
+     then `$%' is `bar.o' and `$@' is `foo.a'.  `$%' is empty when the
+     target is not an archive member.
+--------------------------------------------------
+COMPILE.mod = $(M2C) $(M2FLAGS) $(MODFLAGS) $(TARGET_ARCH)
+COMPILE.def = $(M2C) $(M2FLAGS) $(DEFFLAGS) $(TARGET_ARCH)
+FC = f77
+F77 = $(FC)
+F77FLAGS = $(FFLAGS)
+PREPROCESS.F = $(FC) $(FFLAGS) $(CPPFLAGS) $(TARGET_ARCH) -F
+COMPILE.F = $(FC) $(FFLAGS) $(CPPFLAGS) $(TARGET_ARCH) -c
+LINK.F = $(FC) $(FFLAGS) $(CPPFLAGS) $(LDFLAGS) $(TARGET_ARCH)
+COMPILE.f = $(FC) $(FFLAGS) $(TARGET_ARCH) -c
+LINK.f = $(FC) $(FFLAGS) $(LDFLAGS) $(TARGET_ARCH)
+COMPILE.m = $(OBJC) $(OBJCFLAGS) $(CPPFLAGS) $(TARGET_ARCH) -c
+LINK.m = $(OBJC) $(OBJCFLAGS) $(CPPFLAGS) $(LDFLAGS) $(TARGET_ARCH)
+COMPILE.p = $(PC) $(PFLAGS) $(CPPFLAGS) $(TARGET_ARCH) -c
+LINK.p = $(PC) $(PFLAGS) $(CPPFLAGS) $(LDFLAGS) $(TARGET_ARCH)
+CHECKOUT,v = +$(if $(wildcard $@),,$(CO) $(COFLAGS) $< $@)
+MAKE_HOST := x86_64-pc-linux-gnu
+LD = ld    ##+## ändern!
+TEXI2DVI = texi2dvi
+ARFLAGS = rv ##+## ändern
+LINT.c = $(LINT) $(LINTFLAGS) $(CPPFLAGS) $(TARGET_ARCH)
+WEAVE = weave
+TANGLE = tangle
+GET = get
+CTANGLE = ctangle
+PREPROCESS.r = $(FC) $(FFLAGS) $(RFLAGS) $(TARGET_ARCH) -F
+COMPILE.r = $(FC) $(FFLAGS) $(RFLAGS) $(TARGET_ARCH) -c
+LINK.r = $(FC) $(FFLAGS) $(RFLAGS) $(LDFLAGS) $(TARGET_ARCH)
+MAKE = $(MAKE_COMMAND)
+AS = as ##+## ändern
+MAKE_COMMAND := make
+LINK.cpp = $(LINK.cc)
+LEX = lex
+LEX.l = $(LEX) $(LFLAGS) -t
+LEX.m = $(LEX) $(LFLAGS) -t
+YACC = yacc
+YACC.m = $(YACC) $(YFLAGS)
+YACC.y = $(YACC) $(YFLAGS)
+M2C = m2c
+.VARIABLES :=
+MAKEFILES :=
+COFLAGS =
+COMPILE.C = $(COMPILE.cc)
+CPP = $(CC) -E
+LINK.C = $(LINK.cc)
+PREPROCESS.S = $(CC) -E $(CPPFLAGS)
+COMPILE.S = $(CC) $(ASFLAGS) $(CPPFLAGS) $(TARGET_MACH) -c
+LINK.S = $(CC) $(ASFLAGS) $(CPPFLAGS) $(LDFLAGS) $(TARGET_MACH)
+COMPILE.s = $(AS) $(ASFLAGS) $(TARGET_MACH)
+LINK.s = $(CC) $(ASFLAGS) $(LDFLAGS) $(TARGET_MACH)
+.INCLUDE_DIRS = /usr/include /usr/local/include /usr/include
+.RECIPEPREFIX :=
+MAKE_TERMERR := /dev/tty6
+OBJC = cc
+TEX = tex
+--------------------------------------------------
+%.out:
+
+%.a:
+
+%.ln:
+
+%.o:
+
+%: %.o
+#  Auszuführende Regel (eingebaut):
+    $(LINK.o) $^ $(LOADLIBES) $(LDLIBS) -o $@
+
+%: %.c
+#  Auszuführende Regel (eingebaut):
+        $(LINK.c) $^ $(LOADLIBES) $(LDLIBS) -o $@
+
+%.ln: %.c
+#  Auszuführende Regel (eingebaut):
+        $(LINT.c) -C$* $<
+
+%.cc:
+
+%: %.cc
+#  Auszuführende Regel (eingebaut):
+        $(LINK.cc) $^ $(LOADLIBES) $(LDLIBS) -o $@
+
+%.C:
+
+%: %.C
+#  Auszuführende Regel (eingebaut):
+        $(LINK.C) $^ $(LOADLIBES) $(LDLIBS) -o $@
+
+%.cpp:
+
+%: %.cpp
+#  Auszuführende Regel (eingebaut):
+        $(LINK.cpp) $^ $(LOADLIBES) $(LDLIBS) -o $@
+
+%.p:
+
+%: %.p
+#  Auszuführende Regel (eingebaut):
+        $(LINK.p) $^ $(LOADLIBES) $(LDLIBS) -o $@
+
+%.f:
+
+%: %.f
+#  Auszuführende Regel (eingebaut):
+        $(LINK.f) $^ $(LOADLIBES) $(LDLIBS) -o $@
+
+%.o: %.f
+#  Auszuführende Regel (eingebaut):
+        $(COMPILE.f) $(OUTPUT_OPTION) $<
+
+%.F:
+
+%: %.F
+#  Auszuführende Regel (eingebaut):
+        $(LINK.F) $^ $(LOADLIBES) $(LDLIBS) -o $@
+
+%.o: %.F
+#  Auszuführende Regel (eingebaut):
+        $(COMPILE.F) $(OUTPUT_OPTION) $<
+
+%.f: %.F
+#  Auszuführende Regel (eingebaut):
+        $(PREPROCESS.F) $(OUTPUT_OPTION) $<
+
+%.m:
+
+%: %.m
+#  Auszuführende Regel (eingebaut):
+        $(LINK.m) $^ $(LOADLIBES) $(LDLIBS) -o $@
+
+%.o: %.m
+#  Auszuführende Regel (eingebaut):
+        $(COMPILE.m) $(OUTPUT_OPTION) $<
+
+%.r:
+
+%: %.r
+#  Auszuführende Regel (eingebaut):
+        $(LINK.r) $^ $(LOADLIBES) $(LDLIBS) -o $@
+
+%.o: %.r
+#  Auszuführende Regel (eingebaut):
+        $(COMPILE.r) $(OUTPUT_OPTION) $<
+
+%.f: %.r
+#  Auszuführende Regel (eingebaut):
+        $(PREPROCESS.r) $(OUTPUT_OPTION) $<
+
+%.y:
+
+%.ln: %.y
+#  Auszuführende Regel (eingebaut):
+        $(YACC.y) $<
+         $(LINT.c) -C$* y.tab.c
+         $(RM) y.tab.c
+
+%.c: %.y
+#  Auszuführende Regel (eingebaut):
+        $(YACC.y) $<
+         mv -f y.tab.c $@
+
+%.l:
+
+%.ln: %.l
+#  Auszuführende Regel (eingebaut):
+        @$(RM) $*.c
+         $(LEX.l) $< > $*.c
+        $(LINT.c) -i $*.c -o $@
+         $(RM) $*.c
+
+%.c: %.l
+#  Auszuführende Regel (eingebaut):
+        @$(RM) $@
+         $(LEX.l) $< > $@
+
+%.r: %.l
+#  Auszuführende Regel (eingebaut):
+        $(LEX.l) $< > $@
+         mv -f lex.yy.r $@
+
+%.ym:
+
+%.m: %.ym
+#  Auszuführende Regel (eingebaut):
+        $(YACC.m) $<
+         mv -f y.tab.c $@
+
+%.yl:
+
+%.s:
+
+%: %.s
+#  Auszuführende Regel (eingebaut):
+        $(LINK.s) $^ $(LOADLIBES) $(LDLIBS) -o $@
+
+%.o: %.s
+#  Auszuführende Regel (eingebaut):
+        $(COMPILE.s) -o $@ $<
+
+%.S:
+
+%: %.S
+#  Auszuführende Regel (eingebaut):
+        $(LINK.S) $^ $(LOADLIBES) $(LDLIBS) -o $@
+
+%.o: %.S
+#  Auszuführende Regel (eingebaut):
+        $(COMPILE.S) -o $@ $<
+
+%.s: %.S
+#  Auszuführende Regel (eingebaut):
+        $(PREPROCESS.S) $< > $@
+
+%.mod:
+
+%: %.mod
+#  Auszuführende Regel (eingebaut):
+        $(COMPILE.mod) -o $@ -e $@ $^
+
+%.o: %.mod
+#  Auszuführende Regel (eingebaut):
+        $(COMPILE.mod) -o $@ $<
+
+%.sym:
+
+%.def:
+
+%.sym: %.def
+#  Auszuführende Regel (eingebaut):
+        $(COMPILE.def) -o $@ $<
+
+%.h:
+
+%.info:
+
+%.dvi:
+
+%.tex:
+
+%.dvi: %.tex
+#  Auszuführende Regel (eingebaut):
+        $(TEX) $<
+
+%.texinfo:
+
+%.dvi: %.texinfo
+#  Auszuführende Regel (eingebaut):
+        $(TEXI2DVI) $(TEXI2DVI_FLAGS) $<
+
+%.texi:
+
+%.dvi: %.texi
+#  Auszuführende Regel (eingebaut):
+        $(TEXI2DVI) $(TEXI2DVI_FLAGS) $<
+
+%.txinfo:
+
+%.dvi: %.txinfo
+#  Auszuführende Regel (eingebaut):
+        $(TEXI2DVI) $(TEXI2DVI_FLAGS) $<
+
+%.w:
+
+%.c: %.w
+#  Auszuführende Regel (eingebaut):
+        $(CTANGLE) $< - $@
+
+%.tex: %.w
+#  Auszuführende Regel (eingebaut):
+        $(CWEAVE) $< - $@
+
+%.ch:
+
+%.web:
+
+%.p: %.web
+#  Auszuführende Regel (eingebaut):
+        $(TANGLE) $<
+
+%.tex: %.web
+#  Auszuführende Regel (eingebaut):
+        $(WEAVE) $<
+
+%.sh:
+
+%: %.sh
+#  Auszuführende Regel (eingebaut):
+        cat $< >$@
+         chmod a+x $@
+
+%.elc:
+
+%.el:
+
+%.c++:
+
+%.cxx:
+
+%.pas:
+
+%.for:
+
+%.f77:
+
+%.f90:
+
+%.f95:
+
+%.f03:
+
+%.f08:
+
+%.latex:
+
+%.ps:
+
+%.nw:
+
+%.cweb:
+
+%.noweb:
+
+%.mf:
+
+%.ind:
+
+%.sgml:
+
+%.cob:
+
+%.1:
+
+%.odt:
+
+%.html:
+
+%.pdf:
+
+%.tfm:
+
+(%): %
+#  Auszuführende Regel (eingebaut):
+	$(AR) $(ARFLAGS) $@ $<
+
+%.out: %
+#  Auszuführende Regel (eingebaut):
+	@rm -f $@ 
+	 cp $< $@
+
+%.c: %.w %.ch
+#  Auszuführende Regel (eingebaut):
+	$(CTANGLE) $^ $@
+
+%.tex: %.w %.ch
+#  Auszuführende Regel (eingebaut):
+	$(CWEAVE) $^ $@
+
+%:: %,v
+#  Auszuführende Regel (eingebaut):
+	$(CHECKOUT,v)
+
+%:: RCS/%,v
+#  Auszuführende Regel (eingebaut):
+	$(CHECKOUT,v)
+
+%:: RCS/%
+#  Auszuführende Regel (eingebaut):
+	$(CHECKOUT,v)
+
+%:: s.%
+#  Auszuführende Regel (eingebaut):
+	$(GET) $(GFLAGS) $(SCCS_OUTPUT_OPTION) $<
+
+%:: SCCS/s.%
+#  Auszuführende Regel (eingebaut):
+	$(GET) $(GFLAGS) $(SCCS_OUTPUT_OPTION) $<
+--------------------------------------------------
+.SUFFIXES: .out .a .ln .o .c .cc .C .cpp .p .f .F .m .r .y .l .ym .yl .s .S .mod .sym .def .h .info .dvi .tex .texinfo .texi .txinfo .w .ch .web .sh .elc .el .out .a .ln .o .c .cc .cpp .c++ .cxx .C .p .pas .f .F .for .f77 .f90 .f95 .f03 .f08 .m .r .y .l .ym .yl .s .S .mod .sym .def .h .info .dvi .tex .texinfo .texi .txinfo .w .ch .web .sh .elc .el .latex .ps .nw .cweb .noweb .mf .ind .sgml .cob .1 .odt .html .pdf .ps .tfm
+--------------------------------------------------
+
