@@ -1,4 +1,5 @@
 # erzeugt Samstag, 04. Juli 2015 14:04 (C) 2015 von Leander Jedamus
+# modifiziert Samstag, 24. August 2024 14:27 von Leander Jedamus
 # modifiziert Montag, 12. August 2024 09:39 von Leander Jedamus
 # modifiziert Dienstag, 06. August 2024 14:52 von Leander Jedamus
 # modifiziert Freitag, 23. Februar 2024 16:26 von Leander Jedamus
@@ -63,6 +64,7 @@ link_switch		:= static
 DEPENDFILE		:= .depend
 PRINTFILE		:= .print
 PROJECT			:= $(shell cat project.txt)
+PROJECT_FILES		:= project.h version.h
 # PROJECT		:= va_args
 TEXINFOFILE		:= check.texinfo
 INFOFILE		:= $(TEXINFOFILE:%.texinfo=%.info)
@@ -220,8 +222,8 @@ FILES			+= distclean.sh
 FILES			+= zip.sh
 FILES			+= create_project.sh
 FILES			+= create_version.sh
-FILES			+= project.txt project.h
-FILES			+= version.txt version.h
+FILES			+= project.txt
+FILES			+= version.txt
 FILES			+= author.txt email.txt years.txt
 FILES			+= $(PROJECT).cppcheck
 
@@ -311,7 +313,7 @@ CLEANDIRS		= $(strip $(HTMLDIR) $(CPPCHECKDIR))
 PROGRAM1		:= $(PROJECT)
 #PROGRAM2		:= $(PROJECT)
 
-PROGRAMS		:= $(strip $(PROGRAM1) $(PROGRAM2))
+PROGRAMS		:= $(PROJECT_FILES) $(strip $(PROGRAM1) $(PROGRAM2))
 
 .PHONY:			all
 all::			$(PROGRAMS)
@@ -374,7 +376,7 @@ endif
 .PHONY:			distclean
 distclean:
 			$(RM) -r $(CLEANDIRS)
-			@./distclean.sh $(strip $(CDEPENDS) $(CCDEPENDS) $(PRINTFILE) $(GMONFILE) $(PROFFILE) $(NMFILE) $(CLEAN))
+			@./distclean.sh $(strip $(CDEPENDS) $(CCDEPENDS) $(PRINTFILE) $(GMONFILE) $(PROFFILE) $(NMFILE) $(PROJECT_FILES) $(CLEAN))
 ifeq ($(machtype),MacOS)
 			$(RM) -r $(PROJECT).dSYM
 endif
@@ -389,11 +391,11 @@ $(PRINTFILE):		$(FILES)
 .PHONY:			dummy
 dummy:
 
-project.h:		project.txt
+project.h:		project.txt author.txt email.txt years.txt
 			@echo "creating $@"
 			@./create_project.sh $@
 
-version.h:		version.txt
+version.h:		version.txt author.txt
 			@echo "creating $@"
 			@./create_version.sh $@
 
