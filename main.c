@@ -1,6 +1,7 @@
 /* -*- C -*- */
 /* main.c */
 /* erzeugt Freitag, 07. Juli 2023 12:05 (C) 2023 von Leander Jedamus */
+/* modifiziert Samstag, 24. August 2024 14:28 von Leander Jedamus */
 /* modifiziert Freitag, 23. Februar 2024 07:50 von Leander Jedamus */
 /* modifiziert Donnerstag, 22. Februar 2024 17:43 von Leander Jedamus */
 /* modifiziert Montag, 25. September 2023 07:38 von Leander Jedamus */
@@ -79,7 +80,7 @@ int main(int argc, char *argv[]) {
   printf(_("%s V%s (C) %s by %s <%s>\n"), PROJECT, VERSION, YEARS, AUTHOR, EMAIL);
 
 #if defined __unix__
-  optCon = poptGetContext(NULL, argc, argv, optionsTable, 0);
+  optCon = poptGetContext(NULL, argc, (const char **) argv, optionsTable, 0);
   if (argc < 2) {
     poptPrintUsage(optCon, POPTSTDOUTPUT, 0);
     exit(EXIT_FAILURE);
