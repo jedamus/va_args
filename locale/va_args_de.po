@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: va_args 1.0\n"
 "Report-Msgid-Bugs-To: Leander Jedamus <ljedamus@web.de>\n"
-"POT-Creation-Date: 2024-08-16 09:32+0200\n"
+"POT-Creation-Date: 2024-10-01 00:45+0200\n"
 "PO-Revision-Date: 2023-08-14 08:16+0200\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -17,22 +17,32 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: main.c:79
+#: main.c:82
 #, c-format
 msgid "%s V%s (C) %s by %s <%s>\n"
 msgstr "%s V%s (C) %s von %s <%s>\n"
 
-#: main.c:96
+#: main.c:84
+#, c-format
+msgid "maintained by %s <%s>\n"
+msgstr "unterhalten von %s <%s>\n"
+
+#: main.c:87
+#, c-format
+msgid "published under license \"%s\"\n"
+msgstr "veröffentlicht unter Lizenz \"%s\"\n"
+
+#: main.c:105
 #, c-format
 msgid "Enter a number: "
 msgstr "Geben Sie eine Zahl ein: "
 
-#: main.c:98
+#: main.c:107
 #, c-format
 msgid "Input error.\n"
 msgstr "Fehlerhafte Eingabe.\n"
 
-#: main.c:109
+#: main.c:118
 #, c-format
 msgid "Please press 'q' to end program!\n"
 msgstr "Drücken Sie bitte 'q', um das Programm zu beenden!\n"
