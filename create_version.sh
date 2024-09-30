@@ -1,7 +1,7 @@
 #!/usr/bin/env sh
 
 # erzeugt Freitag, 16. Februar 2024 19:38 (C) 2024 von Leander Jedamus
-# modifiziert Dienstag, 01. Oktober 2024 00:24 von Leander Jedamus
+# modifiziert Dienstag, 01. Oktober 2024 00:48 von Leander Jedamus
 # modifiziert Montag, 30. September 2024 23:26 von Leander Jedamus
 # modifiziert Dienstag, 10. September 2024 09:31 von Leander Jedamus
 # modifiziert Freitag, 16. August 2024 09:02 von Leander Jedamus
@@ -76,7 +76,7 @@ EOF
 
 for file in $the_version.texinfo $the_version.txinfo $the_version.texi; do
   if [ -f $file.in ]; then
-    echo "$file for input found."
+    # echo "$file for input found."
     sed \
       -e "s/[@]VERSION[@]/$version/g" \
       -e "s/[@]UPDATED[@]/$updated/g" \
