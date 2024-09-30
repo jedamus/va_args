@@ -1,0 +1,10 @@
+\input texinfo
+@c erzeugt Donnerstag, 10. August 2023 16:40 (C) 2023 von Leander Jedamus
+@c modifiziert Dienstag, 01. Oktober 2024 00:04 von Leander Jedamus
+@c modifiziert Donnerstag, 10. August 2023 16:41 von Leander Jedamus
+
+@set VERSION @VERSION@
+@set UPDATED @UPDATED@
+
+@c vim:set ai sw=2:
+
