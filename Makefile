@@ -1,4 +1,6 @@
 # erzeugt Samstag, 04. Juli 2015 14:04 (C) 2015 von Leander Jedamus
+# modifiziert Dienstag, 01. Oktober 2024 00:22 von Leander Jedamus
+# modifiziert Montag, 30. September 2024 23:59 von Leander Jedamus
 # modifiziert Samstag, 24. August 2024 14:27 von Leander Jedamus
 # modifiziert Montag, 12. August 2024 09:39 von Leander Jedamus
 # modifiziert Dienstag, 06. August 2024 14:52 von Leander Jedamus
@@ -59,13 +61,21 @@ VPATH			:= # search path for files not found in the current directpry; separated
 .LIBPATTERNS		:= lib%.so lib%.a
 
 debug_switch		:= true# false
-link_switch		:= static
+
+# set link_switch to shared, if there is at least one shared library:
+link_switch		:= static# shared
 
 DEPENDFILE		:= .depend
 PRINTFILE		:= .print
+
+DATE			:= $(shell date +\"%y%m%d\")
+DATETIME		:= $(shell date +\"%d.%m.%Y\ %H:%M\")
 PROJECT			:= $(shell cat project.txt)
-PROJECT_FILES		:= project.h version.h
 # PROJECT		:= va_args
+PROJECT_FILES		:= project.h version.h
+BACKUPDIR		:= $(PROJECT)
+TARFILE			:= $(PROJECT).tar.gz
+ZIPFILE			:= $(PROJECT)_$(DATE).zip
 TEXINFOFILE		:= check.texinfo
 INFOFILE		:= $(TEXINFOFILE:%.texinfo=%.info)
 XMLFILE			:= $(TEXINFOFILE:%.texinfo=%.xml)
@@ -74,11 +84,6 @@ PDFFILE			:= $(TEXINFOFILE:%.texinfo=%.pdf)
 HTMLFILE		:= $(TEXINFOFILE:%.texinfo=%.html)
 HTMLDIR			:= $(TEXINFOFILE:%.texinfo=%)
 
-DATE			:= $(shell date +\"%y%m%d\")
-DATETIME		:= $(shell date +\"%d.%m.%Y\ %H:%M\")
-BACKUPDIR		:= $(PROJECT)
-TARFILE			:= $(PROJECT).tar.gz
-ZIPFILE			:= $(PROJECT)_$(DATE).zip
 CPPCHECKDIR		:= $(PROJECT)-cppcheck-build-dir
 
 PDFOUTPUT		:= $(PDFFILE)
@@ -205,15 +210,7 @@ FILES			:= # put your source and other files here, that you \
 
 FILES			+= Makefile
 FILES			+= Makefile.c_and_c++
-FILES			+= Makefile.cobol
-FILES			+= Makefile.cweb_and_noweb
-FILES			+= Makefile.documentation
-FILES			+= Makefile.flex_and_bison
-FILES			+= Makefile.FORTRAN
-FILES			+= Makefile.latex
-FILES			+= Makefile.modula2
-FILES			+= Makefile.pascal
-FILES			+= check.texinfo version.texinfo check.d
+FILES			+= create_Makefile.sh
 FILES			+= run_me_once.sh
 FILES			+= depend.sh
 FILES			+= translate.sh
@@ -222,9 +219,20 @@ FILES			+= distclean.sh
 FILES			+= zip.sh
 FILES			+= create_project.sh
 FILES			+= create_version.sh
+FILES			+= Makefile.cobol
+FILES			+= Makefile.cweb_and_noweb
+FILES			+= Makefile.documentation
+FILES			+= Makefile.flex_and_bison
+FILES			+= Makefile.FORTRAN
+FILES			+= Makefile.latex
+FILES			+= Makefile.modula2
+FILES			+= Makefile.pascal
+FILES			+= check.texinfo the_version.texinfo check.d
 FILES			+= project.txt
 FILES			+= version.txt
-FILES			+= author.txt email.txt years.txt
+FILES			+= author.txt author_email.txt license.txt
+FILES			+= maintainer.txt maintainer_email.txt
+FILES			+= updated.txt url.txt description.txt years.txt
 FILES			+= $(PROJECT).cppcheck
 
 # use this for your c++ source files (uncomment for use with your c++-file):
@@ -261,38 +269,39 @@ FILES			+= $(PROJECT).cppcheck
 			   $(CCOBJS.cxx) $(CCOBJS.C)
 #OBJS			+= $(CCOBJS)
 
-CLIB1FILES		:= minmax.c getlocaledir.c
-CLIB1FILES2		:= getch.c
-CSOURCES		+= $(CLIB1FILES)
-CDEPENDS		+= $(CLIB1FILES:%.c=%.d)
-FILES			+= $(CLIB1FILES)
-HLIB1FILES		:= types.h gettext.h clrscr.h macros.h
-HLIB1FILES		+= $(CLIB1FILES:%.c=%.h)
-FILES			+= $(HLIB1FILES)
-FILES			+= $(CLIB1FILES2)
-FILES			+= $(CLIB1FILES2:%.c=%.h)
-LIB1OBJS		:= $(CLIB1FILES:%.c=%.oo)
+LIB1CFILES		:= minmax.c getlocaledir.c
+LIB1CFILES2		:= getch.c
+CSOURCES		+= $(LIB1CFILES)
+FILES			+= $(LIB1CFILES)
+LIB1HFILES		:= types.h gettext.h clrscr.h macros.h
+LIB1HFILES		+= $(LIB1CFILES:%.c=%.h)
+FILES			+= $(LIB1HFILES)
+FILES			+= $(LIB1CFILES2)
+FILES			+= $(LIB1CFILES2:%.c=%.h)
+CDEPENDS		+= $(LIB1CFILES:%.c=%.d)
+LIB1OBJS		:= $(LIB1CFILES:%.c=%.ol)
 ifeq ($(machtype),Linux)
-  CSOURCES		+= $(CLIB1FILES2)
-  CDEPENDS		+= $(CLIB1FILES2:%.c=%.d)
-  LIB1OBJS		+= $(CLIB1FILES2:%.c=%.oo)
+  CSOURCES		+= $(LIB1CFILES2)
+  CDEPENDS		+= $(LIB1CFILES2:%.c=%.d)
+  LIB1OBJS		+= $(LIB1CFILES2:%.c=%.ol)
 endif 
 ifeq ($(machtype),Arm)
-  CSOURCES		+= $(CLIB1FILES2)
-  CDEPENDS		+= $(CLIB1FILES2:%.c=%.d)
-  LIB1OBJS		+= $(CLIB1FILES2:%.c=%.oo)
+  CSOURCES		+= $(LIB1CFILES2)
+  CDEPENDS		+= $(LIB1CFILES2:%.c=%.d)
+  LIB1OBJS		+= $(LIB1CFILES2:%.c=%.ol)
 endif 
 ifeq ($(machtype),MacOS)
-  CSOURCES		+= $(CLIB1FILES2)
-  CDEPENDS		+= $(CLIB1FILES2:%.c=%.d)
-  LIB1OBJS		+= $(CLIB1FILES2:%.c=%.oo)
+  CSOURCES		+= $(LIB1CFILES2)
+  CDEPENDS		+= $(LIB1CFILES2:%.c=%.d)
+  LIB1OBJS		+= $(LIB1CFILES2:%.c=%.ol)
 endif 
 OBJS			+= $(LIB1OBJS)
-LIBRARY1NAME		:= subs
-LIBRARY1		:= lib$(LIBRARY1NAME).a
-LOADLIBES		:= -l$(LIBRARY1NAME)
-LIBRARIES		+= $(LIBRARY1)
-IS_IN_LIB		+= $(CLIB1FILES:%.c=%.d)
+LIB1RARYNAME		:= subs
+LIB1RARY		:= lib$(LIB1RARYNAME).a
+
+LOADLIBES		:= -l$(LIB1RARYNAME)
+
+LIBRARIES		+= $(LIB1RARY)
 
 CMAINFILE		:= main.c
 CSOURCES		+= $(CMAINFILE)
@@ -302,8 +311,8 @@ MAINOBJS		:= $(CMAINFILE:%.c=%.o)
 OBJS			+= $(MAINOBJS)
 
 CLEAN			= $(strip $(filter %.o,$(OBJS)) \
-		            $(filter %.o++,$(OBJS)) \
-		            $(filter %.oo,$(OBJS)) \
+		            $(filter %.osl,$(OBJS)) \
+		            $(filter %.ol,$(OBJS)) \
 			    $(LIBRARIES) $(PROGRAMS) \
 			    $(INFOFILE) $(XMLFILE) \
 			    $(TXTFILE) $(PDFOUTPUT) \
@@ -333,9 +342,11 @@ debug:
 			@echo "$$""(CCSOURCES)=$(strip $(CCSOURCES))"
 			@echo "$$""(CDEPENDS)=$(strip $(CDEPENDS))"
 			@echo "$$""(CCDEPENDS)=$(strip $(CCDEPENDS))"
+			@echo "$$""(OBJS1)=$(strip $(OBJS1))"
 			@echo "$$""(PROGRAMS)=$(strip $(PROGRAMS))"
 			@echo "$$""(PC)=$(strip $(PC))"
 			@echo "$$""(DATETIME)=$(strip $(DATETIME))"
+			@echo "$$""(LIB1OBJS)=$(strip $(LIB1OBJS))"
 
 .PHONY:			debugger
 debugger:		$(PROGRAM1)
@@ -356,14 +367,14 @@ doc:			$(INFOFILE) $(XMLFILE) $(TXTFILE) \
 			$(HTMLFILE)
 			# $(PDFFILE) 
 
-$(PROGRAM1):		$(LIBRARY1) $(CDEPENDS) $(MAINOBJS)
+$(PROGRAM1):		$(LIB1RARY) $(CDEPENDS) $(MAINOBJS)
 			$(link.c)
 
 #$(PROJECT):			$(CCOBJS)
 #			$(link.cc)
 
-$(LIBRARY1):		$(LIB1OBJS)
-			$(archive)
+$(LIB1RARY):		$(LIB1OBJS)
+			$(static_library)
 
 .PHONY:			clean
 clean:
@@ -391,11 +402,11 @@ $(PRINTFILE):		$(FILES)
 .PHONY:			dummy
 dummy:
 
-project.h:		project.txt author.txt email.txt years.txt
+project.h:		project.txt author.txt author_email.txt license.txt maintainer.txt maintainer_email.txt url.txt description.txt years.txt create_project.sh
 			@echo "creating $@"
 			@./create_project.sh $@
 
-version.h:		version.txt author.txt
+version.h:		version.txt author.txt updated.txt create_version.sh
 			@echo "creating $@"
 			@./create_version.sh $@
 
