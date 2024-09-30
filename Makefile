@@ -1,5 +1,5 @@
 # erzeugt Samstag, 04. Juli 2015 14:04 (C) 2015 von Leander Jedamus
-# modifiziert Dienstag, 01. Oktober 2024 00:22 von Leander Jedamus
+# modifiziert Dienstag, 01. Oktober 2024 00:45 von Leander Jedamus
 # modifiziert Montag, 30. September 2024 23:59 von Leander Jedamus
 # modifiziert Samstag, 24. August 2024 14:27 von Leander Jedamus
 # modifiziert Montag, 12. August 2024 09:39 von Leander Jedamus
@@ -210,7 +210,6 @@ FILES			:= # put your source and other files here, that you \
 
 FILES			+= Makefile
 FILES			+= Makefile.c_and_c++
-FILES			+= create_Makefile.sh
 FILES			+= run_me_once.sh
 FILES			+= depend.sh
 FILES			+= translate.sh
