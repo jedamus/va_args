@@ -1,8 +1,9 @@
 \input texinfo
 @c erzeugt Donnerstag, 10. August 2023 14:26 (C) 2023 von Leander Jedamus
+@c modifiziert Dienstag, 01. Oktober 2024 00:24 von Leander Jedamus
 @c modifiziert Donnerstag, 10. August 2023 14:27 von Leander Jedamus
 
-@include version.texinfo
+@include the_version.texinfo
 
 @settitle Sample Manual 1.0
 
