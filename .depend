@@ -1,3 +1,0 @@
-# automatically created 21.07.2023 07:47 by "make depend"
-minmax.o: minmax.c types.h minmax.h
-main.o: main.c types.h minmax.h
