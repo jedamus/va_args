@@ -1,6 +1,7 @@
 /* -*- C -*- */
 /* main.c */
 /* erzeugt Freitag, 07. Juli 2023 12:05 (C) 2023 von Leander Jedamus */
+/* modifiziert Dienstag, 01. Oktober 2024 00:25 von Leander Jedamus */
 /* modifiziert Samstag, 24. August 2024 14:28 von Leander Jedamus */
 /* modifiziert Freitag, 23. Februar 2024 07:50 von Leander Jedamus */
 /* modifiziert Donnerstag, 22. Februar 2024 17:43 von Leander Jedamus */
@@ -23,6 +24,7 @@
 #include <stdio.h>
 #include <stdarg.h>
 #include <stdlib.h>
+#include <string.h>
 #if defined __unix__
   #include <popt.h>
 #endif
@@ -77,7 +79,13 @@ int main(int argc, char *argv[]) {
   bindtextdomain(PROJECT, localedir);
   textdomain(PROJECT);
 
-  printf(_("%s V%s (C) %s by %s <%s>\n"), PROJECT, VERSION, YEARS, AUTHOR, EMAIL);
+  printf(_("%s V%s (C) %s by %s <%s>\n"), PROJECT, VERSION, YEARS, AUTHOR, AUTHOR_EMAIL);
+  if (strlen(MAINTAINER) > 0) {
+    printf(_("maintained by %s <%s>\n"), MAINTAINER, MAINTAINER_EMAIL);
+  }
+  if (strlen(LICENSE) > 0) {
+    printf(_("published under license \"%s\"\n"), LICENSE);
+  }
 
 #if defined __unix__
   optCon = poptGetContext(NULL, argc, (const char **) argv, optionsTable, 0);
