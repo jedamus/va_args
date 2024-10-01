@@ -1,5 +1,5 @@
 # erzeugt Samstag, 04. Juli 2015 14:04 (C) 2015 von Leander Jedamus
-# modifiziert Dienstag, 01. Oktober 2024 00:45 von Leander Jedamus
+# modifiziert Dienstag, 01. Oktober 2024 10:07 von Leander Jedamus
 # modifiziert Montag, 30. September 2024 23:59 von Leander Jedamus
 # modifiziert Samstag, 24. August 2024 14:27 von Leander Jedamus
 # modifiziert Montag, 12. August 2024 09:39 von Leander Jedamus
@@ -73,6 +73,13 @@ DATETIME		:= $(shell date +\"%d.%m.%Y\ %H:%M\")
 PROJECT			:= $(shell cat project.txt)
 # PROJECT		:= va_args
 PROJECT_FILES		:= project.h version.h
+
+PREFIX			:= /usr/local
+BINDIR			:= $(PREFIX)/bin
+LIBDIR			:= $(PREFIX)/lib
+DATADIR			:= $(PREFIX)/share
+LOCALEDIR		:= $(DATADIR)/locale
+
 BACKUPDIR		:= $(PROJECT)
 TARFILE			:= $(PROJECT).tar.gz
 ZIPFILE			:= $(PROJECT)_$(DATE).zip
@@ -218,6 +225,7 @@ FILES			+= distclean.sh
 FILES			+= zip.sh
 FILES			+= create_project.sh
 FILES			+= create_version.sh
+FILES			+= install_bin.sh install_lib.sh install_locale.sh
 FILES			+= Makefile.cobol
 FILES			+= Makefile.cweb_and_noweb
 FILES			+= Makefile.documentation
@@ -324,8 +332,14 @@ PROGRAM1		:= $(PROJECT)
 PROGRAMS		:= $(PROJECT_FILES) $(strip $(PROGRAM1) $(PROGRAM2))
 
 .PHONY:			all
-all::			$(PROGRAMS)
+all:			$(PROGRAMS)
 			@echo done.
+
+.PHONY:			install
+install:		$(PROJECT_FILES) $(PROGRAMS)
+			@sh ./install_bin.sh $(BINDIR) $(PROGRAM1) $(PROGRAM2)
+#			@sh ./install_lib.sh $(LIBDIR) $(LIB2RARY)
+			@sh ./install_locale.sh $(LOCALEDIR) $(PROJECT).mo
 
 .PHONY:			strip
 strip:			$(PROGRAMS)
