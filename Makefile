@@ -1,4 +1,5 @@
 # erzeugt Samstag, 04. Juli 2015 14:04 (C) 2015 von Leander Jedamus
+# modifiziert Samstag, 05. Oktober 2024 10:08 von Leander Jedamus
 # modifiziert Dienstag, 01. Oktober 2024 10:07 von Leander Jedamus
 # modifiziert Montag, 30. September 2024 23:59 von Leander Jedamus
 # modifiziert Samstag, 24. August 2024 14:27 von Leander Jedamus
@@ -208,6 +209,7 @@ CSOURCES		:= # put your c source files here \
 CDEPENDS		:= # here you add the .d files make from .c files
 CCDEPENDS		:= # here you add the .d files make from .cc files
 IS_IN_LIB		:= # here you add the .d files, which obj-files are in a library
+SHARED_LIBS		:= # put your shared libs here
 CCSOURCES		:= # put your c++ source files here. File types \
 			    "*.cc,*.cpp,*.c++,*.cxx,*.C" are recognized. \
 			    (will be used e.g. by "make depend")
@@ -226,6 +228,7 @@ FILES			+= zip.sh
 FILES			+= create_project.sh
 FILES			+= create_version.sh
 FILES			+= install_bin.sh install_lib.sh install_locale.sh
+FILES			+= bin_dist.sh
 FILES			+= Makefile.cobol
 FILES			+= Makefile.cweb_and_noweb
 FILES			+= Makefile.documentation
@@ -340,6 +343,11 @@ install:		$(PROJECT_FILES) $(PROGRAMS)
 			@sh ./install_bin.sh $(BINDIR) $(PROGRAM1) $(PROGRAM2)
 #			@sh ./install_lib.sh $(LIBDIR) $(LIB2RARY)
 			@sh ./install_locale.sh $(LOCALEDIR) $(PROJECT).mo
+
+.PHONY:			bin_dist
+bin_dist:		$(PROJECT_FILES) $(PROGRAMS)
+			@sh ./bin_dist.sh $(PROGRAM1) $(PROJECT) $(SHARED_LIBS)
+#			@sh ./bin_dist.sh $(PROGRAM2) $(PROJECT) $(SHARED_LIBS)
 
 .PHONY:			strip
 strip:			$(PROGRAMS)
