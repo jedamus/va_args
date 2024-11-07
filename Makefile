@@ -1,4 +1,6 @@
 # erzeugt Samstag, 04. Juli 2015 14:04 (C) 2015 von Leander Jedamus
+# modifiziert Donnerstag, 07. November 2024 10:19 von Leander Jedamus
+# modifiziert Montag, 07. Oktober 2024 11:05 von Leander Jedamus
 # modifiziert Samstag, 05. Oktober 2024 10:08 von Leander Jedamus
 # modifiziert Dienstag, 01. Oktober 2024 10:07 von Leander Jedamus
 # modifiziert Montag, 30. September 2024 23:59 von Leander Jedamus
@@ -78,12 +80,17 @@ PROJECT_FILES		:= project.h version.h
 PREFIX			:= /usr/local
 BINDIR			:= $(PREFIX)/bin
 LIBDIR			:= $(PREFIX)/lib
-DATADIR			:= $(PREFIX)/share
-LOCALEDIR		:= $(DATADIR)/locale
+DATAROOTDIR		:= $(PREFIX)/share
+DATADIR			:= $(DATAROOTDIR)
+MANDIR			:= $(DATAROOTDIR)/man
+INFODIR			:= $(DATAROOTDIR)/info
+DOCDIR			:= $(DATAROOTDIR)/doc/$(PROJECT)
+LOCALEDIR		:= $(DATAROOTDIR)/locale
 
 BACKUPDIR		:= $(PROJECT)
 TARFILE			:= $(PROJECT).tar.gz
 ZIPFILE			:= $(PROJECT)_$(DATE).zip
+
 TEXINFOFILE		:= check.texinfo
 INFOFILE		:= $(TEXINFOFILE:%.texinfo=%.info)
 XMLFILE			:= $(TEXINFOFILE:%.texinfo=%.xml)
@@ -208,8 +215,8 @@ CSOURCES		:= # put your c source files here \
 			    (will be used e.g. by "make depend")
 CDEPENDS		:= # here you add the .d files make from .c files
 CCDEPENDS		:= # here you add the .d files make from .cc files
-IS_IN_LIB		:= # here you add the .d files, which obj-files are in a library
-SHARED_LIBS		:= # put your shared libs here
+IS_IN_LIB		:= # no longer needed
+SHARED_LIBS		:= # here you add all shared libraries
 CCSOURCES		:= # put your c++ source files here. File types \
 			    "*.cc,*.cpp,*.c++,*.cxx,*.C" are recognized. \
 			    (will be used e.g. by "make depend")
@@ -243,6 +250,7 @@ FILES			+= version.txt
 FILES			+= author.txt author_email.txt license.txt
 FILES			+= maintainer.txt maintainer_email.txt
 FILES			+= updated.txt url.txt description.txt years.txt
+FILES			+= license.md
 FILES			+= $(PROJECT).cppcheck
 
 # use this for your c++ source files (uncomment for use with your c++-file):
