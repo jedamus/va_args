@@ -1,5 +1,5 @@
 # erzeugt Samstag, 04. Juli 2015 14:04 (C) 2015 von Leander Jedamus
-# modifiziert Mittwoch, 15. April 2026 17:50 von Leander Jedamus
+# modifiziert Mittwoch, 15. April 2026 18:29 von Leander Jedamus
 # modifiziert Samstag, 09. September 2023 09:31 von Leander Jedamus
 # modifiziert Mittwoch, 02. September 2015 14:31 von Leander Jedamus
 # modifiziert Dienstag, 01. September 2015 18:11 von Leander Jedamus
@@ -32,10 +32,10 @@ $(COMPILE.F) $< -o $@
 endef
 
 %.o:		%.f
-		$(compile.f) 
+		$(compile.f)
 
 %.o:		%.F
-		$(compile.F) 
+		$(compile.F)
 
 %.o:		%.for
 		$(compile.f)
@@ -65,7 +65,7 @@ endef
 		$(compile.f)
 
 %.o:		%.F95
-		$(compile.F) 
+		$(compile.F)
 
 %.o:		%.f03
 		$(compile.f)
