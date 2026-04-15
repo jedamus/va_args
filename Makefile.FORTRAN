@@ -1,4 +1,5 @@
 # erzeugt Samstag, 04. Juli 2015 14:04 (C) 2015 von Leander Jedamus
+# modifiziert Mittwoch, 15. April 2026 15:29 von Leander Jedamus
 # modifiziert Samstag, 09. September 2023 09:31 von Leander Jedamus
 # modifiziert Mittwoch, 02. September 2015 14:31 von Leander Jedamus
 # modifiziert Dienstag, 01. September 2015 18:11 von Leander Jedamus
@@ -10,12 +11,12 @@
 # modifiziert Samstag, 04. Juli 2015 14:11 von Leander Jedamus
 
 ifeq ($(machtype),MacOS)
-FORTRANC        = mpifort
+FC              = mpifort
 else
-FORTRANC	= gfortran
+FC	        = gfortran
 endif
 
-COMPILE.f	= $(FORTRANC)
+COMPILE.f	= $(FC) $(FFLAGS) $(MODFLAG) $(INCLUDES)
 
 define compile.f
 $(RM) $@
@@ -23,25 +24,43 @@ $(COMPILE.f) -c $< -o $@
 endef
 
 %.o:		%.f
-		$(compile.f)
+		$(compile.f) -c $< -o $@
+
+%.o:		%.F
+		$(compile.f) -cpp -c $< -o $@
 
 %.o:		%.for
-		$(compile.f)
+		$(compile.f) -c $< -o $@
+
+%.o:		%.FOR
+		$(compile.f) -cpp -c $< -o $@
 
 %.o:		%.f77
-		$(compile.f)
+		$(compile.f) -c $< -o $@
 
 %.o:		%.f90
-		$(compile.f)
+		$(compile.f) -c $< -o $@
+
+%.o:		%.F90
+		$(compile.f) -cpp -c $< -o $@
 
 %.o:		%.f95
-		$(compile.f) -std=f95
+		$(compile.f) -c $< -o $@
+
+%.o:		%.F95
+		$(compile.f) -cpp -c $< -o $@
 
 %.o:		%.f03
-		$(compile.f) -std=f2003
+		$(compile.f) -c $< -o $@
+
+%.o:		%.F03
+		$(compile.f) -cpp -c $< -o $@
 
 %.o:		%.f08
-		$(compile.f) -std=f2008
+		$(compile.f) -c $< -o $@
+
+%.o:		%.F08
+		$(compile.f) -cpp -c $< -o $@
 
 # vim:ai sw=2 noexpandtab
 
