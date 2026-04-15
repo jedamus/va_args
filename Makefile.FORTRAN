@@ -1,5 +1,5 @@
 # erzeugt Samstag, 04. Juli 2015 14:04 (C) 2015 von Leander Jedamus
-# modifiziert Mittwoch, 15. April 2026 15:42 von Leander Jedamus
+# modifiziert Mittwoch, 15. April 2026 15:56 von Leander Jedamus
 # modifiziert Samstag, 09. September 2023 09:31 von Leander Jedamus
 # modifiziert Mittwoch, 02. September 2015 14:31 von Leander Jedamus
 # modifiziert Dienstag, 01. September 2015 18:11 von Leander Jedamus
@@ -16,8 +16,8 @@ else
 FC	        = gfortran
 endif
 
-COMPILE.f	= $(FC) $(FFLAGS) $(MODFLAG) $(FINCLUDES) $(TARGET_ARCH) -c
-COMPILE.F	= $(FC) -cpp $(FFLAGS) $(MODFLAG) $(FINCLUDES) $(TARGET_ARCH) -c
+COMPILE.f	= $(FC) $(strip $(FFLAGS) $(MODFLAG) $(FINCLUDES) $(TARGET_ARCH)) -c
+COMPILE.F	= $(FC) -cpp $(strip $(FFLAGS) $(MODFLAG) $(FINCLUDES) $(TARGET_ARCH)) -c
 
 define compile.f
 $(RM) $@
