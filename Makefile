@@ -1,4 +1,5 @@
 # erzeugt Samstag, 04. Juli 2015 14:04 (C) 2015 von Leander Jedamus
+# modifiziert Mittwoch, 15. April 2026 20:51 von Leander Jedamus
 # modifiziert Donnerstag, 07. November 2024 10:19 von Leander Jedamus
 # modifiziert Montag, 07. Oktober 2024 11:05 von Leander Jedamus
 # modifiziert Samstag, 05. Oktober 2024 10:08 von Leander Jedamus
@@ -145,7 +146,7 @@ NMFLAGS			:= --extern-only --defined-only -v --print-file-name
 LINTFLAGS		:= #
 
 ifeq ($(debug_switch),true)
-  CPPFLAGS		+= -g -Wall
+  CPPFLAGS		+= -g -Wall -Wextra
   ifeq ($(CC),gcc)
     CPPFLAGS		+= -pg # profiling
     CPPFLAGS		+= -Og # optimize for debug
@@ -176,7 +177,7 @@ endif
 
 CPPFLAGS		+= # -traditional
 CPPFLAGS		+= # -funroll-loops -fomit-frame-pointer
-CXXFLAGS		+= # -felide-constructors -fmemoize-lookups
+CXXFLAGS		+= -std=c++17 # -felide-constructors -fmemoize-lookups
 LDFLAGS			+= -L .# -s
 LDLIBS			+= -lm
 # LDLIBS		+= -lefence
