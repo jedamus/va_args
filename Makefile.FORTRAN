@@ -1,5 +1,5 @@
 # erzeugt Samstag, 04. Juli 2015 14:04 (C) 2015 von Leander Jedamus
-# modifiziert Mittwoch, 15. April 2026 15:29 von Leander Jedamus
+# modifiziert Mittwoch, 15. April 2026 15:42 von Leander Jedamus
 # modifiziert Samstag, 09. September 2023 09:31 von Leander Jedamus
 # modifiziert Mittwoch, 02. September 2015 14:31 von Leander Jedamus
 # modifiziert Dienstag, 01. September 2015 18:11 von Leander Jedamus
@@ -16,51 +16,57 @@ else
 FC	        = gfortran
 endif
 
-COMPILE.f	= $(FC) $(FFLAGS) $(MODFLAG) $(INCLUDES)
+COMPILE.f	= $(FC) $(FFLAGS) $(MODFLAG) $(FINCLUDES) $(TARGET_ARCH) -c
+COMPILE.F	= $(FC) -cpp $(FFLAGS) $(MODFLAG) $(FINCLUDES) $(TARGET_ARCH) -c
 
 define compile.f
 $(RM) $@
-$(COMPILE.f) -c $< -o $@
+$(COMPILE.f) $< -o $@
+endef
+
+define compile.F
+$(RM) $@
+$(COMPILE.F) $< -o $@
 endef
 
 %.o:		%.f
-		$(compile.f) -c $< -o $@
+		$(compile.f) 
 
 %.o:		%.F
-		$(compile.f) -cpp -c $< -o $@
+		$(compile.F) 
 
 %.o:		%.for
-		$(compile.f) -c $< -o $@
+		$(compile.f)
 
 %.o:		%.FOR
-		$(compile.f) -cpp -c $< -o $@
+		$(compile.F)
 
 %.o:		%.f77
-		$(compile.f) -c $< -o $@
+		$(compile.f)
 
 %.o:		%.f90
-		$(compile.f) -c $< -o $@
+		$(compile.f)
 
 %.o:		%.F90
-		$(compile.f) -cpp -c $< -o $@
+		$(compile.F)
 
 %.o:		%.f95
-		$(compile.f) -c $< -o $@
+		$(compile.f)
 
 %.o:		%.F95
-		$(compile.f) -cpp -c $< -o $@
+		$(compile.F) 
 
 %.o:		%.f03
-		$(compile.f) -c $< -o $@
+		$(compile.f)
 
 %.o:		%.F03
-		$(compile.f) -cpp -c $< -o $@
+		$(compile.F)
 
 %.o:		%.f08
-		$(compile.f) -c $< -o $@
+		$(compile.f)
 
 %.o:		%.F08
-		$(compile.f) -cpp -c $< -o $@
+		$(compile.F)
 
 # vim:ai sw=2 noexpandtab
 
