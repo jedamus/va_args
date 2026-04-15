@@ -1,6 +1,7 @@
 /* -*- C -*- */
 /* main.c */
 /* erzeugt Freitag, 07. Juli 2023 12:05 (C) 2023 von Leander Jedamus */
+/* modifiziert Mittwoch, 15. April 2026 21:06 von Leander Jedamus */
 /* modifiziert Dienstag, 01. Oktober 2024 00:39 von Leander Jedamus */
 /* modifiziert Samstag, 24. August 2024 14:28 von Leander Jedamus */
 /* modifiziert Freitag, 23. Februar 2024 07:50 von Leander Jedamus */
@@ -67,7 +68,7 @@ int main(int argc, char *argv[]) {
 
   struct poptOption optionsTable[] = {
     POPT_AUTOHELP
-    { NULL, 0, 0, NULL, 0 }
+    { NULL, 0, 0, NULL, 0, NULL, NULL }
   };
 #endif
 
