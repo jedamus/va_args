@@ -1,5 +1,5 @@
 # erzeugt Samstag, 04. Juli 2015 14:04 (C) 2015 von Leander Jedamus
-# modifiziert Mittwoch, 15. April 2026 18:29 von Leander Jedamus
+# modifiziert Mittwoch, 15. April 2026 19:42 von Leander Jedamus
 # modifiziert Samstag, 09. September 2023 09:31 von Leander Jedamus
 # modifiziert Mittwoch, 02. September 2015 14:31 von Leander Jedamus
 # modifiziert Dienstag, 01. September 2015 18:11 von Leander Jedamus
@@ -20,6 +20,8 @@ FFLAGS		= -std=f2003 -Wall -Wextra -O2
 
 COMPILE.f	= $(FC) $(strip $(FFLAGS) $(MODFLAG) $(FINCLUDES) $(TARGET_ARCH)) -c
 COMPILE.F	= $(FC) -cpp $(strip $(FFLAGS) $(MODFLAG) $(FINCLUDES) $(TARGET_ARCH)) -c
+DEPEND.f	= $(FC) -M $(strip $(FINCLUDES))
+DEPEND.F	= $(FC) -cpp -M $(strip $(FINCLUDES))
 
 define compile.f
 $(RM) $@
@@ -29,6 +31,16 @@ endef
 define compile.F
 $(RM) $@
 $(COMPILE.F) $< -o $@
+endef
+
+define depend.f
+$(RM) $@
+$(DEPEND.f) $< > $@
+endef
+
+define depend.F
+$(RM) $@
+$(DEPEND.F) $< > $@
 endef
 
 %.o:		%.f
@@ -78,6 +90,54 @@ endef
 
 %.o:		%.F08
 		$(compile.F)
+
+%.d:		%.f
+		$(depend.f)
+
+%.d:		%.F
+		$(depend.F)
+
+%.d:		%.for
+		$(depend.f)
+
+%.d:		%.FOR
+		$(depend.F)
+
+%.d:		%.ftn
+		$(depend.f)
+
+%.d:		%.FTN
+		$(depend.F)
+
+%.d:		%.FPP
+		$(depend.F)
+
+%.d:		%.f77
+		$(depend.f)
+
+%.d:		%.f90
+		$(depend.f)
+
+%.d:		%.F90
+		$(depend.F)
+
+%.d:		%.f95
+		$(depend.f)
+
+%.d:		%.F95
+		$(depend.F)
+
+%.d:		%.f03
+		$(depend.f)
+
+%.d:		%.F03
+		$(depend.F)
+
+%.d:		%.f08
+		$(depend.f)
+
+%.d:		%.F08
+		$(depend.F)
 
 # vim:ai sw=2 noexpandtab
 
