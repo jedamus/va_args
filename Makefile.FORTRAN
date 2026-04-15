@@ -1,5 +1,5 @@
 # erzeugt Samstag, 04. Juli 2015 14:04 (C) 2015 von Leander Jedamus
-# modifiziert Mittwoch, 15. April 2026 15:56 von Leander Jedamus
+# modifiziert Mittwoch, 15. April 2026 17:33 von Leander Jedamus
 # modifiziert Samstag, 09. September 2023 09:31 von Leander Jedamus
 # modifiziert Mittwoch, 02. September 2015 14:31 von Leander Jedamus
 # modifiziert Dienstag, 01. September 2015 18:11 von Leander Jedamus
@@ -39,6 +39,15 @@ endef
 		$(compile.f)
 
 %.o:		%.FOR
+		$(compile.F)
+
+%.o:		%.ftn
+		$(compile.f)
+
+%.o:		%.FTN
+		$(compile.F)
+
+%.o:		%.FPP
 		$(compile.F)
 
 %.o:		%.f77
