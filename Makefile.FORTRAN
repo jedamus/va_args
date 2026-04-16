@@ -1,4 +1,5 @@
 # erzeugt Samstag, 04. Juli 2015 14:04 (C) 2015 von Leander Jedamus
+# modifiziert Donnerstag, 16. April 2026 04:54 von Leander Jedamus
 # modifiziert Mittwoch, 15. April 2026 19:42 von Leander Jedamus
 # modifiziert Samstag, 09. September 2023 09:31 von Leander Jedamus
 # modifiziert Mittwoch, 02. September 2015 14:31 von Leander Jedamus
@@ -42,6 +43,8 @@ define depend.F
 $(RM) $@
 $(DEPEND.F) $< > $@
 endef
+
+# .o object files
 
 %.o:		%.f
 		$(compile.f)
@@ -90,6 +93,108 @@ endef
 
 %.o:		%.F08
 		$(compile.F)
+
+# .ol object files
+
+%.ol:		%.f
+		$(compile.f)
+
+%.ol:		%.F
+		$(compile.F)
+
+%.ol:		%.for
+		$(compile.f)
+
+%.ol:		%.FOR
+		$(compile.F)
+
+%.ol:		%.ftn
+		$(compile.f)
+
+%.ol:		%.FTN
+		$(compile.F)
+
+%.ol:		%.FPP
+		$(compile.F)
+
+%.ol:		%.f77
+		$(compile.f)
+
+%.ol:		%.f90
+		$(compile.f)
+
+%.ol:		%.F90
+		$(compile.F)
+
+%.ol:		%.f95
+		$(compile.f)
+
+%.ol:		%.F95
+		$(compile.F)
+
+%.ol:		%.f03
+		$(compile.f)
+
+%.ol:		%.F03
+		$(compile.F)
+
+%.ol:		%.f08
+		$(compile.f)
+
+%.ol:		%.F08
+		$(compile.F)
+
+# .osl object files
+
+%.osl:		%.f
+		$(compile.f)
+
+%.osl:		%.F
+		$(compile.F)
+
+%.osl:		%.for
+		$(compile.f)
+
+%.osl:		%.FOR
+		$(compile.F)
+
+%.osl:		%.ftn
+		$(compile.f)
+
+%.osl:		%.FTN
+		$(compile.F)
+
+%.osl:		%.FPP
+		$(compile.F)
+
+%.osl:		%.f77
+		$(compile.f)
+
+%.osl:		%.f90
+		$(compile.f)
+
+%.osl:		%.F90
+		$(compile.F)
+
+%.osl:		%.f95
+		$(compile.f)
+
+%.osl:		%.F95
+		$(compile.F)
+
+%.osl:		%.f03
+		$(compile.f)
+
+%.osl:		%.F03
+		$(compile.F)
+
+%.osl:		%.f08
+		$(compile.f)
+
+%.osl:		%.F08
+		$(compile.F)
+
+# dependencies
 
 %.d:		%.f
 		$(depend.f)
